@@ -121,6 +121,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="View\Account_Manager.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -205,15 +210,17 @@
     <Compile Include="View\QuanLyBill.Designer.cs">
       <DependentUpon>QuanLyBill.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="View\FormManager.resx">
+      <DependentUpon>FormManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +256,18 @@
       <DependentUpon>DB_SE12.edmx</DependentUpon>
       <LastGenOutput>DB_SE12.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\FormManager_QL_Account.jpg" />
+    <None Include="Resources\FormManager_Feedback.jpg" />
+    <None Include="Resources\FormManager_DiemDanh.png" />
+    <None Include="Resources\FormManager_QL_DoangThu.png" />
+    <None Include="Resources\FormManager_QL_NhanVien.png" />
+    <None Include="Resources\FormManager_QL_Items.png" />
+    <None Include="Resources\FormManager_Order.jpg" />
+    <None Include="Resources\Logo_Chinh.PNG" />
+    <None Include="Resources\login_background.png" />
+    <None Include="Resources\login_logo.jpg" />
+    <None Include="Resources\login_username.png" />
+    <None Include="Resources\login_pass.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
