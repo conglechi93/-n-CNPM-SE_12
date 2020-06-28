@@ -7,14 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CNPM_SE_12.DTO;
 
 namespace CNPM_SE_12.View
 {
     public partial class Main : UserControl
     {
-        public Main()
-        {
-            private string ID_User;
+        private string ID_User;
         private int total = 0;
         private List<List<Button>> matrix;
         private List<data_Order> tb_Order;
@@ -114,8 +113,9 @@ namespace CNPM_SE_12.View
             {
                 cbb_Ctg.Items.Add(new CBBCtg
                 {
+                    Values = Convert.ToInt32(i.ID_Category),
                     Text = i.Category_Name,
-                    Values = Convert.ToInt32(i.ID_Category)
+                    
                 });
             }
         }
@@ -195,6 +195,5 @@ namespace CNPM_SE_12.View
         {
             pnlShow.Controls.Remove(pnlShow.Controls[0]);
         }
-    }
     }
 }

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\CNPM_SE_12\CNPM_SE_12\DTO\DB_SE12.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\CNPM_SE_12\CNPM_SE_12\DTO\DB_SE12.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

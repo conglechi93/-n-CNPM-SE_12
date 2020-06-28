@@ -18,5 +18,7 @@ namespace CNPM_SE_12.DTO
         public string ID_Account { get; set; }
         public string Month { get; set; }
         public string Salary1 { get; set; }
+    
+        public virtual User User { get; set; }
     }
 }

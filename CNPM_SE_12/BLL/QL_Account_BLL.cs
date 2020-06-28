@@ -1,8 +1,10 @@
-﻿using System;
+﻿using CNPM_SE_12.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CNPM_SE_12.BLL
 {
@@ -45,7 +47,7 @@ namespace CNPM_SE_12.BLL
             {
                 account = db.Accounts.Select(p => p).ToList();
             }
-            else account = db.Accounts.Where(p => p.ID_User.Contains(Search)).ToList();
+            else account = db.Accounts.Where(p => p.ID_Account.Contains(Search)).ToList();
             return account;
         }
         public bool Update_Pass_BLL(string ID, string newPass)

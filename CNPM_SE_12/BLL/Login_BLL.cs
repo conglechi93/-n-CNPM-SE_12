@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CNPM_SE_12.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,7 +50,7 @@ namespace CNPM_SE_12.BLL
             {
                 if (login == i.Login)
                 {
-                    return i.ID_User;
+                    return i.ID_Account;
                 }
             }
             return null;

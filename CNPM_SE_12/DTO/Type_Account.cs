@@ -14,7 +14,16 @@ namespace CNPM_SE_12.DTO
     
     public partial class Type_Account
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Type_Account()
+        {
+            this.Accounts = new HashSet<Account>();
+        }
+    
         public string ID_Type { get; set; }
         public string Access { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Account> Accounts { get; set; }
     }
 }

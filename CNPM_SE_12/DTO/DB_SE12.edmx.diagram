@@ -4,24 +4,28 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="ff7a0692f7c147a0b5d5b6cc710ad827" Name="Diagram1">
-        <EntityTypeShape EntityType="SE_12Model.Category" Width="1.5" PointX="1.5" PointY="10.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="SE_12Model.Detail_Order" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SE_12Model.Item" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SE_12Model.Link" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SE_12Model.Order" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SE_12Model.QL_WDay" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SE_12Model.Salary" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SE_12Model.sysdiagram" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SE_12Model.Type_Account" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SE_12Model.User" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="SE_12Model.Account" Width="1.5" PointX="8" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="SE_12Model.QL_Payment" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+      <Diagram DiagramId="40b9e3e2456b457fb19e8abfd7fbb206" Name="Diagram1">
+        <EntityTypeShape EntityType="SE_12Model.Account" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_12Model.Category" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_12Model.Detail_Order" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_12Model.Item" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_12Model.Link" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_12Model.Order" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_12Model.QL_WDay" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_12Model.Salary" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_12Model.sysdiagram" Width="1.5" PointX="5.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_12Model.Type_Account" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_12Model.User" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SE_12Model.QL_Payment" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <AssociationConnector Association="SE_12Model.FK_Account_Type_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_12Model.FK_Account_User" ManuallyRouted="false" />
         <AssociationConnector Association="SE_12Model.FK_Items_Category" ManuallyRouted="false" />
         <AssociationConnector Association="SE_12Model.FK_Detail_Order_Items1" ManuallyRouted="false" />
         <AssociationConnector Association="SE_12Model.FK_Detail_Order_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_12Model.FK_Order_User" ManuallyRouted="false" />
         <AssociationConnector Association="SE_12Model.FK_QL_Payment_Order" ManuallyRouted="false" />
-        <AssociationConnector Association="SE_12Model.FK_Account_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_12Model.FK_QL_WDay_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SE_12Model.FK_Salary_User" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

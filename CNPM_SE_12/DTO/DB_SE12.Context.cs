@@ -25,6 +25,7 @@ namespace CNPM_SE_12.DTO
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Detail_Order> Detail_Order { get; set; }
         public virtual DbSet<Item> Items { get; set; }
@@ -35,7 +36,6 @@ namespace CNPM_SE_12.DTO
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Type_Account> Type_Account { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<QL_Payment> QL_Payment { get; set; }
     }
 }

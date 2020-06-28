@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CNPM_SE_12.BLL;
+using CNPM_SE_12.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

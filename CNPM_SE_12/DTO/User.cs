@@ -17,10 +17,11 @@ namespace CNPM_SE_12.DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            this.Accounts = new HashSet<Account>();
+            this.Orders = new HashSet<Order>();
+            this.QL_WDay = new HashSet<QL_WDay>();
+            this.Salaries = new HashSet<Salary>();
         }
     
-        public string ID_Account { get; set; }
         public string User_Name { get; set; }
         public bool Gender { get; set; }
         public System.DateTime Birthday { get; set; }
@@ -29,8 +30,14 @@ namespace CNPM_SE_12.DTO
         public string Address { get; set; }
         public string Shift_Time { get; set; }
         public Nullable<int> Salary { get; set; }
+        public string ID_Account { get; set; }
     
+        public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Account> Accounts { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<QL_WDay> QL_WDay { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Salary> Salaries { get; set; }
     }
 }

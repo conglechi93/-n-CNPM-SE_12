@@ -19,5 +19,7 @@ namespace CNPM_SE_12.DTO
         public Nullable<System.DateTime> Shift_Start_Time { get; set; }
         public Nullable<System.DateTime> Shift_End_Time { get; set; }
         public Nullable<int> Salary_Shift { get; set; }
+    
+        public virtual User User { get; set; }
     }
 }

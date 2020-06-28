@@ -19,6 +19,7 @@ namespace CNPM_SE_12.DTO
         public string PassWord { get; set; }
         public string ID_Type { get; set; }
     
+        public virtual Type_Account Type_Account { get; set; }
         public virtual User User { get; set; }
     }
 }

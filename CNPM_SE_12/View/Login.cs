@@ -1,22 +1,24 @@
-﻿using System;
+﻿using CNPM_SE_12.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CNPM_SE_12.BLL;
 
 namespace CNPM_SE_12.View
 {
-    public partial class Login : UserControl
+    public partial class fLogin : Form
     {
-        public Login()
+        private string ID_User;
+        public fLogin()
         {
             InitializeComponent();
         }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (BLL.Login_BLL.Instance.CheckAccount(txt_User.Text, txt_Pass.Text))

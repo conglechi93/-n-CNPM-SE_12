@@ -14,7 +14,7 @@ namespace CNPM_SE_12.DTO
     
     public partial class Detail_Order
     {
-        public int ID_DetalOrder { get; set; }
+        public int ID_DetailOrder { get; set; }
         public string ID_Items { get; set; }
         public int Price { get; set; }
         public string Amount { get; set; }

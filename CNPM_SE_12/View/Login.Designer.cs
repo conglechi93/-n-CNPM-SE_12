@@ -1,6 +1,6 @@
 ﻿namespace CNPM_SE_12.View
 {
-    partial class Login
+    partial class fLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -67,7 +67,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::GiaoDien.Properties.Resources.logo;
             this.pictureBox3.Location = new System.Drawing.Point(13, 4);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
@@ -126,7 +125,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GiaoDien.Properties.Resources._302_3026464_png_file_svg_login_member_icon_png;
             this.pictureBox1.Location = new System.Drawing.Point(12, 34);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
@@ -150,7 +148,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GiaoDien.Properties.Resources.unlocking_solid_512;
             this.pictureBox2.Location = new System.Drawing.Point(12, 94);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
@@ -218,7 +215,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BackgroundImage = global::GiaoDien.Properties.Resources.Picture1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(785, 613);
             this.Controls.Add(this.panel4);
