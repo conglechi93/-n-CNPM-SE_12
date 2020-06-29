@@ -199,7 +199,16 @@
             this.lb_Loai.Size = new System.Drawing.Size(49, 23);
             this.lb_Loai.TabIndex = 4;
             this.lb_Loai.Text = "Loại";
-            //
+            // 
+            // ID_Items
+            // 
+            this.ID_Items.DataPropertyName = "Items_ID";
+            this.ID_Items.HeaderText = "Mã sản phẩm";
+            this.ID_Items.MinimumWidth = 6;
+            this.ID_Items.Name = "ID_Items";
+            this.ID_Items.ReadOnly = true;
+            // 
+ 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
