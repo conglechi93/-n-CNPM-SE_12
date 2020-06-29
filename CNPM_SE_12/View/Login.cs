@@ -54,7 +54,7 @@ namespace CNPM_SE_12
         }
         private void MousClick(object sender, MouseEventArgs e)
         {
-            TextBox txt = sender as TextBox;
+            TextBox txt = (TextBox)sender;
             txt.Text = "";
         }
 
