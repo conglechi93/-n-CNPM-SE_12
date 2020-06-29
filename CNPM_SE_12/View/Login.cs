@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,8 @@ namespace CNPM_SE_12
                 MessageBox.Show("Sai mật khẩu hoặc tài khoản !");
             }
         }
+
+
         private void btnCancle_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -53,6 +56,24 @@ namespace CNPM_SE_12
         {
             TextBox txt = sender as TextBox;
             txt.Text = "";
+        }
+
+        public void ReadData()
+        {
+            string[] lines = File.ReadAllLines(@"E:\Lich.txt");
+            Console.ReadLine();
+        }
+
+        public void WriteData()
+        {
+            //giatri = Console.ReadLine();
+            String filepath = "E:\\Lich.txt";
+            FileStream fs = new FileStream(filepath, FileMode.Create);
+            StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
+                sWriter.WriteLine();
+                sWriter.Flush();
+
+            fs.Close();
         }
     }
 }
