@@ -1,4 +1,5 @@
 ﻿using CNPM_SE_12.BLL;
+using CNPM_SE_12.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,8 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace CNPM_SE_12.View
+////
+namespace CNPM_SE_12
 {
     public partial class fLogin : Form
     {
