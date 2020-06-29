@@ -115,6 +115,7 @@ namespace CNPM_SE_12.View
                 txt_TenSanPham.Text = item.Items_Name;
             }
         }
+        //
         private void DGV_Items_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (DGV_Items.Columns.Count == 2)
