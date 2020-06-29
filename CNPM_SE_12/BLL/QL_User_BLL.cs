@@ -121,7 +121,7 @@ namespace CNPM_SE_12.BLL
                 return false;
             }
         }
-        public bool Edit_Ctg_BLL(string ID_User, string User_Name, string Gender, string Birthday, string Phonenumber, string Passport, string Address, string ShiftTime, string Salary)
+        public bool Edit_User_BLL(string ID_User, string User_Name, string Gender, string Birthday, string Phonenumber, string Passport, string Address, string ShiftTime, string Salary)
         {
             try
             {

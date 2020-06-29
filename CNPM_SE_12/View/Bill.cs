@@ -13,7 +13,6 @@ namespace CNPM_SE_12.View
 {
     public partial class Bill : Form
     {
-        private string ID_Type;
         private string ID_User;
         private int Total;
         private List<data_Order> list;
