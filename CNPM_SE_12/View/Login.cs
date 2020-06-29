@@ -77,5 +77,8 @@ namespace CNPM_SE_12
 
             fs.Close();
         }
+        public testc()
+            {
+            }
     }
 }
