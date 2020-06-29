@@ -77,9 +77,9 @@ namespace CNPM_SE_12
 
             fs.Close();
         }
-        public testc()
+        public test2313546()
             {
-            //khdaskjdhasdjah
+     
             }
     }
 }
