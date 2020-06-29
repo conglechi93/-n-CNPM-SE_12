@@ -239,6 +239,9 @@
     <EmbeddedResource Include="View\QL_Items.resx">
       <DependentUpon>QL_Items.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\QL_User.resx">
+      <DependentUpon>QL_User.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\QuanLyBill.resx">
       <DependentUpon>QuanLyBill.cs</DependentUpon>
     </EmbeddedResource>

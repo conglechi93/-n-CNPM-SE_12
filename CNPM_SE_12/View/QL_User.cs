@@ -105,19 +105,42 @@ namespace CNPM_SE_12.View
         private void Add()
         {
             string ID_User = txt_MaNhanVien.Text;
-            string User_Name = txt_TenNhanVien.Text;
-            string Gender = "0";
-            if (rdb_Male.Checked == true) Gender = "1";
-            string Birthday = Convert.ToDateTime(dateTimePicker1.Value).ToString();
-            string Phonenumber = txt_SoDienThoai.Text;
-            string Passport = txt_CMND.Text;
-            string Address = txt_DiaChi.Text;
-            string ShiftTime = txt_ShiftTime.Text;
-            string Salary = txt_Salary.Text;
-            if (BLL.QL_User_BLL.Instance.Add_User_BLL(ID_User, User_Name, Gender, Birthday, Phonenumber, Passport, Address, ShiftTime, Salary))
-                MessageBox.Show("Add thành công!");
-            else MessageBox.Show("Add thất bại");
-            
+            if (check(ID_User) == true)
+            {
+                string User_Name = txt_TenNhanVien.Text;
+                string Gender = "0";
+                if (rdb_Male.Checked == true) Gender = "1";
+                string Birthday = Convert.ToDateTime(dateTimePicker1.Value).ToString();
+                string Phonenumber = txt_SoDienThoai.Text;
+                string Passport = txt_CMND.Text;
+                string Address = txt_DiaChi.Text;
+                string ShiftTime = txt_ShiftTime.Text;
+                string Salary = txt_Salary.Text;
+                if (BLL.QL_User_BLL.Instance.Add_User_BLL(ID_User, User_Name, Gender, Birthday, Phonenumber, Passport, Address, ShiftTime, Salary))
+                    MessageBox.Show("Add thành công!");
+                else MessageBox.Show("Add thất bại");
+            }       
+        }
+
+        private bool check(string id_user)
+        {
+            if( BLL.QL_User_BLL.Instance.getUser_byID(id_user) != null)
+            {
+                MessageBox.Show("Mã nhân viên đã tồn tại !");
+                return false;
+            }
+            else
+            {
+                foreach(Control i in grb_NhanVien.Controls)
+                {
+                    if (i.Text == "")
+                    {
+                        MessageBox.Show("Phải nhập đầy đủ thông tin !");
+                        return false; 
+                    }           
+                }    
+            }
+            return true;
         }
         private void Btn_Update_Click(object sender, EventArgs e)
         {
@@ -135,6 +158,7 @@ namespace CNPM_SE_12.View
                 MessageBox.Show("Add thành công!");
             else MessageBox.Show("Add thất bại");
         }
+
 
         private void Reset_Click(object sender, EventArgs e)
         {
