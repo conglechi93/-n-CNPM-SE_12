@@ -14,6 +14,7 @@ namespace CNPM_SE_12.View
     public partial class Main : UserControl
     {
         private string ID_Type;
+        private string ID_User;
         private int total = 0;
         private List<List<Button>> matrix;
         private List<data_Order> tb_Order;
@@ -27,7 +28,7 @@ namespace CNPM_SE_12.View
 
         public Main(string id_user)
         {
-            this.ID_Type = id_user;
+            this.ID_User = id_user;
             tb_Order = new List<data_Order>();
             InitializeComponent();
             //setColumn_DGV();
@@ -131,7 +132,7 @@ namespace CNPM_SE_12.View
 
         private void ShowOrder(string id_item)
         {
-            DGV_Show.DataSource = null;
+            //DGV_Show.DataSource = null;
             Item item = BLL.QL_Items_BLL.Instance.getItems_byID_BLL(id_item);
             bool check = true;
             foreach (data_Order i in tb_Order)
@@ -144,6 +145,7 @@ namespace CNPM_SE_12.View
                 }
             }
             if (check) tb_Order.Add(new data_Order { Items_ID = item.ID_Items, Items_Name = item.Items_Name, Price = item.Price, Values = 1 });
+            tb_Order.Add(new data_Order { Items_ID = item.ID_Items, Items_Name = item.Items_Name, Price = item.Price, Values = 1 });
             DGV_Show.DataSource = tb_Order;
         }
         private void ClearMatrix()
@@ -176,24 +178,23 @@ namespace CNPM_SE_12.View
 
         private void btn_TamTinh_Click(object sender, EventArgs e)
         {
-            getTotal();
-            txt_Total.Text = total.ToString();
-        }
-
-        private void getTotal()
-        {
             foreach (DataGridViewRow i in DGV_Show.Rows)
             {
                 int price = Convert.ToInt32(i.Cells["Price"].Value.ToString());
                 int value = Convert.ToInt32(i.Cells["Values"].Value.ToString());
                 total += price * value;
             }
+            txt_Total.Text = total.ToString();
         }
         private void btn_CreateBill_Click(object sender, EventArgs e)
         {
-            getTotal();
-            Bill f = new Bill(ID_Type, total, tb_Order);
+            Bill f = new Bill(ID_User, total, tb_Order);
             f.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pnlShow.Controls.Remove(pnlShow.Controls[0]);
         }
     }
 }

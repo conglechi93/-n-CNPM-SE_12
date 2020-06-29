@@ -16,15 +16,5 @@ namespace CNPM_SE_12.View
         {
             InitializeComponent();
         }
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-
-        }
     }
 }
