@@ -18,7 +18,7 @@ namespace CNPM_SE_12.View
             InitializeComponent();
             ShowDGV();
         }
-
+        
         private void btnAdd_Ctg_Click(object sender, EventArgs e)
         {
             DGV_Items.DataSource = null;
