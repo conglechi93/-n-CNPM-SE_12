@@ -69,17 +69,17 @@ namespace CNPM_SE_12
         public void WriteData()
         {
             //giatri = Console.ReadLine();
-            String filepath = "E:\\Lich.txt";
-            FileStream fs = new FileStream(filepath, FileMode.Create);
+            String filepathhh = "E:\\Lich.txt";
+            FileStream fs = new FileStream(filepathhh, FileMode.Create);
             StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
                 sWriter.WriteLine();
                 sWriter.Flush();
-
+            //abcccc
             fs.Close();
         }
         public test2313546()
             {
-     
+                    int a;
             }
     }
 }
