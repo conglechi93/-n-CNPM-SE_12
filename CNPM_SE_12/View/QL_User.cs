@@ -13,10 +13,21 @@ namespace CNPM_SE_12.View
 {
     public partial class QL_User : UserControl
     {
-        public QL_User()
+        private string ID_Type;
+        public QL_User(string id_account)
+
         {
-            InitializeComponent();
-            dataGridView1.DataSource = BLL.QL_User_BLL.Instance.getUser_BLL();
+            this.ID_Type = BLL.QL_Account_BLL.Instance.getTypeAccount_BLL(id_account);
+            if(ID_Type != "3")
+            {
+                InitializeComponent();
+                dataGridView1.DataSource = BLL.QL_User_BLL.Instance.getUser_BLL();
+            }
+            else
+            {
+                MessageBox.Show(" Bạn không có quyền hạn này !");
+            }
+           
         }
 
         private void Add()

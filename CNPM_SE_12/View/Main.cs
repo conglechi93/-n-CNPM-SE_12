@@ -195,5 +195,6 @@ namespace CNPM_SE_12.View
         {
             pnlShow.Controls.Remove(pnlShow.Controls[0]);
         }
+
     }
 }

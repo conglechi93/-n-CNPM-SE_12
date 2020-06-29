@@ -66,6 +66,7 @@
             this.btn_Reset.TabIndex = 3;
             this.btn_Reset.Text = "Làm mới";
             this.btn_Reset.UseVisualStyleBackColor = true;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // btn_Search
             // 
@@ -181,11 +182,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 466);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "QuanLyBill";
-            this.Text = "QuanLyBill";
+            this.Size = new System.Drawing.Size(810, 466);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
