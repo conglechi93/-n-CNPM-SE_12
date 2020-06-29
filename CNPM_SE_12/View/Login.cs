@@ -28,8 +28,8 @@ namespace CNPM_SE_12
             if (BLL.Login_BLL.Instance.CheckAccount(txt_User.Text, txt_Pass.Text))
             {
                 WriteData(txt_User.Text, txt_Pass.Text);
-                ID_User = Login_BLL.Instance.getIDUser(txt_User.Text);
-                FormManager f = new FormManager(ID_User);
+                ID_Account = Login_BLL.Instance.getIDUser(txt_User.Text);
+                FormManager f = new FormManager(ID_Account);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
@@ -62,7 +62,7 @@ namespace CNPM_SE_12
         }
         public void ReadData()
         {
-            string[] lines = File.ReadAllLines(@"E:\check.txt");
+            string[] lines = File.ReadAllLines(@"K:\check.txt");
 
             if (lines[0] == "true")
             {
@@ -75,7 +75,7 @@ namespace CNPM_SE_12
 
         public void WriteData(string us,string pass)
         {
-            String filepath = "E:\\check.txt";
+            String filepath = "K:\\check.txt";
             FileStream fs = new FileStream(filepath, FileMode.Create);
             StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
             if (cb_Rmb.Checked == true)
@@ -95,13 +95,6 @@ namespace CNPM_SE_12
                 sWriter.WriteLine("false");
             }
             fs.Close();
-        }
-
-        public void ReadData()
-        {
-            string[] lines = File.ReadAllLines(@"E:\Lich.txt");
-            Console.ReadLine();
-            //
         }
     }
 }

@@ -30,24 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.cb_Rmb = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_User = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_Pass = new System.Windows.Forms.TextBox();
             this.btn_Login = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,10 +69,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(13, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(10, 3);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(107, 96);
+            this.pictureBox3.Size = new System.Drawing.Size(80, 78);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
@@ -92,10 +92,10 @@
             // 
             this.cb_Rmb.AutoSize = true;
             this.cb_Rmb.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cb_Rmb.Location = new System.Drawing.Point(76, 263);
+            this.cb_Rmb.Location = new System.Drawing.Point(70, 211);
             this.cb_Rmb.Margin = new System.Windows.Forms.Padding(4);
             this.cb_Rmb.Name = "cb_Rmb";
-            this.cb_Rmb.Size = new System.Drawing.Size(122, 21);
+            this.cb_Rmb.Size = new System.Drawing.Size(94, 17);
             this.cb_Rmb.TabIndex = 5;
             this.cb_Rmb.Text = "Remember me";
             this.cb_Rmb.UseVisualStyleBackColor = true;
@@ -126,20 +126,21 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CNPM_SE_12.Properties.Resources.login_username;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 28);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 41);
+            this.pictureBox1.Size = new System.Drawing.Size(42, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // txt_User
             // 
+            this.txt_User.BackColor = System.Drawing.Color.LightGray;
             this.txt_User.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_User.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.txt_User.Location = new System.Drawing.Point(91, 34);
+            this.txt_User.Location = new System.Drawing.Point(68, 34);
             this.txt_User.Margin = new System.Windows.Forms.Padding(4);
             this.txt_User.Name = "txt_User";
             this.txt_User.Size = new System.Drawing.Size(200, 22);
@@ -150,20 +151,21 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CNPM_SE_12.Properties.Resources.login_pass;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 94);
+            this.pictureBox2.Location = new System.Drawing.Point(9, 76);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(53, 48);
+            this.pictureBox2.Size = new System.Drawing.Size(40, 39);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // txt_Pass
             // 
+            this.txt_Pass.BackColor = System.Drawing.Color.LightGray;
             this.txt_Pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Pass.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.txt_Pass.Location = new System.Drawing.Point(91, 100);
+            this.txt_Pass.Location = new System.Drawing.Point(68, 84);
             this.txt_Pass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Pass.Name = "txt_Pass";
             this.txt_Pass.Size = new System.Drawing.Size(185, 22);
@@ -211,36 +213,6 @@
             this.panel4.Size = new System.Drawing.Size(478, 72);
             this.panel4.TabIndex = 2;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(10, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(80, 78);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CNPM_SE_12.Properties.Resources.login_username;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CNPM_SE_12.Properties.Resources.login_pass;
-            this.pictureBox2.Location = new System.Drawing.Point(9, 76);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 39);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // fLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,13 +233,13 @@
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MousClick);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
