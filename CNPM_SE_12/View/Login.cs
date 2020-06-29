@@ -68,7 +68,11 @@ namespace CNPM_SE_12
 
         public void WriteData()
         {
-            //giatri = Console.ReadLine();
+            test();
+          
+        }
+        public test()
+            {
             String file = "E:\\Lich.txt";
             FileStream fs = new FileStream(file, FileMode.Create);
             StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
@@ -76,10 +80,6 @@ namespace CNPM_SE_12
                 sWriter.Flush();
             //abcccc
             fs.Close();
-        }
-        public test2313546()
-            {
-                    int a;
             }
     }
 }
