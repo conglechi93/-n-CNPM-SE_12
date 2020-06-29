@@ -95,28 +95,5 @@ namespace CNPM_SE_12
             }
             fs.Close();
         }
-
-        public void ReadData()
-        {
-            string[] lines = File.ReadAllLines(@"E:\Lich.txt");
-            Console.ReadLine();
-            //
-        }
-
-        public void WriteData()
-        {
-            test();
-          
-        }
-        public test()
-            {
-            String fileth = "E:\\Lich.txt";
-            FileStream fs = new FileStream(fileth, FileMode.Create);
-            StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
-                sWriter.WriteLine();
-                sWriter.Flush();
-            //abcccc
-            fs.Close();
-            }
     }
 }
