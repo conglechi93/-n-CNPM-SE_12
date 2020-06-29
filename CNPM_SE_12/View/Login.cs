@@ -79,7 +79,7 @@ namespace CNPM_SE_12
         }
         public test2313546()
             {
-     
+                    int a;
             }
     }
 }
