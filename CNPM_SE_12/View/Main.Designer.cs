@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.DGV_Show = new System.Windows.Forms.DataGridView();
+            this.ID_Items = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Clear = new System.Windows.Forms.Button();
             this.btn_CreateBill = new System.Windows.Forms.Button();
@@ -41,8 +42,6 @@
             this.pnlShow = new System.Windows.Forms.Panel();
             this.cbb_Ctg = new System.Windows.Forms.ComboBox();
             this.lb_Loai = new System.Windows.Forms.Label();
-            this.ID_Items = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -64,6 +63,14 @@
             this.DGV_Show.RowTemplate.Height = 24;
             this.DGV_Show.Size = new System.Drawing.Size(467, 345);
             this.DGV_Show.TabIndex = 0;
+            // 
+            // ID_Items
+            // 
+            this.ID_Items.DataPropertyName = "Items_ID";
+            this.ID_Items.HeaderText = "Mã sản phẩm";
+            this.ID_Items.MinimumWidth = 6;
+            this.ID_Items.Name = "ID_Items";
+            this.ID_Items.ReadOnly = true;
             // 
             // panel2
             // 
@@ -138,7 +145,6 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.DGV_Show);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
@@ -194,33 +200,15 @@
             this.lb_Loai.TabIndex = 4;
             this.lb_Loai.Text = "Loại";
             // 
-            // ID_Items
-            // 
-            this.ID_Items.DataPropertyName = "Items_ID";
-            this.ID_Items.HeaderText = "Mã sản phẩm";
-            this.ID_Items.MinimumWidth = 6;
-            this.ID_Items.Name = "ID_Items";
-            this.ID_Items.ReadOnly = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(28, 480);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 506);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main";
-            this.Text = "Main";
+            this.Size = new System.Drawing.Size(1010, 506);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -247,6 +235,5 @@
         private System.Windows.Forms.Panel pnlShow;
         private System.Windows.Forms.TextBox txt_Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Items;
-        private System.Windows.Forms.Button button1;
     }
 }
