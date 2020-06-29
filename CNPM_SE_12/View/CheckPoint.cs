@@ -53,7 +53,6 @@ namespace CNPM_SE_12.View
                 }
             }
             Console.ReadLine();
-
         }
 
         public void WriteData()
