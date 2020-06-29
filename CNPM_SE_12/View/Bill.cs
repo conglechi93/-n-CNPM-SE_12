@@ -45,7 +45,7 @@ namespace CNPM_SE_12.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("abc");
+            MessageBox.Show("abca");
         }
 
         private void lb_Phone_Click(object sender, EventArgs e)
