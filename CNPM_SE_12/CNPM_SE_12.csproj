@@ -113,6 +113,12 @@
     <Compile Include="DTO\User.cs">
       <DependentUpon>DB_SE12.tt</DependentUpon>
     </Compile>
+    <Compile Include="View\ChangePass_NV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ChangePass_NV.Designer.cs">
+      <DependentUpon>ChangePass_NV.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChangePass_NV.resx">
+      <DependentUpon>ChangePass_NV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FB_Manager.resx">
       <DependentUpon>FB_Manager.cs</DependentUpon>

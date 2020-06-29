@@ -65,15 +65,5 @@ namespace CNPM_SE_12
             Console.ReadLine();
             //
         }
-
-        public void WriteData()
-        {
-            test();
-          
-        }
-        public test()
-            {
-
-            }
     }
 }
