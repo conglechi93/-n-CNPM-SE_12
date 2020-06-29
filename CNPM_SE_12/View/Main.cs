@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CNPM_SE_12.DTO;
+using System.IO;
 
 namespace CNPM_SE_12.View
 {
@@ -196,5 +197,26 @@ namespace CNPM_SE_12.View
             f.ShowDialog();
         }
 
+        public void ReadData()
+        {
+            string[] lines = File.ReadAllLines(@"E:\Lich.txt");
+
+            foreach (string s in lines)
+            {
+
+            }
+            Console.ReadLine();
+        }
+
+        public void WriteData()
+        {
+            string giatri = Console.ReadLine();
+            String filepath = "E:\\Lich.txt";
+            FileStream fs = new FileStream(filepath, FileMode.Create);
+            StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
+            sWriter.WriteLine();
+            sWriter.Flush();
+            fs.Close();
+        }
     }
 }

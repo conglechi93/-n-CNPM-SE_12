@@ -58,12 +58,5 @@ namespace CNPM_SE_12
             txt.Text = "";
             //vcgncntg
         }
-
-        public void ReadData()
-        {
-            string[] lines = File.ReadAllLines(@"E:\Lich.txt");
-            Console.ReadLine();
-            //
-        }
     }
 }
