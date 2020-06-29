@@ -146,7 +146,6 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.DGV_Show);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
@@ -212,6 +211,15 @@
             this.lb_Loai.TabIndex = 4;
             this.lb_Loai.Text = "Loại";
             // 
+
+            // ID_Items
+            // 
+            this.ID_Items.DataPropertyName = "Items_ID";
+            this.ID_Items.HeaderText = "Mã sản phẩm";
+            this.ID_Items.MinimumWidth = 6;
+            this.ID_Items.Name = "ID_Items";
+            this.ID_Items.ReadOnly = true;
+
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -247,6 +255,5 @@
         private System.Windows.Forms.Panel pnlShow;
         private System.Windows.Forms.TextBox txt_Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Items;
-        private System.Windows.Forms.Button button1;
     }
 }

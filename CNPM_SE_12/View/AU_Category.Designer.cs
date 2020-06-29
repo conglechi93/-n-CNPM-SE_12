@@ -39,70 +39,93 @@
             // lb_idCtg
             // 
             this.lb_idCtg.AutoSize = true;
-            this.lb_idCtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_idCtg.Location = new System.Drawing.Point(49, 36);
+            this.lb_idCtg.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_idCtg.ForeColor = System.Drawing.Color.Navy;
+            this.lb_idCtg.Location = new System.Drawing.Point(28, 25);
+            this.lb_idCtg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_idCtg.Name = "lb_idCtg";
-            this.lb_idCtg.Size = new System.Drawing.Size(121, 20);
+            this.lb_idCtg.Size = new System.Drawing.Size(100, 19);
             this.lb_idCtg.TabIndex = 0;
             this.lb_idCtg.Text = "Mã Category:";
             // 
             // lb_NameCtg
             // 
             this.lb_NameCtg.AutoSize = true;
-            this.lb_NameCtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_NameCtg.Location = new System.Drawing.Point(49, 71);
+            this.lb_NameCtg.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_NameCtg.ForeColor = System.Drawing.Color.Navy;
+            this.lb_NameCtg.Location = new System.Drawing.Point(28, 55);
+            this.lb_NameCtg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_NameCtg.Name = "lb_NameCtg";
-            this.lb_NameCtg.Size = new System.Drawing.Size(127, 20);
+            this.lb_NameCtg.Size = new System.Drawing.Size(104, 19);
             this.lb_NameCtg.TabIndex = 0;
             this.lb_NameCtg.Text = "Tên Category:";
             // 
             // txtCtg_ID
             // 
-            this.txtCtg_ID.Location = new System.Drawing.Point(203, 34);
+            this.txtCtg_ID.BackColor = System.Drawing.Color.LightGray;
+            this.txtCtg_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCtg_ID.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCtg_ID.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtCtg_ID.Location = new System.Drawing.Point(143, 25);
+            this.txtCtg_ID.Margin = new System.Windows.Forms.Padding(2);
             this.txtCtg_ID.Name = "txtCtg_ID";
-            this.txtCtg_ID.Size = new System.Drawing.Size(154, 22);
+            this.txtCtg_ID.Size = new System.Drawing.Size(176, 18);
             this.txtCtg_ID.TabIndex = 1;
             // 
             // txtCtg_Name
             // 
-            this.txtCtg_Name.Location = new System.Drawing.Point(203, 71);
+            this.txtCtg_Name.BackColor = System.Drawing.Color.LightGray;
+            this.txtCtg_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCtg_Name.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCtg_Name.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtCtg_Name.Location = new System.Drawing.Point(143, 56);
+            this.txtCtg_Name.Margin = new System.Windows.Forms.Padding(2);
             this.txtCtg_Name.Name = "txtCtg_Name";
-            this.txtCtg_Name.Size = new System.Drawing.Size(154, 22);
+            this.txtCtg_Name.Size = new System.Drawing.Size(176, 18);
             this.txtCtg_Name.TabIndex = 2;
             // 
             // btn_OK
             // 
-            this.btn_OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_OK.Location = new System.Drawing.Point(95, 117);
+            this.btn_OK.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btn_OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OK.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_OK.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_OK.Location = new System.Drawing.Point(48, 88);
+            this.btn_OK.Margin = new System.Windows.Forms.Padding(2);
             this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(88, 30);
+            this.btn_OK.Size = new System.Drawing.Size(106, 36);
             this.btn_OK.TabIndex = 3;
             this.btn_OK.Text = "OK";
-            this.btn_OK.UseVisualStyleBackColor = true;
+            this.btn_OK.UseVisualStyleBackColor = false;
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 
             // btn_Cancle
             // 
-            this.btn_Cancle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancle.Location = new System.Drawing.Point(237, 117);
+            this.btn_Cancle.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btn_Cancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancle.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancle.ForeColor = System.Drawing.Color.White;
+            this.btn_Cancle.Location = new System.Drawing.Point(192, 88);
+            this.btn_Cancle.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancle.Name = "btn_Cancle";
-            this.btn_Cancle.Size = new System.Drawing.Size(85, 30);
+            this.btn_Cancle.Size = new System.Drawing.Size(106, 36);
             this.btn_Cancle.TabIndex = 4;
             this.btn_Cancle.Text = "Cancle";
-            this.btn_Cancle.UseVisualStyleBackColor = true;
+            this.btn_Cancle.UseVisualStyleBackColor = false;
             this.btn_Cancle.Click += new System.EventHandler(this.btn_Cancle_Click);
             // 
             // AU_Category
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 181);
+            this.ClientSize = new System.Drawing.Size(339, 147);
             this.Controls.Add(this.btn_Cancle);
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.txtCtg_Name);
             this.Controls.Add(this.txtCtg_ID);
             this.Controls.Add(this.lb_NameCtg);
             this.Controls.Add(this.lb_idCtg);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AU_Category";
             this.Text = "AUCategory";
             this.Load += new System.EventHandler(this.AUCategory_Load);

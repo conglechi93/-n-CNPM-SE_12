@@ -13,6 +13,7 @@ namespace CNPM_SE_12.View
 {
     public partial class CheckPoint : UserControl
     {
+        private string ID_Type;
         #region Peoperties
         private List<List<Button>> matrix;
         private List<string> Day;
@@ -52,7 +53,6 @@ namespace CNPM_SE_12.View
                 }
             }
             Console.ReadLine();
-
         }
 
         public void WriteData()

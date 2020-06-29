@@ -57,6 +57,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.DGV_Items = new System.Windows.Forms.DataGridView();
+            this.ID_Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -418,6 +419,8 @@
             // 
             this.DGV_Items.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_Items.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Items.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_Category});
             this.DGV_Items.Location = new System.Drawing.Point(16, 173);
             this.DGV_Items.Name = "DGV_Items";
             this.DGV_Items.RowHeadersWidth = 51;
@@ -425,16 +428,22 @@
             this.DGV_Items.TabIndex = 1;
             this.DGV_Items.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_Items_RowHeaderMouseClick);
             // 
+            // ID_Category
+            // 
+            this.ID_Category.DataPropertyName = "ID_Category";
+            this.ID_Category.HeaderText = "Mã loại hàng";
+            this.ID_Category.Name = "ID_Category";
+            this.ID_Category.ReadOnly = true;
+            // 
             // QL_Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 492);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DGV_Items);
             this.Name = "QL_Items";
-            this.Text = "QLHangHoa";
+            this.Size = new System.Drawing.Size(837, 492);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -477,5 +486,6 @@
         private System.Windows.Forms.TextBox txt_Gia;
         private System.Windows.Forms.Button btn_ShowCtg;
         private System.Windows.Forms.DataGridView DGV_Items;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Category;
     }
 }

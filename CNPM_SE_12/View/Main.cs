@@ -131,7 +131,6 @@ namespace CNPM_SE_12.View
 
         private void ShowOrder(string id_item)
         {
-            //DGV_Show.DataSource = null;
             Item item = BLL.QL_Items_BLL.Instance.getItems_byID_BLL(id_item);
             bool check = true;
             foreach (data_Order i in tb_Order)
@@ -158,6 +157,7 @@ namespace CNPM_SE_12.View
                 }
             }
         }
+        // *****
         private void cbb_Ctg_SelectedIndexChanged(object sender, EventArgs e)
         {
             int cbb_index = ((CBBCtg)cbb_Ctg.SelectedItem).Values;
@@ -177,23 +177,23 @@ namespace CNPM_SE_12.View
 
         private void btn_TamTinh_Click(object sender, EventArgs e)
         {
+            getToTal();
+            txt_Total.Text = total.ToString();
+        }
+        private void getToTal()
+        {
             foreach (DataGridViewRow i in DGV_Show.Rows)
             {
                 int price = Convert.ToInt32(i.Cells["Price"].Value.ToString());
                 int value = Convert.ToInt32(i.Cells["Values"].Value.ToString());
                 total += price * value;
             }
-            txt_Total.Text = total.ToString();
         }
         private void btn_CreateBill_Click(object sender, EventArgs e)
         {
-            Bill f = new Bill(ID_Type, total, tb_Order);
+            getToTal();
+            Bill f = new Bill(ID_User, total, tb_Order);
             f.ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            pnlShow.Controls.Remove(pnlShow.Controls[0]);
         }
 
     }
