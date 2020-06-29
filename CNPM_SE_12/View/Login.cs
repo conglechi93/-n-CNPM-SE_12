@@ -73,8 +73,8 @@ namespace CNPM_SE_12
         }
         public test()
             {
-            String fileth = "E:\\Lich.txt";
-            FileStream fs = new FileStream(fileth, FileMode.Create);
+            String t = "E:\\Lich.txt";
+            FileStream fs = new FileStream(t, FileMode.Create);
             StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
                 sWriter.WriteLine();
                 sWriter.Flush();
