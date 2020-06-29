@@ -14,7 +14,7 @@ namespace CNPM_SE_12.View
     public partial class QL_Items : UserControl
     {
         private string ID_Type;
-        public QL_Items()
+        public QL_Items(string id_Account)
         {
             InitializeComponent();
             ShowDGV();
