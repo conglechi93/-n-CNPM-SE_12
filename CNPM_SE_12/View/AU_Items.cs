@@ -11,8 +11,10 @@ using System.Windows.Forms;
 
 namespace CNPM_SE_12.View
 {
+    
     public partial class AU_Items : Form
     {
+        private string ID_Type;
         private string ID_Items;
         public Mydel D { get; set; }
 

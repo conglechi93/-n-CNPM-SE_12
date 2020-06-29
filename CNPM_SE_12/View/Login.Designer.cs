@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txt_Rmb = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_User = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.txt_Rmb);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btn_Login);
@@ -65,6 +65,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(278, 354);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(13, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(107, 96);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
             // linkLabel1
             // 
@@ -77,16 +88,17 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forgot your password?";
             // 
-            // checkBox1
+            // txt_Rmb
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.checkBox1.Location = new System.Drawing.Point(57, 214);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(94, 17);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Remember me";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.txt_Rmb.AutoSize = true;
+            this.txt_Rmb.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txt_Rmb.Location = new System.Drawing.Point(76, 263);
+            this.txt_Rmb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Rmb.Name = "txt_Rmb";
+            this.txt_Rmb.Size = new System.Drawing.Size(122, 21);
+            this.txt_Rmb.TabIndex = 5;
+            this.txt_Rmb.Text = "Remember me";
+            this.txt_Rmb.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -111,24 +123,48 @@
             this.panel3.Size = new System.Drawing.Size(274, 119);
             this.panel3.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CNPM_SE_12.Properties.Resources.login_username;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 34);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // txt_User
             // 
             this.txt_User.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_User.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.txt_User.Location = new System.Drawing.Point(68, 28);
+            this.txt_User.Location = new System.Drawing.Point(91, 34);
+            this.txt_User.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_User.Name = "txt_User";
             this.txt_User.Size = new System.Drawing.Size(200, 22);
             this.txt_User.TabIndex = 0;
             this.txt_User.Text = "User name";
             this.txt_User.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MousClick);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CNPM_SE_12.Properties.Resources.login_pass;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 94);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(53, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // txt_Pass
             // 
             this.txt_Pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Pass.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.txt_Pass.Location = new System.Drawing.Point(68, 81);
+            this.txt_Pass.Location = new System.Drawing.Point(91, 100);
+            this.txt_Pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Pass.Name = "txt_Pass";
             this.txt_Pass.Size = new System.Drawing.Size(185, 22);
             this.txt_Pass.TabIndex = 0;
@@ -169,7 +205,8 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(73, 25);
+            this.panel4.Location = new System.Drawing.Point(97, 31);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(478, 72);
             this.panel4.TabIndex = 2;
@@ -247,7 +284,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox txt_Rmb;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox3;
     }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CNPM_SE_12.DTO;
+using System.IO;
 
 namespace CNPM_SE_12.View
 {
@@ -131,7 +132,6 @@ namespace CNPM_SE_12.View
 
         private void ShowOrder(string id_item)
         {
-            //DGV_Show.DataSource = null;
             Item item = BLL.QL_Items_BLL.Instance.getItems_byID_BLL(id_item);
             bool check = true;
             foreach (data_Order i in tb_Order)
@@ -158,6 +158,7 @@ namespace CNPM_SE_12.View
                 }
             }
         }
+        // *****
         private void cbb_Ctg_SelectedIndexChanged(object sender, EventArgs e)
         {
             int cbb_index = ((CBBCtg)cbb_Ctg.SelectedItem).Values;
@@ -177,23 +178,45 @@ namespace CNPM_SE_12.View
 
         private void btn_TamTinh_Click(object sender, EventArgs e)
         {
+            getToTal();
+            txt_Total.Text = total.ToString();
+        }
+        private void getToTal()
+        {
             foreach (DataGridViewRow i in DGV_Show.Rows)
             {
                 int price = Convert.ToInt32(i.Cells["Price"].Value.ToString());
                 int value = Convert.ToInt32(i.Cells["Values"].Value.ToString());
                 total += price * value;
             }
-            txt_Total.Text = total.ToString();
         }
         private void btn_CreateBill_Click(object sender, EventArgs e)
         {
-            Bill f = new Bill(ID_Type, total, tb_Order);
+            getToTal();
+            Bill f = new Bill(ID_User, total, tb_Order);
             f.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void ReadData()
         {
-            pnlShow.Controls.Remove(pnlShow.Controls[0]);
+            string[] lines = File.ReadAllLines(@"E:\Lich.txt");
+
+            foreach (string s in lines)
+            {
+
+            }
+            Console.ReadLine();
+        }
+
+        public void WriteData()
+        {
+            string giatri = Console.ReadLine();
+            String filepath = "E:\\Lich.txt";
+            FileStream fs = new FileStream(filepath, FileMode.Create);
+            StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
+            sWriter.WriteLine();
+            sWriter.Flush();
+            fs.Close();
         }
 
     }

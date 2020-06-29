@@ -13,6 +13,7 @@ namespace CNPM_SE_12.View
 {
     public partial class Bill : Form
     {
+        private string ID_Type;
         private string ID_User;
         private int Total;
         private List<data_Order> list;
@@ -44,7 +45,7 @@ namespace CNPM_SE_12.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("abc");
+            MessageBox.Show("abca");
         }
 
         private void lb_Phone_Click(object sender, EventArgs e)
