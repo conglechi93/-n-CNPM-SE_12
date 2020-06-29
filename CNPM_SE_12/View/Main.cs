@@ -178,16 +178,21 @@ namespace CNPM_SE_12.View
 
         private void btn_TamTinh_Click(object sender, EventArgs e)
         {
+            getToTal();
+            txt_Total.Text = total.ToString();
+        }
+        private void getToTal()
+        {
             foreach (DataGridViewRow i in DGV_Show.Rows)
             {
                 int price = Convert.ToInt32(i.Cells["Price"].Value.ToString());
                 int value = Convert.ToInt32(i.Cells["Values"].Value.ToString());
                 total += price * value;
             }
-            txt_Total.Text = total.ToString();
         }
         private void btn_CreateBill_Click(object sender, EventArgs e)
         {
+            getToTal();
             Bill f = new Bill(ID_User, total, tb_Order);
             f.ShowDialog();
         }
