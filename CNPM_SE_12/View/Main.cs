@@ -13,7 +13,6 @@ namespace CNPM_SE_12.View
 {
     public partial class Main : UserControl
     {
-        private string ID_Type;
         private string ID_User;
         private int total = 0;
         private List<List<Button>> matrix;
@@ -132,7 +131,6 @@ namespace CNPM_SE_12.View
 
         private void ShowOrder(string id_item)
         {
-            //DGV_Show.DataSource = null;
             Item item = BLL.QL_Items_BLL.Instance.getItems_byID_BLL(id_item);
             bool check = true;
             foreach (data_Order i in tb_Order)
@@ -159,6 +157,7 @@ namespace CNPM_SE_12.View
                 }
             }
         }
+        // *****
         private void cbb_Ctg_SelectedIndexChanged(object sender, EventArgs e)
         {
             int cbb_index = ((CBBCtg)cbb_Ctg.SelectedItem).Values;
@@ -192,9 +191,5 @@ namespace CNPM_SE_12.View
             f.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            pnlShow.Controls.Remove(pnlShow.Controls[0]);
-        }
     }
 }
