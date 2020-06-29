@@ -15,7 +15,8 @@ namespace CNPM_SE_12
 {
     public partial class fLogin : Form
     {
-        private string ID_User;
+        private string ID_Account;
+        private string ID_Type;
         public fLogin()
         {
             InitializeComponent();

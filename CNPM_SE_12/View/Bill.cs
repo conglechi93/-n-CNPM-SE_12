@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//ádgas
 namespace CNPM_SE_12.View
 {
     public partial class Bill : Form

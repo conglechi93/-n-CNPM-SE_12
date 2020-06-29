@@ -14,7 +14,8 @@ namespace CNPM_SE_12.View
 {
     public partial class Main : UserControl
     {
-        private string ID_User;
+
+        private string ID_Account;
         private int total = 0;
         private List<List<Button>> matrix;
         private List<data_Order> tb_Order;
@@ -26,9 +27,9 @@ namespace CNPM_SE_12.View
 
         internal List<data_Order> Tb_Order { get => tb_Order; set => tb_Order = value; }
 
-        public Main(string id_user)
+        public Main(string id_account)
         {
-            this.ID_User = id_user;
+            this.ID_Account = id_account;
             tb_Order = new List<data_Order>();
             InitializeComponent();
             //setColumn_DGV();
@@ -197,7 +198,7 @@ namespace CNPM_SE_12.View
         private void btn_CreateBill_Click(object sender, EventArgs e)
         {
             getToTal();
-            Bill f = new Bill(ID_User, total, tb_Order);
+            Bill f = new Bill(ID_Account, total, tb_Order);
             f.ShowDialog();
         }
 
@@ -222,5 +223,6 @@ namespace CNPM_SE_12.View
             sWriter.Flush();
             fs.Close();
         }
+
     }
 }
