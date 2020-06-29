@@ -53,6 +53,7 @@ namespace CNPM_SE_12
         {
             TextBox txt = sender as TextBox;
             txt.Text = "";
+            //vcgncntg
         }
     }
 }
