@@ -132,19 +132,24 @@ namespace CNPM_SE_12.View
 
         private void ShowOrder(string id_item)
         {
+            DGV_Show.DataSource = null;   
             Item item = BLL.QL_Items_BLL.Instance.getItems_byID_BLL(id_item);
+            int dem = Convert.ToInt32(item.Reserve);
             bool check = true;
             foreach (data_Order i in tb_Order)
             {
                 if (i.Items_ID == id_item)
                 {
-                    i.Values++;
+                    if(dem < i .Values + 1)
+                    {
+                        MessageBox.Show(" Hết hàng!");
+                    }
+                    else i.Values++;
                     check = false;
                     break;
                 }
             }
             if (check) tb_Order.Add(new data_Order { Items_ID = item.ID_Items, Items_Name = item.Items_Name, Price = item.Price, Values = 1 });
-            tb_Order.Add(new data_Order { Items_ID = item.ID_Items, Items_Name = item.Items_Name, Price = item.Price, Values = 1 });
             DGV_Show.DataSource = tb_Order;
         }
         private void ClearMatrix()
