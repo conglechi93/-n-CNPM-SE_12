@@ -56,6 +56,7 @@ namespace CNPM_SE_12
         {
             TextBox txt = (TextBox)sender;
             txt.Text = "";
+            //vcgncntg
         }
 
         public void ReadData()
@@ -76,5 +77,9 @@ namespace CNPM_SE_12
             //abcccc
             fs.Close();
         }
+        public testc()
+            {
+            //khdaskjdhasdjah
+            }
     }
 }
