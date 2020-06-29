@@ -62,6 +62,7 @@ namespace CNPM_SE_12
         {
             string[] lines = File.ReadAllLines(@"E:\Lich.txt");
             Console.ReadLine();
+            //
         }
 
         public void WriteData()
