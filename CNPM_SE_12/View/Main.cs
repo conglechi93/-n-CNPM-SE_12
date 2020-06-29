@@ -163,7 +163,6 @@ namespace CNPM_SE_12.View
                 }
             }
         }
-        // *****
         private void cbb_Ctg_SelectedIndexChanged(object sender, EventArgs e)
         {
             int cbb_index = ((CBBCtg)cbb_Ctg.SelectedItem).Values;
