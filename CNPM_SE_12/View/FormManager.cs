@@ -51,7 +51,7 @@ namespace CNPM_SE_12.View
             }
             if (btn.Tag.ToString() == "2")
             {
-                OpenChildForm(new QL_Items(ID_Type));
+                OpenChildForm(new QL_Item());
             }
             if (btn.Tag.ToString() == "3")
             {
