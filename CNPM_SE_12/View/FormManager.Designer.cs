@@ -120,7 +120,7 @@
             // btnQ
             // 
             this.btnQ.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQ.Location = new System.Drawing.Point(9, 71);
+            this.btnQ.Location = new System.Drawing.Point(9, 88);
             this.btnQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQ.Name = "btnQ";
             this.btnQ.Size = new System.Drawing.Size(55, 53);
@@ -332,7 +332,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(69, 4);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(224, 181);
+            this.pictureBox2.Size = new System.Drawing.Size(224, 137);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;

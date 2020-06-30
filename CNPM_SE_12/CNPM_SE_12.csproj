@@ -119,6 +119,12 @@
     <Compile Include="View\ChangePass_NV.Designer.cs">
       <DependentUpon>ChangePass_NV.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\CreateAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CreateAccount.Designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>

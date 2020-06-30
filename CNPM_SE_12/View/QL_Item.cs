@@ -63,7 +63,6 @@ namespace CNPM_SE_12.View
             }
 
         }
-
         private void Add_Ctg()
         {
             AU_Category f = new AU_Category("");
@@ -75,6 +74,57 @@ namespace CNPM_SE_12.View
             AU_Items f = new AU_Items("");
             f.D += new AU_Items.Mydel(ShowItems);
             f.ShowDialog();
+        }
+
+        private void Edit_Ctg()
+        {
+            DataGridViewSelectedRowCollection r = DGV_Show.SelectedRows;
+            if (r.Count == 1)
+            {
+                string id_ctg = r[0].Cells["Mã loại hàng"].Value.ToString();
+                AU_Category f = new AU_Category(id_ctg);
+                f.D += new AU_Category.Mydel(ShowCtg);
+                f.ShowDialog();
+            }
+        }
+
+        private void Edit_Items()
+        {
+            DataGridViewSelectedRowCollection r = DGV_Show.SelectedRows;
+            if (r.Count == 1)
+            {
+                string id_item = r[0].Cells["Mã sản phẩm"].Value.ToString();
+                AU_Items f = new AU_Items(id_item);
+                f.D += new AU_Items.Mydel(ShowItems);
+                f.ShowDialog();
+            }
+        }
+
+        private void Del_Ctg()
+        {
+            DataGridViewSelectedRowCollection r = DGV_Show.SelectedRows;
+            if (BLL.QL_Items_BLL.Instance.delCatg_BLL(r))
+            {
+                ShowItems();
+                MessageBox.Show("Xóa thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại !");
+            }
+        }
+        private void Del_Items()
+        {
+            DataGridViewSelectedRowCollection r = DGV_Show.SelectedRows;
+            if (BLL.QL_Items_BLL.Instance.delItems_BLL(r))
+            {
+                ShowItems();
+                MessageBox.Show("Xóa thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Xóa thất bại !");
+            }
         }
         private void Fill_Ctg()
         {
@@ -146,6 +196,18 @@ namespace CNPM_SE_12.View
         {
             if (tab_Main.SelectedIndex.ToString() == "0") Add_Ctg();
             else Add_Items();
+        }
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+            if (tab_Main.SelectedIndex.ToString() == "0") Edit_Ctg();
+            else Edit_Items();
+        }
+
+        private void btn_Del_Click(object sender, EventArgs e)
+        {
+            if (tab_Main.SelectedIndex.ToString() == "0") Del_Ctg();
+            else Del_Items();
         }
     }
 }

@@ -77,15 +77,12 @@ namespace CNPM_SE_12
                 txt_User.Text = "User name";
             }
         }
-        private void MousClick(object sender, MouseEventArgs e)
-        {
-            TextBox txt = (TextBox)sender;
-            if(txt.Text == "User name" || txt.Text == "Pass word")
-            {
-                txt.Text = "";
-            }    
-        }
-
+  
+        //TextBox txt = (TextBox)sender;
+        //    if(txt.Text == "User name" || txt.Text == "Pass word")
+        //    {
+        //        txt.Text = "";
+        //    }
         private void txt_Pass_Leave(object sender, EventArgs e)
         {
             if (txt_Pass.Text == "")
@@ -114,6 +111,27 @@ namespace CNPM_SE_12
         private void btnCancle_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtUser_Click(object sender, EventArgs e)
+        {
+            if (txt_User.Text == "User name")
+            {
+                txt_User.Text = "";
+            }
+        }
+
+        private void txt_Pass_Click(object sender, EventArgs e)
+        {
+            if (txt_Pass.Text == "User name")
+            {
+                txt_Pass.Text = "";
+            }
+        }
+
+        private void btn_Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
