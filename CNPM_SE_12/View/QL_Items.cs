@@ -66,6 +66,7 @@ namespace CNPM_SE_12.View
         }
         private void ShowCtg()
         {
+            
             DGV_Items.DataSource = null;
             DGV_Items.ColumnCount = 2;
             DGV_Items.Columns[0].Name = "Mã loại hàng";
@@ -88,14 +89,21 @@ namespace CNPM_SE_12.View
         private void btnDel_Ctg_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection r = DGV_Items.SelectedRows;
-            if (BLL.QL_Items_BLL.Instance.delItems_BLL(r))
+            if(DGV_Items.Columns.Count > 2)
             {
-                ShowDGV();
-                MessageBox.Show("Xóa thành công !");
+                MessageBox.Show("Phải chọn ở bảng Category nghe!");
             }
             else
             {
-                MessageBox.Show("Xóa thất bại !");
+                if (BLL.QL_Items_BLL.Instance.delCatg_BLL(r))
+                {
+                    ShowCtg();
+                    MessageBox.Show("Xóa thành công !");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại !");
+                }
             }
         }
 
@@ -104,7 +112,7 @@ namespace CNPM_SE_12.View
             DataGridViewSelectedRowCollection r = DGV_Items.SelectedRows;
             if (r.Count == 1)
             {
-                string id_ctg = r[0].Cells["ID_Category"].Value.ToString();
+                string id_ctg = r[0].Cells["Mã loại hàng"].Value.ToString();
                 AU_Category f = new AU_Category(id_ctg);
                 f.D += new AU_Category.Mydel(ShowCtg);
                 f.ShowDialog();
@@ -122,11 +130,35 @@ namespace CNPM_SE_12.View
 
         private void btnUpdate_Items_Click(object sender, EventArgs e)
         {
-
+            DataGridViewSelectedRowCollection r = DGV_Items.SelectedRows;
+            if (r.Count == 1)
+            {
+                string id_item = r[0].Cells["Mã sản phẩm"].Value.ToString();
+                AU_Items f = new AU_Items(id_item);
+                f.D += new AU_Items.Mydel(ShowDGV);
+                f.ShowDialog();
+            }
         }
 
         private void btnDel_Items_Click(object sender, EventArgs e)
         {
+            DataGridViewSelectedRowCollection r = DGV_Items.SelectedRows;
+            if (DGV_Items.Columns.Count < 4)
+            {
+                MessageBox.Show("Phải chọn ở bảng Items nghe!");
+            }
+            else
+            {
+                if (BLL.QL_Items_BLL.Instance.delItems_BLL(r))
+                {
+                    ShowDGV();
+                    MessageBox.Show("Xóa thành công !");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại !");
+                }
+            }
 
         }
 

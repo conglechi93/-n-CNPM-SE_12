@@ -186,6 +186,12 @@
     <Compile Include="View\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\QL_Item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\QL_Item.Designer.cs">
+      <DependentUpon>QL_Item.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\QL_Items.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     <EmbeddedResource Include="View\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\QL_Item.resx">
+      <DependentUpon>QL_Item.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\QL_Items.resx">
       <DependentUpon>QL_Items.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,7 +286,7 @@
       <DependentUpon>DB_SE12.edmx</DependentUpon>
       <LastGenOutput>DB_SE12.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\bakery-black-and-white-2.jpg" />
+    <None Include="Resources\stone-oven_8-18-2018_1230.jpg" />
     <None Include="Resources\FormManager_QL_Account.jpg" />
     <None Include="Resources\FormManager_Feedback.jpg" />
     <None Include="Resources\FormManager_DiemDanh.png" />

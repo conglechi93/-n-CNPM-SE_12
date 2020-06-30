@@ -110,6 +110,22 @@ namespace CNPM_SE_12.BLL
             }
         }
 
+        public bool Add_Items_BLL(Item item)
+        {
+            try
+            {
+                SE_12Entities db = new SE_12Entities();
+                db.Items.Add(item);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+
+            }
+        }
         public bool Edit_Ctg_BLL(string Ctg_ID, string Ctg_Name)
         {
             try
@@ -132,7 +148,66 @@ namespace CNPM_SE_12.BLL
                 return false;
             }
         }
+        public bool Edit_Items_BLL(string id_item, string nameitems, string price, string number, string category)
+        {
+            try
+            {
+                string status = "Còn hàng";
+                if (number == "0")
+                {
+                    status = "Hết hàng";
+                }
+                SE_12Entities db = new SE_12Entities();
+                Item item = new Item()
+                {
+                    ID_Items = id_item,
+                    Items_Name = nameitems,
+                    Price = Convert.ToInt32(price),
+                    Reserve = Convert.ToInt32(number),
+                    Status = status,
+                    ID_Category = (Convert.ToInt32(category) + 1).ToString(),
+                };
+                Item item_clone = db.Items.Where(p => p.ID_Items == id_item).FirstOrDefault();
+                item_clone.ID_Items = item.ID_Items;
+                item_clone.Items_Name = item.Items_Name;
+                item_clone.Price = item.Price;
+                item_clone.Reserve = item.Reserve;
+                item_clone.Status = item.Status;
+                item_clone.ID_Category = item.ID_Category;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+        }
 
+        public bool delCatg_BLL(DataGridViewSelectedRowCollection r)
+        {
+            try
+            {
+                SE_12Entities db = new SE_12Entities();
+                foreach (Category i in db.Categories)
+                {
+                    foreach (DataGridViewRow j in r)
+                    {
+                        if (i.ID_Category == j.Cells["Mã loại hàng"].Value.ToString())
+                        {
+                            db.Categories.Remove(i);
+                        }
+                    }
+                }
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+        }
         public bool delItems_BLL(DataGridViewSelectedRowCollection r)
         {
             try
@@ -142,7 +217,7 @@ namespace CNPM_SE_12.BLL
                 {
                     foreach (DataGridViewRow j in r)
                     {
-                        if (i.ID_Items == j.Cells["ID_Items"].Value.ToString())
+                        if (i.ID_Items == j.Cells["Mã sản phẩm"].Value.ToString())
                         {
                             db.Items.Remove(i);
                         }

@@ -18,6 +18,7 @@ namespace CNPM_SE_12.View
         {
             if(id_type == "1")
             {
+                ID_Type = id_type;
                 InitializeComponent();
             }
             else
