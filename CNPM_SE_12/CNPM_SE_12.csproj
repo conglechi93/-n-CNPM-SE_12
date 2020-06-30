@@ -58,6 +58,7 @@
     <Compile Include="BLL\Login_BLL.cs" />
     <Compile Include="BLL\QL_Account_BLL.cs" />
     <Compile Include="BLL\QL_Items_BLL.cs" />
+    <Compile Include="BLL\QL_Payment.cs" />
     <Compile Include="BLL\QL_User_BLL.cs" />
     <Compile Include="Cons.cs" />
     <Compile Include="DTO\Account.cs">
@@ -93,9 +94,6 @@
       <DependentUpon>DB_SE12.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\Order.cs">
-      <DependentUpon>DB_SE12.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DTO\QL_Payment.cs">
       <DependentUpon>DB_SE12.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\QL_WDay.cs">
@@ -282,16 +280,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DTO\DB_SE12.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DB_SE12.edmx</DependentUpon>
-      <LastGenOutput>DB_SE12.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DTO\DB_SE12.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DB_SE12.edmx</DependentUpon>
-      <LastGenOutput>DB_SE12.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\stone-oven_8-18-2018_1230.jpg" />
     <None Include="Resources\FormManager_QL_Account.jpg" />
     <None Include="Resources\FormManager_Feedback.jpg" />
@@ -308,6 +296,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DTO\DB_SE12.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_SE12.edmx</DependentUpon>
+      <LastGenOutput>DB_SE12.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DTO\DB_SE12.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_SE12.edmx</DependentUpon>
+      <LastGenOutput>DB_SE12.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
