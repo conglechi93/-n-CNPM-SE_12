@@ -104,7 +104,7 @@ namespace CNPM_SE_12.View
             DataGridViewSelectedRowCollection r = DGV_Items.SelectedRows;
             if (r.Count == 1)
             {
-                string id_ctg = r[0].Cells["ID_Category"].Value.ToString();
+                string id_ctg = r[0].Cells["Mã loại hàng"].Value.ToString();
                 AU_Category f = new AU_Category(id_ctg);
                 f.D += new AU_Category.Mydel(ShowCtg);
                 f.ShowDialog();
@@ -122,7 +122,14 @@ namespace CNPM_SE_12.View
 
         private void btnUpdate_Items_Click(object sender, EventArgs e)
         {
-
+            DataGridViewSelectedRowCollection r = DGV_Items.SelectedRows;
+            if (r.Count == 1)
+            {
+                string id_item = r[0].Cells["Mã sản phẩm"].Value.ToString();
+                AU_Items f = new AU_Items(id_item);
+                f.D += new AU_Items.Mydel(ShowDGV);
+                f.ShowDialog();
+            }
         }
 
         private void btnDel_Items_Click(object sender, EventArgs e)

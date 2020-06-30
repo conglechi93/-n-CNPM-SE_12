@@ -133,6 +133,42 @@ namespace CNPM_SE_12.BLL
             }
         }
 
+        public bool Edit_Items_BLL(string id_Item, string nameItems, string price, string number, string category)
+        {
+            try
+            {
+                string status = "Còn hàng";
+                if (number == "0")
+                {
+                    status = "Hết hàng";
+                }
+                SE_12Entities db = new SE_12Entities();
+                Item item = new Item()
+                {
+                    ID_Items = id_Item,
+                    Items_Name = nameItems,
+                    Price = Convert.ToInt32(price),
+                    Reserve = Convert.ToInt32(number),
+                    Status = status,
+                    ID_Category = (Convert.ToInt32(category) + 1).ToString(),
+                };
+                Item item_clone = db.Items.Where(p => p.ID_Items == id_Item).FirstOrDefault();
+                item_clone.ID_Items = item.ID_Items;
+                item_clone.Items_Name = item.Items_Name;
+                item_clone.Price = item.Price;
+                item_clone.Reserve = item.Reserve;
+                item_clone.Status = item.Status;
+                item_clone.ID_Category = item.ID_Category;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+        }
+
         public bool delItems_BLL(DataGridViewSelectedRowCollection r)
         {
             try

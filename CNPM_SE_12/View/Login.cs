@@ -61,7 +61,7 @@ namespace CNPM_SE_12
         }
         public void ReadData()
         {
-            string[] lines = File.ReadAllLines(@"E:\check.txt");
+            string[] lines = File.ReadAllLines(@"D:\check.txt");
 
             if (lines[0] == "true")
             {
@@ -74,7 +74,7 @@ namespace CNPM_SE_12
 
         public void WriteData(string us,string pass)
         {
-            String filepath = "E:\\check.txt";
+            String filepath = "D:\\check.txt";
             FileStream fs = new FileStream(filepath, FileMode.Create);
             StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
             if (cb_Rmb.Checked == true)
