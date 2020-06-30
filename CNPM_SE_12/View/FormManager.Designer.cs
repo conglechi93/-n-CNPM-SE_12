@@ -30,10 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManager));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnOut = new System.Windows.Forms.Button();
             this.pnl_Menu = new System.Windows.Forms.Panel();
             this.pnl_ButtonMenu = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnl_ShowForm = new System.Windows.Forms.Panel();
+            this.lbTieuDe = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.X = new System.Windows.Forms.Label();
             this.btn_DiemDanh = new System.Windows.Forms.Button();
             this.btn_GopY = new System.Windows.Forms.Button();
             this.btn_QLDoanhThu = new System.Windows.Forms.Button();
@@ -41,42 +46,26 @@
             this.btn_QLTaiKhoan = new System.Windows.Forms.Button();
             this.btn_Main = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnQ = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pnl_ShowForm = new System.Windows.Forms.Panel();
-            this.lbTieuDe = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.X = new System.Windows.Forms.Label();
             this.pnl_Menu.SuspendLayout();
             this.pnl_ButtonMenu.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1024, 24);
-            this.menuStrip1.TabIndex = 0;
             // 
             // btnOut
             // 
-            this.btnOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOut.Location = new System.Drawing.Point(170, 2);
+            this.btnOut.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOut.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOut.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnOut.Location = new System.Drawing.Point(898, 7);
             this.btnOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(101, 24);
+            this.btnOut.Size = new System.Drawing.Size(115, 27);
             this.btnOut.TabIndex = 2;
             this.btnOut.Text = "Đăng xuất";
-            this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.UseVisualStyleBackColor = false;
             // 
             // pnl_Menu
             // 
@@ -84,10 +73,10 @@
             this.pnl_Menu.Controls.Add(this.pnl_ButtonMenu);
             this.pnl_Menu.Controls.Add(this.panel4);
             this.pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_Menu.Location = new System.Drawing.Point(0, 24);
+            this.pnl_Menu.Location = new System.Drawing.Point(0, 0);
             this.pnl_Menu.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Menu.Name = "pnl_Menu";
-            this.pnl_Menu.Size = new System.Drawing.Size(231, 507);
+            this.pnl_Menu.Size = new System.Drawing.Size(231, 531);
             this.pnl_Menu.TabIndex = 3;
             // 
             // pnl_ButtonMenu
@@ -99,11 +88,60 @@
             this.pnl_ButtonMenu.Controls.Add(this.btn_QLTaiKhoan);
             this.pnl_ButtonMenu.Controls.Add(this.btn_Main);
             this.pnl_ButtonMenu.Controls.Add(this.btnSetting);
-            this.pnl_ButtonMenu.Location = new System.Drawing.Point(2, 184);
+            this.pnl_ButtonMenu.Location = new System.Drawing.Point(2, 211);
             this.pnl_ButtonMenu.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_ButtonMenu.Name = "pnl_ButtonMenu";
             this.pnl_ButtonMenu.Size = new System.Drawing.Size(226, 301);
             this.pnl_ButtonMenu.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(226, 204);
+            this.panel4.TabIndex = 0;
+            // 
+            // pnl_ShowForm
+            // 
+            this.pnl_ShowForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_ShowForm.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnl_ShowForm.Location = new System.Drawing.Point(229, 53);
+            this.pnl_ShowForm.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl_ShowForm.Name = "pnl_ShowForm";
+            this.pnl_ShowForm.Size = new System.Drawing.Size(797, 478);
+            this.pnl_ShowForm.TabIndex = 4;
+            // 
+            // lbTieuDe
+            // 
+            this.lbTieuDe.AutoSize = true;
+            this.lbTieuDe.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTieuDe.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lbTieuDe.Location = new System.Drawing.Point(238, 0);
+            this.lbTieuDe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTieuDe.Name = "lbTieuDe";
+            this.lbTieuDe.Size = new System.Drawing.Size(0, 29);
+            this.lbTieuDe.TabIndex = 0;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // X
+            // 
+            this.X.AutoSize = true;
+            this.X.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.X.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.X.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.X.Location = new System.Drawing.Point(725, 11);
+            this.X.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.X.Name = "X";
+            this.X.Size = new System.Drawing.Size(150, 18);
+            this.X.TabIndex = 3;
+            this.X.Text = "Welcome Minh Huan!";
             // 
             // btn_DiemDanh
             // 
@@ -245,109 +283,28 @@
             this.btnSetting.UseVisualStyleBackColor = false;
             this.btnSetting.Click += new System.EventHandler(this.MenuClick);
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Controls.Add(this.btnQ);
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(226, 176);
-            this.panel4.TabIndex = 0;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CNPM_SE_12.Properties.Resources.login_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(52, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(-3, 3);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(168, 147);
+            this.pictureBox2.Size = new System.Drawing.Size(229, 201);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnQ
-            // 
-            this.btnQ.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQ.Location = new System.Drawing.Point(7, 58);
-            this.btnQ.Margin = new System.Windows.Forms.Padding(2);
-            this.btnQ.Name = "btnQ";
-            this.btnQ.Size = new System.Drawing.Size(41, 43);
-            this.btnQ.TabIndex = 0;
-            this.btnQ.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(7, 3);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(41, 43);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "≡";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // pnl_ShowForm
-            // 
-            this.pnl_ShowForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_ShowForm.Location = new System.Drawing.Point(236, 43);
-            this.pnl_ShowForm.Margin = new System.Windows.Forms.Padding(2);
-            this.pnl_ShowForm.Name = "pnl_ShowForm";
-            this.pnl_ShowForm.Size = new System.Drawing.Size(787, 477);
-            this.pnl_ShowForm.TabIndex = 4;
-            // 
-            // lbTieuDe
-            // 
-            this.lbTieuDe.AutoSize = true;
-            this.lbTieuDe.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTieuDe.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lbTieuDe.Location = new System.Drawing.Point(238, 0);
-            this.lbTieuDe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbTieuDe.Name = "lbTieuDe";
-            this.lbTieuDe.Size = new System.Drawing.Size(29, 29);
-            this.lbTieuDe.TabIndex = 0;
-            this.lbTieuDe.Text = "X";
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.X);
-            this.panel1.Controls.Add(this.btnOut);
-            this.panel1.Location = new System.Drawing.Point(740, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(285, 30);
-            this.panel1.TabIndex = 5;
-            // 
-            // X
-            // 
-            this.X.AutoSize = true;
-            this.X.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.X.Location = new System.Drawing.Point(2, 4);
-            this.X.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.X.Name = "X";
-            this.X.Size = new System.Drawing.Size(65, 18);
-            this.X.TabIndex = 3;
-            this.X.Text = "lbName";
             // 
             // FormManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CNPM_SE_12.Properties.Resources.bakery_black_and_white_2;
             this.ClientSize = new System.Drawing.Size(1024, 531);
+            this.Controls.Add(this.btnOut);
+            this.Controls.Add(this.X);
             this.Controls.Add(this.lbTieuDe);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnl_ShowForm);
             this.Controls.Add(this.pnl_Menu);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.pnl_ShowForm);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormManager";
             this.Text = "Quản lí tiệm bánh mỳ";
@@ -355,16 +312,12 @@
             this.pnl_ButtonMenu.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button btnOut;
         private System.Windows.Forms.Panel pnl_Menu;
         private System.Windows.Forms.Panel pnl_ShowForm;
@@ -373,11 +326,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnQ;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btn_NVManager;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbTieuDe;
         private System.Windows.Forms.Button btn_QLDoanhThu;
         private System.Windows.Forms.Button btn_QLTaiKhoan;

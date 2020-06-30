@@ -274,6 +274,7 @@
       <DependentUpon>DB_SE12.edmx</DependentUpon>
       <LastGenOutput>DB_SE12.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\bakery-black-and-white-2.jpg" />
     <None Include="Resources\FormManager_QL_Account.jpg" />
     <None Include="Resources\FormManager_Feedback.jpg" />
     <None Include="Resources\FormManager_DiemDanh.png" />

@@ -118,20 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="login_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login_logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FormManager_QL_NhanVien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FormManager_QL_NhanVien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FormManager_DiemDanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FormManager_DiemDanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FormManager_Feedback" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FormManager_Feedback.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FormManager_QL_DoangThu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FormManager_QL_DoangThu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login_username" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login_username.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="login_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FormManager_QL_Items" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FormManager_QL_Items.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,19 +136,25 @@
   <data name="Logo_Chinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo_Chinh.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FormManager_Feedback" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FormManager_Feedback.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FormManager_Order" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FormManager_Order.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login_pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_pass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FormManager_QL_NhanVien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FormManager_QL_NhanVien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FormManager_QL_Account" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FormManager_QL_Account.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_username" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login_username.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bakery-black-and-white-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bakery-black-and-white-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_Slogan = new System.Windows.Forms.Label();
             this.lb_Adress = new System.Windows.Forms.Label();
             this.lb_Phone = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_GiamGia = new System.Windows.Forms.Label();
@@ -43,20 +45,16 @@
             this.lb_Time = new System.Windows.Forms.Label();
             this.lb_BillID = new System.Windows.Forms.Label();
             this.lb_UserID = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.lb_Slogan);
-            this.panel1.Controls.Add(this.lb_Adress);
-            this.panel1.Controls.Add(this.lb_Phone);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -68,12 +66,12 @@
             // lb_Slogan
             // 
             this.lb_Slogan.AutoSize = true;
-            this.lb_Slogan.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Slogan.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Slogan.ForeColor = System.Drawing.Color.Navy;
-            this.lb_Slogan.Location = new System.Drawing.Point(220, 46);
+            this.lb_Slogan.Location = new System.Drawing.Point(204, 46);
             this.lb_Slogan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Slogan.Name = "lb_Slogan";
-            this.lb_Slogan.Size = new System.Drawing.Size(241, 25);
+            this.lb_Slogan.Size = new System.Drawing.Size(336, 32);
             this.lb_Slogan.TabIndex = 1;
             this.lb_Slogan.Text = "HÓA ĐƠN THANH TOÁN";
             // 
@@ -82,7 +80,7 @@
             this.lb_Adress.AutoSize = true;
             this.lb_Adress.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Adress.ForeColor = System.Drawing.Color.Black;
-            this.lb_Adress.Location = new System.Drawing.Point(342, 114);
+            this.lb_Adress.Location = new System.Drawing.Point(338, 7);
             this.lb_Adress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Adress.Name = "lb_Adress";
             this.lb_Adress.Size = new System.Drawing.Size(249, 15);
@@ -94,32 +92,36 @@
             this.lb_Phone.AutoSize = true;
             this.lb_Phone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Phone.ForeColor = System.Drawing.Color.Black;
-            this.lb_Phone.Location = new System.Drawing.Point(32, 114);
+            this.lb_Phone.Location = new System.Drawing.Point(433, 29);
             this.lb_Phone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Phone.Name = "lb_Phone";
-            this.lb_Phone.Size = new System.Drawing.Size(152, 15);
+            this.lb_Phone.Size = new System.Drawing.Size(154, 15);
             this.lb_Phone.TabIndex = 1;
-            this.lb_Phone.Text = "Số điện thoại: 0000000abc";
+            this.lb_Phone.Text = "Số điện thoại: 0362704282";
             this.lb_Phone.Click += new System.EventHandler(this.lb_Phone_Click);
             // 
-            // button1
+            // pictureBox1
             // 
-            this.button1.Location = new System.Drawing.Point(535, 11);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 50);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = global::CNPM_SE_12.Properties.Resources.login_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(133, 116);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.lb_Phone);
+            this.panel2.Controls.Add(this.lb_Time);
+            this.panel2.Controls.Add(this.lb_Adress);
             this.panel2.Controls.Add(this.btn_ThanhToan);
             this.panel2.Controls.Add(this.DGV_Show);
-            this.panel2.Controls.Add(this.lb_Time);
             this.panel2.Controls.Add(this.lb_BillID);
             this.panel2.Controls.Add(this.lb_UserID);
-            this.panel2.Location = new System.Drawing.Point(2, 129);
+            this.panel2.Location = new System.Drawing.Point(2, 124);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(595, 284);
@@ -191,7 +193,23 @@
             // DGV_Show
             // 
             this.DGV_Show.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_Show.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_Show.DefaultCellStyle = dataGridViewCellStyle8;
             this.DGV_Show.Location = new System.Drawing.Point(19, 54);
             this.DGV_Show.Margin = new System.Windows.Forms.Padding(2);
             this.DGV_Show.Name = "DGV_Show";
@@ -205,7 +223,7 @@
             this.lb_Time.AutoSize = true;
             this.lb_Time.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Time.ForeColor = System.Drawing.Color.Black;
-            this.lb_Time.Location = new System.Drawing.Point(18, 33);
+            this.lb_Time.Location = new System.Drawing.Point(18, 7);
             this.lb_Time.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Time.Name = "lb_Time";
             this.lb_Time.Size = new System.Drawing.Size(86, 15);
@@ -217,35 +235,24 @@
             this.lb_BillID.AutoSize = true;
             this.lb_BillID.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_BillID.ForeColor = System.Drawing.Color.Black;
-            this.lb_BillID.Location = new System.Drawing.Point(400, 12);
+            this.lb_BillID.Location = new System.Drawing.Point(18, 37);
             this.lb_BillID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_BillID.Name = "lb_BillID";
-            this.lb_BillID.Size = new System.Drawing.Size(78, 15);
+            this.lb_BillID.Size = new System.Drawing.Size(88, 15);
             this.lb_BillID.TabIndex = 0;
-            this.lb_BillID.Text = "Mã hoá đơn: ";
+            this.lb_BillID.Text = "Mã hoá đơn:  1";
             // 
             // lb_UserID
             // 
             this.lb_UserID.AutoSize = true;
             this.lb_UserID.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_UserID.ForeColor = System.Drawing.Color.Black;
-            this.lb_UserID.Location = new System.Drawing.Point(18, 12);
+            this.lb_UserID.Location = new System.Drawing.Point(18, 22);
             this.lb_UserID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_UserID.Name = "lb_UserID";
-            this.lb_UserID.Size = new System.Drawing.Size(87, 15);
+            this.lb_UserID.Size = new System.Drawing.Size(97, 15);
             this.lb_UserID.TabIndex = 0;
-            this.lb_UserID.Text = "Mã nhân viên: ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CNPM_SE_12.Properties.Resources.login_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.lb_UserID.Text = "Mã nhân viên: 1 ";
             // 
             // Bill
             // 
@@ -261,12 +268,12 @@
             this.Load += new System.EventHandler(this.Bill_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -274,7 +281,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lb_Slogan;
         private System.Windows.Forms.Label lb_Adress;

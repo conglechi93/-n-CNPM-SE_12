@@ -19,7 +19,6 @@ namespace CNPM_SE_12.View
             if(id_type == "1")
             {
                 InitializeComponent();
-                ShowDGV();
             }
             else
             {
@@ -27,11 +26,6 @@ namespace CNPM_SE_12.View
             }
 
         }
-        public void ShowDGV()
-        {
-            dtg.DataSource = BLL.QL_Account_BLL.Instance.getAccount_BLL().Select(p => new { p.ID_Account, p.Login, p.PassWord, p.ID_Type }).ToList();
-        }
-
         private void Btn_Search_Click(object sender, EventArgs e)
         {
             dtg.DataSource = BLL.QL_Account_BLL.Instance.Search_BLL(txt_MaNhanVien.Text).Select(p => new { p.ID_Account, p.Login, p.PassWord, p.ID_Type }).ToList();
@@ -76,7 +70,6 @@ namespace CNPM_SE_12.View
             {
                 MessageBox.Show("Update PassWord thất bại!");
             }
-            ShowDGV();
         }
     }
 }

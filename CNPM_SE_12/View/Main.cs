@@ -87,6 +87,10 @@ namespace CNPM_SE_12.View
                         btn.Name = "abc";
                         btn.Text = item[index].Items_Name;
                         btn.Tag = item[index].ID_Items;
+                        btn.ForeColor = Color.Black;
+                        btn.BackColor = Color.LightGray;
+                        btn.Font = new Font("Cambria", 8);
+                        //btn.FlatStyle = FlatStyle.Flat;
                         index++;
                     }
                     else break;

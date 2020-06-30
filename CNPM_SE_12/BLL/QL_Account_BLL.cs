@@ -26,10 +26,10 @@ namespace CNPM_SE_12.BLL
         {
 
         }
-        public List<Account> getAccount_BLL()
+        public List<QL_Payment> getAccount_BLL()
         {
             SE_12Entities db = new SE_12Entities();
-            List<Account> account = db.Accounts.Select(p => p).ToList();
+            List<QL_Payment> account = db.QL_Payment.Select(p => p).ToList();
             return account;
         }
 
