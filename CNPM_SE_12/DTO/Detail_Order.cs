@@ -16,10 +16,8 @@ namespace CNPM_SE_12.DTO
     {
         public int ID_DetailOrder { get; set; }
         public string ID_Items { get; set; }
-        public int Price { get; set; }
         public string Amount { get; set; }
-        public System.DateTime Order_Time { get; set; }
-        public string ID_Order { get; set; }
+        public int ID_Order { get; set; }
     
         public virtual Item Item { get; set; }
         public virtual Order Order { get; set; }

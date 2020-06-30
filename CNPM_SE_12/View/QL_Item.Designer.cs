@@ -309,6 +309,7 @@
             this.btn_Edit.TabIndex = 0;
             this.btn_Edit.Text = "Cập nhật";
             this.btn_Edit.UseVisualStyleBackColor = true;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // btn_Del
             // 
@@ -318,6 +319,7 @@
             this.btn_Del.TabIndex = 0;
             this.btn_Del.Text = "Xóa";
             this.btn_Del.UseVisualStyleBackColor = true;
+            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // btn_Show
             // 

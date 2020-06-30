@@ -30,7 +30,7 @@ namespace CNPM_SE_12.View
 
         public Main(string id_account)
         {
-            this.ID_Account = id_account;
+            ID_Account = id_account;
             tb_Order = new List<data_Order>();
             InitializeComponent();
             //setColumn_DGV();
@@ -220,9 +220,22 @@ namespace CNPM_SE_12.View
         {
             getToTal();
             Bill f = new Bill(ID_Account, total, tb_Order);
+            f.D += new Bill.mydel(clear_DGV);
             f.ShowDialog();
         }
 
+        private void clear_DGV()
+        {
+            DGV_Show.DataSource = null;
+            while (DGV_Show.Columns.Count > 0)
+            {
+                DGV_Show.Columns.RemoveAt(0);
+            }
+            while (DGV_Show.Rows.Count > 1)
+            {
+                DGV_Show.Rows.RemoveAt(0);
+            }
+        }    
         private void ShowDGV(List<data_Order> da_O)
         {
 

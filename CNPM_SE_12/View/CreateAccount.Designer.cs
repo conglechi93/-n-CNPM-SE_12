@@ -1,6 +1,6 @@
 ﻿namespace CNPM_SE_12.View
 {
-    partial class ChangePass_NV
+    partial class CreateAccount
     {
         /// <summary>
         /// Required designer variable.
@@ -63,7 +63,6 @@
             this.btn_Save.TabIndex = 8;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
-            this.btn_Save.Click += new System.EventHandler(this.Btn_Save_Click);
             // 
             // txt_NewPass
             // 

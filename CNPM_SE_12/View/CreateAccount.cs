@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CNPM_SE_12.View
 {
-    public partial class FB_User : UserControl
+    public partial class CreateAccount : UserControl
     {
-        public FB_User()
+        public CreateAccount()
         {
             InitializeComponent();
         }
