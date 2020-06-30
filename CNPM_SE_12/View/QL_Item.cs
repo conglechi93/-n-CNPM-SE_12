@@ -19,7 +19,7 @@ namespace CNPM_SE_12.View
             InitializeComponent();
         }
 
-        private void ShowDGV()
+        private void ShowItems()
         {
             clear_DGV();
             DGV_Show.ColumnCount = 6;
@@ -66,11 +66,15 @@ namespace CNPM_SE_12.View
 
         private void Add_Ctg()
         {
-
+            AU_Category f = new AU_Category("");
+            f.D += new AU_Category.Mydel(ShowCtg);
+            f.ShowDialog();
         }
         private void Add_Items()
         {
-
+            AU_Items f = new AU_Items("");
+            f.D += new AU_Items.Mydel(ShowItems);
+            f.ShowDialog();
         }
         private void Fill_Ctg()
         {
@@ -116,12 +120,14 @@ namespace CNPM_SE_12.View
         private void btn_Show_Click(object sender, EventArgs e)
         {
             if (tab_Main.SelectedIndex.ToString() == "0") ShowCtg();
-            else ShowDGV();
+            else ShowItems();
         }
 
         private void tab_Main_SelectedIndexChanged(object sender, EventArgs e)
         {
             clear_DGV();
+            if (tab_Main.SelectedIndex.ToString() == "0") ShowCtg();
+            else ShowItems();
         }
 
         private void DGV_Show_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -138,8 +144,8 @@ namespace CNPM_SE_12.View
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            if (tab_Main.SelectedIndex.ToString() == "0") ShowCtg();
-            else ShowDGV();
+            if (tab_Main.SelectedIndex.ToString() == "0") Add_Ctg();
+            else Add_Items();
         }
     }
 }

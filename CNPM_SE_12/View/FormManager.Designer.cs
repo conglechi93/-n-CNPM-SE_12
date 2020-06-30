@@ -40,7 +40,6 @@
             this.pnl_ShowForm = new System.Windows.Forms.Panel();
             this.lbTieuDe = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.W = new System.Windows.Forms.Label();
             this.btn_DiemDanh = new System.Windows.Forms.Button();
@@ -51,6 +50,7 @@
             this.btn_Main = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnl_Menu.SuspendLayout();
             this.pnl_ButtonMenu.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -64,7 +64,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1365, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1390, 24);
             this.menuStrip1.TabIndex = 0;
             // 
             // btnOut
@@ -142,10 +142,10 @@
             // 
             this.pnl_ShowForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_ShowForm.BackColor = System.Drawing.Color.White;
-            this.pnl_ShowForm.Location = new System.Drawing.Point(315, 53);
+            this.pnl_ShowForm.Location = new System.Drawing.Point(323, 53);
             this.pnl_ShowForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl_ShowForm.Name = "pnl_ShowForm";
-            this.pnl_ShowForm.Size = new System.Drawing.Size(1049, 587);
+            this.pnl_ShowForm.Size = new System.Drawing.Size(1066, 587);
             this.pnl_ShowForm.TabIndex = 4;
             // 
             // lbTieuDe
@@ -170,7 +170,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.W);
             this.panel1.Controls.Add(this.btnOut);
-            this.panel1.Location = new System.Drawing.Point(987, 0);
+            this.panel1.Location = new System.Drawing.Point(1012, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(380, 37);
@@ -341,7 +341,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1365, 654);
+            this.ClientSize = new System.Drawing.Size(1390, 654);
             this.Controls.Add(this.lbTieuDe);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_ShowForm);
@@ -378,7 +378,6 @@
         private System.Windows.Forms.Button btnQ;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btn_NVManager;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbTieuDe;
         private System.Windows.Forms.Button btn_QLDoanhThu;
@@ -387,5 +386,6 @@
         private System.Windows.Forms.Button btn_DiemDanh;
         private System.Windows.Forms.Button btn_GopY;
         private System.Windows.Forms.Label W;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

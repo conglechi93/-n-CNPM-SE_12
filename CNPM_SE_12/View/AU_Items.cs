@@ -14,7 +14,6 @@ namespace CNPM_SE_12.View
     
     public partial class AU_Items : Form
     {
-        private string ID_Type;
         private string ID_Items;
         public Mydel D { get; set; }
 
@@ -56,33 +55,58 @@ namespace CNPM_SE_12.View
         }
         public void AU()
         {
-            string Name_Item = txt_ItemsName.Text;
-            string Price = txt_Price.Text;
-            string Number = txt_Number.Text;
-            string Category = (cbb_LoaiHang.SelectedIndex + 1).ToString();
-            if (ID_Items == "")
+            string name_item = txt_ItemsName.Text;
+            string price = txt_Price.Text;
+            string values = txt_Number.Text;
+            string ctg = (cbb_LoaiHang.SelectedIndex + 1).ToString();
+            string status = "Hết hàng";
+            if (Convert.ToInt32(values) > 0) status = "Còn hàng";
+            if(check_Inf())
             {
-                //Category ctg = new Category()
-                //{
-                //    ID_Category = txtCtg_ID.Text,
-                //    Category_Name = txtCtg_Name.Text
-
-                //};
-                //if (BLL.QL_Items_BLL.Instance.Add_Ctg_BLL(ctg))
-                //{
-                //    MessageBox.Show("Add thành công !");
-                //}
-            }
-            else
-            {
-                if (BLL.QL_Items_BLL.Instance.Edit_Items_BLL(ID_Items, Name_Item, Price, Number, Category))
+                if (ID_Items == "")
                 {
-                    MessageBox.Show("Edit thành công !");
+                    Item item = new Item()
+                    {
+                        ID_Items = this.ID_Items,
+                        Items_Name = name_item,
+                        ID_Category = ctg,
+                        Price = Convert.ToInt32(price),
+                        Reserve = Convert.ToInt32(values),
+                        Status = status
+                    };
+                    if (BLL.QL_Items_BLL.Instance.Add_Items_BLL(item))
+                    {
+                        MessageBox.Show("Add thành công !");
+                    }
                 }
-
-            }
+                else
+                {
+                    if (BLL.QL_Items_BLL.Instance.Edit_Items_BLL(ID_Items, name_item, price, values, ctg))
+                    {
+                        MessageBox.Show("Edit thành công !");
+                    }
+                }
+            }    
+            
         }
 
+        public bool check_Inf()
+        {
+            if(BLL.QL_Items_BLL.Instance.getItems_byID_BLL(ID_Items) == null)
+            {
+                MessageBox.Show("Sản phẩm này đã tồn tại!");
+                return false;
+            }    
+            foreach(Control i in pnl_Inf.Controls)
+            {
+                if(Controls == null)
+                {
+                    MessageBox.Show("Bạn cần nhập đầy đủ thông tin!");
+                    return false;
+                }    
+            }
+            return true;
+        }
         private void btn_OK_Click(object sender, EventArgs e)
         {
             AU();
@@ -96,6 +120,56 @@ namespace CNPM_SE_12.View
         private void btn_Cancle_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lb_Number_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_Subject_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbb_LoaiHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_ItemsName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_IDItems_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Price_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Number_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

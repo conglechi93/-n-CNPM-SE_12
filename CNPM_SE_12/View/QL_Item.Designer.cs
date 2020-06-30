@@ -57,12 +57,16 @@
             this.btn_Show = new System.Windows.Forms.Button();
             this.cbbSearch = new System.Windows.Forms.ComboBox();
             this.txt_Ctg = new System.Windows.Forms.TextBox();
+            this.pnl_Items = new System.Windows.Forms.Panel();
+            this.pnl_Ctg = new System.Windows.Forms.Panel();
             this.tab_Main.SuspendLayout();
             this.tab_Ctg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).BeginInit();
             this.tab_Items.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.pnl_Items.SuspendLayout();
+            this.pnl_Ctg.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab_Main
@@ -79,10 +83,7 @@
             // 
             // tab_Ctg
             // 
-            this.tab_Ctg.Controls.Add(this.lb_NameCtg);
-            this.tab_Ctg.Controls.Add(this.lb_IDCtg);
-            this.tab_Ctg.Controls.Add(this.txt_NameCtg);
-            this.tab_Ctg.Controls.Add(this.txt_IDCtg);
+            this.tab_Ctg.Controls.Add(this.pnl_Ctg);
             this.tab_Ctg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tab_Ctg.Location = new System.Drawing.Point(4, 31);
             this.tab_Ctg.Name = "tab_Ctg";
@@ -97,7 +98,7 @@
             // 
             this.lb_NameCtg.AutoSize = true;
             this.lb_NameCtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_NameCtg.Location = new System.Drawing.Point(17, 167);
+            this.lb_NameCtg.Location = new System.Drawing.Point(9, 61);
             this.lb_NameCtg.Name = "lb_NameCtg";
             this.lb_NameCtg.Size = new System.Drawing.Size(126, 24);
             this.lb_NameCtg.TabIndex = 6;
@@ -107,7 +108,7 @@
             // 
             this.lb_IDCtg.AutoSize = true;
             this.lb_IDCtg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_IDCtg.Location = new System.Drawing.Point(17, 122);
+            this.lb_IDCtg.Location = new System.Drawing.Point(9, 16);
             this.lb_IDCtg.Name = "lb_IDCtg";
             this.lb_IDCtg.Size = new System.Drawing.Size(118, 24);
             this.lb_IDCtg.TabIndex = 7;
@@ -116,7 +117,7 @@
             // txt_NameCtg
             // 
             this.txt_NameCtg.Enabled = false;
-            this.txt_NameCtg.Location = new System.Drawing.Point(170, 164);
+            this.txt_NameCtg.Location = new System.Drawing.Point(162, 58);
             this.txt_NameCtg.Name = "txt_NameCtg";
             this.txt_NameCtg.Size = new System.Drawing.Size(180, 30);
             this.txt_NameCtg.TabIndex = 4;
@@ -124,7 +125,7 @@
             // txt_IDCtg
             // 
             this.txt_IDCtg.Enabled = false;
-            this.txt_IDCtg.Location = new System.Drawing.Point(170, 119);
+            this.txt_IDCtg.Location = new System.Drawing.Point(162, 13);
             this.txt_IDCtg.Name = "txt_IDCtg";
             this.txt_IDCtg.Size = new System.Drawing.Size(180, 30);
             this.txt_IDCtg.TabIndex = 5;
@@ -147,18 +148,7 @@
             this.tab_Items.Controls.Add(this.cbbSearch);
             this.tab_Items.Controls.Add(this.btn_Search);
             this.tab_Items.Controls.Add(this.txt_Search);
-            this.tab_Items.Controls.Add(this.label6);
-            this.tab_Items.Controls.Add(this.label5);
-            this.tab_Items.Controls.Add(this.label4);
-            this.tab_Items.Controls.Add(this.label3);
-            this.tab_Items.Controls.Add(this.lb_NameItems);
-            this.tab_Items.Controls.Add(this.lb_IDItems);
-            this.tab_Items.Controls.Add(this.txt_State);
-            this.tab_Items.Controls.Add(this.txt_Price);
-            this.tab_Items.Controls.Add(this.txt_Values);
-            this.tab_Items.Controls.Add(this.txt_Ctg);
-            this.tab_Items.Controls.Add(this.txt_NameItems);
-            this.tab_Items.Controls.Add(this.txt_IDItems);
+            this.tab_Items.Controls.Add(this.pnl_Items);
             this.tab_Items.Location = new System.Drawing.Point(4, 31);
             this.tab_Items.Name = "tab_Items";
             this.tab_Items.Padding = new System.Windows.Forms.Padding(3);
@@ -187,7 +177,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 267);
+            this.label6.Location = new System.Drawing.Point(3, 249);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 24);
             this.label6.TabIndex = 2;
@@ -196,7 +186,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 220);
+            this.label5.Location = new System.Drawing.Point(3, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 24);
             this.label5.TabIndex = 2;
@@ -205,7 +195,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 170);
+            this.label4.Location = new System.Drawing.Point(3, 152);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 24);
             this.label4.TabIndex = 2;
@@ -214,7 +204,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 124);
+            this.label3.Location = new System.Drawing.Point(3, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 24);
             this.label3.TabIndex = 2;
@@ -223,7 +213,7 @@
             // lb_NameItems
             // 
             this.lb_NameItems.AutoSize = true;
-            this.lb_NameItems.Location = new System.Drawing.Point(6, 76);
+            this.lb_NameItems.Location = new System.Drawing.Point(3, 58);
             this.lb_NameItems.Name = "lb_NameItems";
             this.lb_NameItems.Size = new System.Drawing.Size(132, 24);
             this.lb_NameItems.TabIndex = 2;
@@ -232,7 +222,7 @@
             // lb_IDItems
             // 
             this.lb_IDItems.AutoSize = true;
-            this.lb_IDItems.Location = new System.Drawing.Point(6, 31);
+            this.lb_IDItems.Location = new System.Drawing.Point(3, 13);
             this.lb_IDItems.Name = "lb_IDItems";
             this.lb_IDItems.Size = new System.Drawing.Size(124, 24);
             this.lb_IDItems.TabIndex = 2;
@@ -241,7 +231,7 @@
             // txt_State
             // 
             this.txt_State.Enabled = false;
-            this.txt_State.Location = new System.Drawing.Point(165, 264);
+            this.txt_State.Location = new System.Drawing.Point(162, 246);
             this.txt_State.Name = "txt_State";
             this.txt_State.Size = new System.Drawing.Size(178, 28);
             this.txt_State.TabIndex = 1;
@@ -249,7 +239,7 @@
             // txt_Price
             // 
             this.txt_Price.Enabled = false;
-            this.txt_Price.Location = new System.Drawing.Point(165, 219);
+            this.txt_Price.Location = new System.Drawing.Point(162, 201);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(178, 28);
             this.txt_Price.TabIndex = 1;
@@ -257,7 +247,7 @@
             // txt_Values
             // 
             this.txt_Values.Enabled = false;
-            this.txt_Values.Location = new System.Drawing.Point(165, 166);
+            this.txt_Values.Location = new System.Drawing.Point(162, 148);
             this.txt_Values.Name = "txt_Values";
             this.txt_Values.Size = new System.Drawing.Size(178, 28);
             this.txt_Values.TabIndex = 1;
@@ -265,7 +255,7 @@
             // txt_NameItems
             // 
             this.txt_NameItems.Enabled = false;
-            this.txt_NameItems.Location = new System.Drawing.Point(165, 73);
+            this.txt_NameItems.Location = new System.Drawing.Point(162, 55);
             this.txt_NameItems.Name = "txt_NameItems";
             this.txt_NameItems.Size = new System.Drawing.Size(178, 28);
             this.txt_NameItems.TabIndex = 1;
@@ -273,7 +263,7 @@
             // txt_IDItems
             // 
             this.txt_IDItems.Enabled = false;
-            this.txt_IDItems.Location = new System.Drawing.Point(165, 28);
+            this.txt_IDItems.Location = new System.Drawing.Point(162, 10);
             this.txt_IDItems.Name = "txt_IDItems";
             this.txt_IDItems.Size = new System.Drawing.Size(178, 28);
             this.txt_IDItems.TabIndex = 1;
@@ -350,10 +340,40 @@
             // txt_Ctg
             // 
             this.txt_Ctg.Enabled = false;
-            this.txt_Ctg.Location = new System.Drawing.Point(165, 120);
+            this.txt_Ctg.Location = new System.Drawing.Point(162, 102);
             this.txt_Ctg.Name = "txt_Ctg";
             this.txt_Ctg.Size = new System.Drawing.Size(178, 28);
             this.txt_Ctg.TabIndex = 1;
+            // 
+            // pnl_Items
+            // 
+            this.pnl_Items.Controls.Add(this.txt_IDItems);
+            this.pnl_Items.Controls.Add(this.txt_NameItems);
+            this.pnl_Items.Controls.Add(this.txt_Ctg);
+            this.pnl_Items.Controls.Add(this.label6);
+            this.pnl_Items.Controls.Add(this.txt_Values);
+            this.pnl_Items.Controls.Add(this.label5);
+            this.pnl_Items.Controls.Add(this.txt_Price);
+            this.pnl_Items.Controls.Add(this.label4);
+            this.pnl_Items.Controls.Add(this.txt_State);
+            this.pnl_Items.Controls.Add(this.label3);
+            this.pnl_Items.Controls.Add(this.lb_IDItems);
+            this.pnl_Items.Controls.Add(this.lb_NameItems);
+            this.pnl_Items.Location = new System.Drawing.Point(10, 21);
+            this.pnl_Items.Name = "pnl_Items";
+            this.pnl_Items.Size = new System.Drawing.Size(356, 286);
+            this.pnl_Items.TabIndex = 7;
+            // 
+            // pnl_Ctg
+            // 
+            this.pnl_Ctg.Controls.Add(this.txt_IDCtg);
+            this.pnl_Ctg.Controls.Add(this.lb_NameCtg);
+            this.pnl_Ctg.Controls.Add(this.txt_NameCtg);
+            this.pnl_Ctg.Controls.Add(this.lb_IDCtg);
+            this.pnl_Ctg.Location = new System.Drawing.Point(6, 107);
+            this.pnl_Ctg.Name = "pnl_Ctg";
+            this.pnl_Ctg.Size = new System.Drawing.Size(360, 100);
+            this.pnl_Ctg.TabIndex = 8;
             // 
             // QL_Item
             // 
@@ -364,12 +384,15 @@
             this.Size = new System.Drawing.Size(1102, 568);
             this.tab_Main.ResumeLayout(false);
             this.tab_Ctg.ResumeLayout(false);
-            this.tab_Ctg.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Show)).EndInit();
             this.tab_Items.ResumeLayout(false);
             this.tab_Items.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.pnl_Items.ResumeLayout(false);
+            this.pnl_Items.PerformLayout();
+            this.pnl_Ctg.ResumeLayout(false);
+            this.pnl_Ctg.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -405,5 +428,7 @@
         private System.Windows.Forms.Button btn_Show;
         private System.Windows.Forms.ComboBox cbbSearch;
         private System.Windows.Forms.TextBox txt_Ctg;
+        private System.Windows.Forms.Panel pnl_Ctg;
+        private System.Windows.Forms.Panel pnl_Items;
     }
 }
