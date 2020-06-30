@@ -66,6 +66,7 @@ namespace CNPM_SE_12.View
         }
         private void ShowCtg()
         {
+            
             DGV_Items.DataSource = null;
             DGV_Items.ColumnCount = 2;
             DGV_Items.Columns[0].Name = "Mã loại hàng";
