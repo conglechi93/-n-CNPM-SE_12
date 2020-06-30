@@ -100,7 +100,6 @@
             this.lb_Phone.Size = new System.Drawing.Size(152, 15);
             this.lb_Phone.TabIndex = 1;
             this.lb_Phone.Text = "Số điện thoại: 0000000abc";
-            this.lb_Phone.Click += new System.EventHandler(this.lb_Phone_Click);
             // 
             // button1
             // 
@@ -159,7 +158,6 @@
             this.lb_TongTien.Size = new System.Drawing.Size(64, 15);
             this.lb_TongTien.TabIndex = 0;
             this.lb_TongTien.Text = "Tổng tiền: ";
-            this.lb_TongTien.Click += new System.EventHandler(this.lb_TongTien_Click);
             // 
             // lb_ThanhTien
             // 
@@ -258,7 +256,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Bill";
             this.Text = "Bill";
-            this.Load += new System.EventHandler(this.Bill_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -169,6 +169,30 @@ namespace CNPM_SE_12.BLL
             }
         }
 
+        public bool delCatg_BLL(DataGridViewSelectedRowCollection r)
+        {
+            try
+            {
+                SE_12Entities db = new SE_12Entities();
+                foreach (Category i in db.Categories)
+                {
+                    foreach (DataGridViewRow j in r)
+                    {
+                        if (i.ID_Category == j.Cells["Mã loại hàng"].Value.ToString())
+                        {
+                            db.Categories.Remove(i);
+                        }
+                    }
+                }
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+        }
         public bool delItems_BLL(DataGridViewSelectedRowCollection r)
         {
             try
@@ -178,7 +202,7 @@ namespace CNPM_SE_12.BLL
                 {
                     foreach (DataGridViewRow j in r)
                     {
-                        if (i.ID_Items == j.Cells["ID_Items"].Value.ToString())
+                        if (i.ID_Items == j.Cells["Mã sản phẩm"].Value.ToString())
                         {
                             db.Items.Remove(i);
                         }

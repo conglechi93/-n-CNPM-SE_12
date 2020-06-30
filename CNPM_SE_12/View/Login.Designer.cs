@@ -33,7 +33,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.cb_Rmb = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbLogin = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_User = new System.Windows.Forms.TextBox();
@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.cb_Rmb);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbLogin);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btn_Login);
             this.panel1.Location = new System.Drawing.Point(221, 126);
@@ -70,7 +70,7 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(13, 4);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(107, 96);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -94,24 +94,24 @@
             this.cb_Rmb.AutoSize = true;
             this.cb_Rmb.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.cb_Rmb.Location = new System.Drawing.Point(87, 269);
-            this.cb_Rmb.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cb_Rmb.Margin = new System.Windows.Forms.Padding(5);
             this.cb_Rmb.Name = "cb_Rmb";
             this.cb_Rmb.Size = new System.Drawing.Size(122, 21);
             this.cb_Rmb.TabIndex = 5;
             this.cb_Rmb.Text = "Remember me";
             this.cb_Rmb.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lbLogin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(128, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 69);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "LOGIN";
+            this.lbLogin.AutoSize = true;
+            this.lbLogin.Font = new System.Drawing.Font("Microsoft YaHei UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.lbLogin.Location = new System.Drawing.Point(117, 20);
+            this.lbLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbLogin.Name = "lbLogin";
+            this.lbLogin.Size = new System.Drawing.Size(233, 80);
+            this.lbLogin.TabIndex = 3;
+            this.lbLogin.Text = "LOGIN";
             // 
             // panel3
             // 
@@ -129,7 +129,7 @@
             // 
             this.pictureBox1.Image = global::CNPM_SE_12.Properties.Resources.login_username;
             this.pictureBox1.Location = new System.Drawing.Point(12, 34);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(56, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -143,18 +143,19 @@
             this.txt_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_User.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.txt_User.Location = new System.Drawing.Point(100, 40);
-            this.txt_User.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_User.Margin = new System.Windows.Forms.Padding(5);
             this.txt_User.Name = "txt_User";
-            this.txt_User.Size = new System.Drawing.Size(267, 27);
+            this.txt_User.Size = new System.Drawing.Size(247, 27);
             this.txt_User.TabIndex = 0;
             this.txt_User.Text = "User name";
             this.txt_User.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MousClick);
+            this.txt_User.Leave += new System.EventHandler(this.txt_User_Leave);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CNPM_SE_12.Properties.Resources.login_pass;
             this.pictureBox2.Location = new System.Drawing.Point(12, 94);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(53, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -168,13 +169,14 @@
             this.txt_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Pass.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.txt_Pass.Location = new System.Drawing.Point(100, 103);
-            this.txt_Pass.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txt_Pass.Margin = new System.Windows.Forms.Padding(5);
             this.txt_Pass.Name = "txt_Pass";
             this.txt_Pass.Size = new System.Drawing.Size(247, 27);
             this.txt_Pass.TabIndex = 0;
             this.txt_Pass.Text = "Pass word";
             this.txt_Pass.UseSystemPasswordChar = true;
             this.txt_Pass.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MousClick);
+            this.txt_Pass.Leave += new System.EventHandler(this.txt_Pass_Leave);
             // 
             // btn_Login
             // 
@@ -211,7 +213,7 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(129, 38);
-            this.panel4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel4.Margin = new System.Windows.Forms.Padding(5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(637, 89);
             this.panel4.TabIndex = 2;
@@ -252,7 +254,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbLogin;
         private System.Windows.Forms.TextBox txt_User;
         private System.Windows.Forms.TextBox txt_Pass;
         private System.Windows.Forms.PictureBox pictureBox1;

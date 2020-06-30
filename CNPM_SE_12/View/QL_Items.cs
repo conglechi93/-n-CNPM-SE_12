@@ -88,14 +88,21 @@ namespace CNPM_SE_12.View
         private void btnDel_Ctg_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection r = DGV_Items.SelectedRows;
-            if (BLL.QL_Items_BLL.Instance.delItems_BLL(r))
+            if(DGV_Items.Columns.Count > 2)
             {
-                ShowDGV();
-                MessageBox.Show("Xóa thành công !");
+                MessageBox.Show("Phải chọn ở bảng Category nghe!");
             }
             else
             {
-                MessageBox.Show("Xóa thất bại !");
+                if (BLL.QL_Items_BLL.Instance.delCatg_BLL(r))
+                {
+                    ShowCtg();
+                    MessageBox.Show("Xóa thành công !");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại !");
+                }
             }
         }
 
@@ -134,6 +141,23 @@ namespace CNPM_SE_12.View
 
         private void btnDel_Items_Click(object sender, EventArgs e)
         {
+            DataGridViewSelectedRowCollection r = DGV_Items.SelectedRows;
+            if (DGV_Items.Columns.Count < 4)
+            {
+                MessageBox.Show("Phải chọn ở bảng Items nghe!");
+            }
+            else
+            {
+                if (BLL.QL_Items_BLL.Instance.delItems_BLL(r))
+                {
+                    ShowDGV();
+                    MessageBox.Show("Xóa thành công !");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại !");
+                }
+            }
 
         }
 

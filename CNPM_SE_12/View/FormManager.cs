@@ -90,5 +90,15 @@ namespace CNPM_SE_12.View
         {
 
         }
+
+        private void FormManager_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOut_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -277,6 +277,7 @@
       <DependentUpon>DB_SE12.edmx</DependentUpon>
       <LastGenOutput>DB_SE12.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\stone-oven_8-18-2018_1230.jpg" />
     <None Include="Resources\FormManager_QL_Account.jpg" />
     <None Include="Resources\FormManager_Feedback.jpg" />
     <None Include="Resources\FormManager_DiemDanh.png" />

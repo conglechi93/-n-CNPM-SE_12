@@ -179,5 +179,15 @@ namespace CNPM_SE_12.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stone_oven_8_18_2018_1230 {
+            get {
+                object obj = ResourceManager.GetObject("stone-oven_8-18-2018_1230", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

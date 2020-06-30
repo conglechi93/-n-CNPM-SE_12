@@ -77,6 +77,7 @@
             this.btnOut.TabIndex = 2;
             this.btnOut.Text = "Đăng xuất";
             this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click_1);
             // 
             // pnl_Menu
             // 
@@ -291,6 +292,7 @@
             // pnl_ShowForm
             // 
             this.pnl_ShowForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_ShowForm.BackColor = System.Drawing.Color.White;
             this.pnl_ShowForm.Location = new System.Drawing.Point(315, 53);
             this.pnl_ShowForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl_ShowForm.Name = "pnl_ShowForm";
@@ -345,10 +347,12 @@
             this.Controls.Add(this.pnl_ShowForm);
             this.Controls.Add(this.pnl_Menu);
             this.Controls.Add(this.menuStrip1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormManager";
             this.Text = "Quản lí tiệm bánh mỳ";
+            this.Load += new System.EventHandler(this.FormManager_Load);
             this.pnl_Menu.ResumeLayout(false);
             this.pnl_ButtonMenu.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
