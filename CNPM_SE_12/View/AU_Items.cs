@@ -60,11 +60,11 @@ namespace CNPM_SE_12.View
             string values = txt_Number.Text;
             string ctg = (cbb_LoaiHang.SelectedIndex + 1).ToString();
             string status = "Hết hàng";
-            if (Convert.ToInt32(values) > 0) status = "Còn hàng";
             if(check_Inf())
             {
                 if (ID_Items == "")
                 {
+                    if (Convert.ToInt32(values) > 0) status = "Còn hàng";
                     Item item = new Item()
                     {
                         ID_Items = this.ID_Items,

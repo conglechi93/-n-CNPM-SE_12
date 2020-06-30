@@ -56,6 +56,7 @@
             this.DGV_Show.Location = new System.Drawing.Point(13, 27);
             this.DGV_Show.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DGV_Show.Name = "DGV_Show";
+            this.DGV_Show.ReadOnly = true;
             this.DGV_Show.RowHeadersWidth = 51;
             this.DGV_Show.RowTemplate.Height = 24;
             this.DGV_Show.Size = new System.Drawing.Size(467, 345);
@@ -177,7 +178,7 @@
             // pnlShow
             // 
             this.pnlShow.Location = new System.Drawing.Point(12, 118);
-            this.pnlShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlShow.Margin = new System.Windows.Forms.Padding(4);
             this.pnlShow.Name = "pnlShow";
             this.pnlShow.Size = new System.Drawing.Size(483, 246);
             this.pnlShow.TabIndex = 6;
@@ -191,7 +192,7 @@
             this.cbb_Ctg.ForeColor = System.Drawing.SystemColors.InfoText;
             this.cbb_Ctg.FormattingEnabled = true;
             this.cbb_Ctg.Location = new System.Drawing.Point(121, 27);
-            this.cbb_Ctg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbb_Ctg.Margin = new System.Windows.Forms.Padding(4);
             this.cbb_Ctg.Name = "cbb_Ctg";
             this.cbb_Ctg.Size = new System.Drawing.Size(227, 29);
             this.cbb_Ctg.TabIndex = 5;

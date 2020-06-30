@@ -165,7 +165,7 @@ namespace CNPM_SE_12.BLL
                     Price = Convert.ToInt32(price),
                     Reserve = Convert.ToInt32(number),
                     Status = status,
-                    ID_Category = (Convert.ToInt32(category) + 1).ToString(),
+                    ID_Category = category,
                 };
                 Item item_clone = db.Items.Where(p => p.ID_Items == id_item).FirstOrDefault();
                 item_clone.ID_Items = item.ID_Items;

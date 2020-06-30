@@ -13,13 +13,14 @@ namespace CNPM_SE_12.View
     public partial class FormManager : Form
     {
         private Form currentChildForm = null;
-        private string ID_Type;
-        public FormManager(string id_user)
+        string ID_Account;
+
+        public FormManager(string id_account)
         {
             InitializeComponent();
-            this.ID_Type = id_user;
+            ID_Account = id_account;
             this.Text = string.Empty;
-            //this.ControlBox = false;
+            this.ControlBox = false;
             this.DoubleBuffered = true;
         }
 
@@ -47,7 +48,8 @@ namespace CNPM_SE_12.View
             btn.BackColor = Color.CadetBlue;
             if (btn.Tag.ToString() == "1")
             {
-                OpenChildForm(new Main(""));
+                pnl_ShowForm.BackColor = Color.White;
+                OpenChildForm(new Main(ID_Account));
             }
             if (btn.Tag.ToString() == "2")
             {
@@ -55,11 +57,18 @@ namespace CNPM_SE_12.View
             }
             if (btn.Tag.ToString() == "3")
             {
-                OpenChildForm(new QL_User(ID_Type));
+                if (BLL.QL_Account_BLL.Instance.getAccount_byID_BLL(ID_Account).ID_Type == "1")
+                {
+                    OpenChildForm(new QL_User(ID_Account));
+                }
+                else
+                {
+                    pnl_ShowForm.BackColor = Color.Transparent;
+                }
             }
             if (btn.Tag.ToString() == "4")
             {
-                OpenChildForm(new QuanLyBill(ID_Type));
+                OpenChildForm(new QuanLyBill(ID_Account));
             }
             if (btn.Tag.ToString() == "5")
             {
@@ -67,7 +76,7 @@ namespace CNPM_SE_12.View
             }
             if (btn.Tag.ToString() == "6")
             {
-                if (BLL.QL_Account_BLL.Instance.getAccount_byID_BLL(ID_Type).ID_Type == "1")
+                if (BLL.QL_Account_BLL.Instance.getAccount_byID_BLL(ID_Account).ID_Type == "1")
                 {
                     OpenChildForm(new FB_Manager());
                 }
@@ -78,7 +87,7 @@ namespace CNPM_SE_12.View
             }
             if (btn.Tag.ToString() == "7")
             {
-                OpenChildForm(new Account_Manager(ID_Type));
+                OpenChildForm(new Account_Manager(ID_Account));
             }
         }
         private void btnOut_Click(object sender, EventArgs e)
