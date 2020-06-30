@@ -322,10 +322,10 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 170);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 168);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(763, 268);
+            this.dataGridView1.Size = new System.Drawing.Size(763, 260);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView1_RowHeaderMouseClick);
             // 
@@ -425,7 +425,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(796, 450);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txt_Search);

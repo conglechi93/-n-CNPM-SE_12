@@ -33,12 +33,6 @@
             this.btnOut = new System.Windows.Forms.Button();
             this.pnl_Menu = new System.Windows.Forms.Panel();
             this.pnl_ButtonMenu = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pnl_ShowForm = new System.Windows.Forms.Panel();
-            this.lbTieuDe = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.X = new System.Windows.Forms.Label();
             this.btn_DiemDanh = new System.Windows.Forms.Button();
             this.btn_GopY = new System.Windows.Forms.Button();
             this.btn_QLDoanhThu = new System.Windows.Forms.Button();
@@ -46,7 +40,13 @@
             this.btn_QLTaiKhoan = new System.Windows.Forms.Button();
             this.btn_Main = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pnl_ShowForm = new System.Windows.Forms.Panel();
+            this.lbTieuDe = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.X = new System.Windows.Forms.Label();
             this.pnl_Menu.SuspendLayout();
             this.pnl_ButtonMenu.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -93,55 +93,6 @@
             this.pnl_ButtonMenu.Name = "pnl_ButtonMenu";
             this.pnl_ButtonMenu.Size = new System.Drawing.Size(226, 301);
             this.pnl_ButtonMenu.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(226, 204);
-            this.panel4.TabIndex = 0;
-            // 
-            // pnl_ShowForm
-            // 
-            this.pnl_ShowForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_ShowForm.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnl_ShowForm.Location = new System.Drawing.Point(229, 53);
-            this.pnl_ShowForm.Margin = new System.Windows.Forms.Padding(2);
-            this.pnl_ShowForm.Name = "pnl_ShowForm";
-            this.pnl_ShowForm.Size = new System.Drawing.Size(797, 478);
-            this.pnl_ShowForm.TabIndex = 4;
-            // 
-            // lbTieuDe
-            // 
-            this.lbTieuDe.AutoSize = true;
-            this.lbTieuDe.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTieuDe.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lbTieuDe.Location = new System.Drawing.Point(238, 0);
-            this.lbTieuDe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbTieuDe.Name = "lbTieuDe";
-            this.lbTieuDe.Size = new System.Drawing.Size(0, 29);
-            this.lbTieuDe.TabIndex = 0;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // X
-            // 
-            this.X.AutoSize = true;
-            this.X.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.X.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.X.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.X.Location = new System.Drawing.Point(725, 11);
-            this.X.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.X.Name = "X";
-            this.X.Size = new System.Drawing.Size(150, 18);
-            this.X.TabIndex = 3;
-            this.X.Text = "Welcome Minh Huan!";
             // 
             // btn_DiemDanh
             // 
@@ -283,16 +234,65 @@
             this.btnSetting.UseVisualStyleBackColor = false;
             this.btnSetting.Click += new System.EventHandler(this.MenuClick);
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(226, 204);
+            this.panel4.TabIndex = 0;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CNPM_SE_12.Properties.Resources.login_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(-3, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(-22, -18);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(229, 201);
+            this.pictureBox2.Size = new System.Drawing.Size(262, 234);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            // 
+            // pnl_ShowForm
+            // 
+            this.pnl_ShowForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_ShowForm.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnl_ShowForm.Location = new System.Drawing.Point(229, 53);
+            this.pnl_ShowForm.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl_ShowForm.Name = "pnl_ShowForm";
+            this.pnl_ShowForm.Size = new System.Drawing.Size(797, 478);
+            this.pnl_ShowForm.TabIndex = 4;
+            // 
+            // lbTieuDe
+            // 
+            this.lbTieuDe.AutoSize = true;
+            this.lbTieuDe.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTieuDe.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lbTieuDe.Location = new System.Drawing.Point(238, 0);
+            this.lbTieuDe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTieuDe.Name = "lbTieuDe";
+            this.lbTieuDe.Size = new System.Drawing.Size(0, 29);
+            this.lbTieuDe.TabIndex = 0;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // X
+            // 
+            this.X.AutoSize = true;
+            this.X.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.X.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.X.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.X.Location = new System.Drawing.Point(725, 11);
+            this.X.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.X.Name = "X";
+            this.X.Size = new System.Drawing.Size(150, 18);
+            this.X.TabIndex = 3;
+            this.X.Text = "Welcome Minh Huan!";
             // 
             // FormManager
             // 
