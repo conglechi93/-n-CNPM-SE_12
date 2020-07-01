@@ -26,12 +26,6 @@ namespace CNPM_SE_12.BLL
         {
 
         }
-        public List<Account> getAccount_BLL()
-        {
-            SE_12Entities db = new SE_12Entities();
-            List<Account> account = db.Accounts.Select(p => p).ToList();
-            return account;
-        }
 
         public string getTypeAccount_BLL(string id_account)
         {

@@ -236,11 +236,17 @@
     <EmbeddedResource Include="View\ChangePass_NV.resx">
       <DependentUpon>ChangePass_NV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Chart_Payment.resx">
-      <DependentUpon>Chart_Payment.cs</DependentUpon>
+    <EmbeddedResource Include="View\CheckPoint.resx">
+      <DependentUpon>CheckPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FB_Manager.resx">
       <DependentUpon>FB_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FB_User.resx">
+      <DependentUpon>FB_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -318,6 +324,22 @@
       <DependentUpon>DB_SE12.edmx</DependentUpon>
       <LastGenOutput>DB_SE12.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\user_magnify.png" />
+    <None Include="Resources\user_cross.png" />
+    <None Include="Resources\package_white.png" />
+    <None Include="Resources\disk_upload.png" />
+    <None Include="Resources\user_b.png" />
+    <None Include="Resources\bullet_plus.png" />
+    <None Include="Resources\email_stop.png" />
+    <None Include="Resources\email_start.png" />
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\Bookmark1.png" />
+    <None Include="Resources\Settings1.png" />
+    <None Include="Resources\Mail1.png" />
+    <None Include="Resources\Select1.png" />
+    <None Include="Resources\Stats1.png" />
+    <None Include="Resources\User1.png" />
+    <None Include="Resources\Package1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

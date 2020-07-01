@@ -248,14 +248,13 @@
             this.btnMonday.Text = "Thứ 2";
             this.btnMonday.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // CheckPoint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 370);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "Lập lịch công việc";
+            this.Name = "CheckPoint";
+            this.Size = new System.Drawing.Size(800, 500);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

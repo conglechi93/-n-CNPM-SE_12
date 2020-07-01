@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Reset = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
@@ -204,7 +206,7 @@
             this.panel2.Location = new System.Drawing.Point(1, 213);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(801, 241);
+            this.panel2.Size = new System.Drawing.Size(601, 217);
             this.panel2.TabIndex = 1;
             // 
             // DGV_Show
@@ -226,9 +228,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "QL_Bill";
-            this.Size = new System.Drawing.Size(811, 466);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "QuanLyBill";
+            this.Size = new System.Drawing.Size(800, 500);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
