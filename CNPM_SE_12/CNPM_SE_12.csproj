@@ -316,6 +316,10 @@
       <DependentUpon>DB_SE12.edmx</DependentUpon>
       <LastGenOutput>DB_SE12.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\application_osx_get.png" />
+    <None Include="Resources\decline1.png" />
+    <None Include="Resources\database_wrench.png" />
+    <None Include="Resources\control_add.png" />
     <None Include="Resources\background1.jpg" />
     <None Include="Resources\user_magnify.png" />
     <None Include="Resources\user_cross.png" />
