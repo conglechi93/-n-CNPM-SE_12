@@ -6,13 +6,12 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-namespace CNPM_SE_12.DTO
-{
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+namespace CNPM_SE_12.DTO
+{
+
     public partial class SE_12Entities : DbContext
     {
         public SE_12Entities()
