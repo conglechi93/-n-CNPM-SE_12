@@ -123,6 +123,16 @@ namespace CNPM_SE_12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bullet_tick {
+            get {
+                object obj = ResourceManager.GetObject("bullet_tick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap control_add {
             get {
                 object obj = ResourceManager.GetObject("control_add", resourceCulture);
@@ -156,6 +166,16 @@ namespace CNPM_SE_12.Properties {
         internal static System.Drawing.Bitmap disk_upload {
             get {
                 object obj = ResourceManager.GetObject("disk_upload", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Documents {
+            get {
+                object obj = ResourceManager.GetObject("Documents", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +273,16 @@ namespace CNPM_SE_12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap letter {
+            get {
+                object obj = ResourceManager.GetObject("letter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_background {
             get {
                 object obj = ResourceManager.GetObject("login_background", resourceCulture);
@@ -326,6 +356,36 @@ namespace CNPM_SE_12.Properties {
         internal static System.Drawing.Bitmap package_white {
             get {
                 object obj = ResourceManager.GetObject("package_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap page_cancel {
+            get {
+                object obj = ResourceManager.GetObject("page_cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap script_start {
+            get {
+                object obj = ResourceManager.GetObject("script_start", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap script_stop {
+            get {
+                object obj = ResourceManager.GetObject("script_stop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

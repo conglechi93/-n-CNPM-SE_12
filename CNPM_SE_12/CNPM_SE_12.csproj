@@ -231,6 +231,9 @@
     <EmbeddedResource Include="View\ChangePass_NV.resx">
       <DependentUpon>ChangePass_NV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Chart_Payment.resx">
+      <DependentUpon>Chart_Payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CheckPoint.resx">
       <DependentUpon>CheckPoint.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +338,12 @@
       <DependentUpon>DB_SE12.edmx</DependentUpon>
       <LastGenOutput>DB_SE12.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Documents.png" />
+    <None Include="Resources\script_stop.png" />
+    <None Include="Resources\script_start.png" />
+    <None Include="Resources\letter.jpg" />
+    <None Include="Resources\page_cancel.png" />
+    <None Include="Resources\bullet_tick.png" />
     <None Include="Resources\bullet_magnify.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

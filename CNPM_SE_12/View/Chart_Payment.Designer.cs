@@ -41,23 +41,26 @@
             this.chart_Bill.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart_Bill.Legends.Add(legend1);
-            this.chart_Bill.Location = new System.Drawing.Point(12, 3);
+            this.chart_Bill.Location = new System.Drawing.Point(9, 2);
+            this.chart_Bill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart_Bill.Name = "chart_Bill";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "VND Đồng";
             this.chart_Bill.Series.Add(series1);
-            this.chart_Bill.Size = new System.Drawing.Size(821, 358);
+            this.chart_Bill.Size = new System.Drawing.Size(616, 291);
             this.chart_Bill.TabIndex = 0;
             this.chart_Bill.Text = "chart_Bill";
             // 
             // Chart_Payment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 373);
+            this.ClientSize = new System.Drawing.Size(634, 303);
             this.Controls.Add(this.chart_Bill);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Chart_Payment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.Chart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart_Bill)).EndInit();
             this.ResumeLayout(false);

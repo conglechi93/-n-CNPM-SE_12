@@ -136,6 +136,9 @@
   <data name="FormManager_Order" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FormManager_Order.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bullet_tick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet_tick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,6 +175,9 @@
   <data name="background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="script_start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\script_start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FormManager_QL_NhanVien" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FormManager_QL_NhanVien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -183,6 +189,9 @@
   </data>
   <data name="control_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\control_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bullet_magnify" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet_magnify.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login_username" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_username.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +205,14 @@
   <data name="login_pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_pass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="page_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FormManager_QL_Items" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FormManager_QL_Items.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="script_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\script_stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="application_osx_get" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\application_osx_get.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -207,6 +222,9 @@
   </data>
   <data name="email_start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email_start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,7 +238,7 @@
   <data name="package_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\package_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bullet_magnify" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bullet_magnify.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Documents" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Documents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

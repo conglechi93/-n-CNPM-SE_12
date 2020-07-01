@@ -27,12 +27,10 @@ namespace CNPM_SE_12.View
         private void ShowData()
         {
             SE_12Entities db = new SE_12Entities();
-            this.Text = "ADD Category";
 
             if (ID_Category != "")
             {
                 txtCtg_ID.Enabled = false;
-                this.Text = "EDIT Category";
                 Category ctg = BLL.QL_Items_BLL.Instance.getCtg_byID_BLL(ID_Category);
                 txtCtg_ID.Text = ctg.ID_Category;
                 txtCtg_Name.Text = ctg.Category_Name;
