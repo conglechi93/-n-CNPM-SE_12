@@ -42,6 +42,37 @@ namespace CNPM_SE_12.BLL
                 return null;
             }
         }
+
+        public int CountBill()
+        {
+            try
+            {
+                SE_12Entities db = new SE_12Entities();
+                List<Order> ord = db.Orders.Select(p => p).ToList();
+                return ord.Count;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return 0;
+            }
+        }
+
+        public int CountDetail()
+        {
+            try
+            {
+                SE_12Entities db = new SE_12Entities();
+                List<Detail_Order> ord = db.Detail_Order.Select(p => p).ToList();
+                return ord.Count;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return 0;
+            }
+        }
+
         public bool Add_Payment_BLL(string id_account,DateTime time,int total)
         {
             try
@@ -50,6 +81,25 @@ namespace CNPM_SE_12.BLL
                 string id = BLL.QL_User_BLL.Instance.getUser_byID(id_account).ID_Account;
                 Order ord = new Order() { ID_Order = 4, ID_Account = id, Time_Order = time, Proceeds = total };
                 db.Orders.Add(ord);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+        }
+
+        public bool Add_DetailBill_BLL(List<Detail_Order> li_deO)
+        {
+            try
+            {
+                SE_12Entities db = new SE_12Entities();
+                foreach(Detail_Order i in li_deO)
+                {
+                    db.Detail_Order.Add(i);
+                }    
                 db.SaveChanges();
                 return true;
             }

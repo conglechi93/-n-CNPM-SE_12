@@ -16,7 +16,10 @@ namespace CNPM_SE_12.View
     {
         private string ID_Account;
         private int Total;
+        private int count_Bill;
+        private int count_Detail;
         private List<data_Order> li_O;
+        private List<Detail_Order> li_DeO;
         public mydel D { get; set; }
 
         public delegate void mydel();
@@ -25,7 +28,10 @@ namespace CNPM_SE_12.View
             this.ID_Account = id_account;
             this.Total = total;
             li_O = list;
+            count_Bill = BLL.QL_Payment.Instance.CountBill() + 1;
+            count_Detail = BLL.QL_Payment.Instance.CountDetail() + 1;
             InitializeComponent();
+            lb_BillID.Text = "Mã hóa đơn:  HD" + count_Bill.ToString();
             SetData();
 
         }
@@ -64,6 +70,7 @@ namespace CNPM_SE_12.View
 
         private void savePayment()
         {
+            li_DeO = new List<Detail_Order>();
             List<string> str = new List<string>();
             int total = 0;
             foreach (DataGridViewRow i in DGV_Show.Rows)
@@ -74,11 +81,20 @@ namespace CNPM_SE_12.View
                     Item item = BLL.QL_Items_BLL.Instance.getItems_byID_BLL(id_item);
                     int price = Convert.ToInt32(i.Cells[2].Value.ToString());
                     int value = Convert.ToInt32(i.Cells[3].Value.ToString());
+                    li_DeO.Add(new Detail_Order()
+                    {
+                        ID_DetailOrder = count_Detail,
+                        ID_Order = count_Bill,
+                        ID_Items = item.ID_Items,
+                        Amount = value.ToString()       
+                    });
                     BLL.QL_Items_BLL.Instance.Edit_Items_BLL(id_item, item.Items_Name, item.Price.ToString(), (item.Reserve - value).ToString(), item.ID_Category);
                     total += price * value;
                 }
+                count_Detail++;
             }
-            if (BLL.QL_Payment.Instance.Add_Payment_BLL(ID_Account, Convert.ToDateTime(DateTime.Now.ToShortTimeString()), total))
+            if (BLL.QL_Payment.Instance.Add_Payment_BLL(ID_Account, Convert.ToDateTime(DateTime.Now.ToShortTimeString()), total)
+                && BLL.QL_Payment.Instance.Add_DetailBill_BLL(li_DeO))
             {
                 MessageBox.Show("Đã thanh toán !");
                 if (D != null)

@@ -125,19 +125,22 @@ namespace CNPM_SE_12.View
                 string Phonenumber = txt_SoDienThoai.Text;
                 string Passport = txt_CMND.Text;
                 string Address = txt_DiaChi.Text;
-                string type_Acc = "1";
+                string type_Acc = "3";
                 if (BLL.QL_User_BLL.Instance.Add_User_BLL(ID_User, User_Name, Gender, Birthday, Phonenumber, Passport, Address))
                 {
-                    CreateAccount f = new CreateAccount(ID_Account,type_Acc);
-                    f.ShowDialog();
+                    
+                    CreateAccount f = new CreateAccount(ID_User,type_Acc);
 
+                    f.D += new CreateAccount.Mydel(ABC);
+                    f.ShowDialog();
                 }    
             }       
         }
 
-        private void delAcc()
+        private void ABC()
         {
-
+            List<User> user = BLL.QL_User_BLL.Instance.getUser_BLL();
+            ShowDGV(user);
         }
 
         private void Edit()
@@ -180,8 +183,6 @@ namespace CNPM_SE_12.View
         private void Btn_Update_Click(object sender, EventArgs e)
         {
             Edit();
-            List<User> user = BLL.QL_User_BLL.Instance.getUser_BLL();
-            ShowDGV(user);
         }
 
 
@@ -200,7 +201,6 @@ namespace CNPM_SE_12.View
         }
         private void Btn_Add_Click(object sender, EventArgs e)
         {
-            CreateAccount f = new CreateAccount(ID_Account, ID_Type);
             Add();
             List<User> user = BLL.QL_User_BLL.Instance.getUser_BLL();
             ShowDGV(user);

@@ -55,7 +55,6 @@
             // 
             this.panel1.Controls.Add(this.lb_Slogan);
             this.panel1.Controls.Add(this.lb_Adress);
-            this.panel1.Controls.Add(this.lb_Phone);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -92,7 +91,7 @@
             this.lb_Phone.AutoSize = true;
             this.lb_Phone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Phone.ForeColor = System.Drawing.Color.Black;
-            this.lb_Phone.Location = new System.Drawing.Point(43, 140);
+            this.lb_Phone.Location = new System.Drawing.Point(453, 44);
             this.lb_Phone.Name = "lb_Phone";
             this.lb_Phone.Size = new System.Drawing.Size(198, 20);
             this.lb_Phone.TabIndex = 1;
@@ -122,6 +121,7 @@
             // 
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btn_ThanhToan);
+            this.panel2.Controls.Add(this.lb_Phone);
             this.panel2.Controls.Add(this.DGV_Show);
             this.panel2.Controls.Add(this.lb_Time);
             this.panel2.Controls.Add(this.lb_BillID);
@@ -221,7 +221,7 @@
             this.lb_BillID.AutoSize = true;
             this.lb_BillID.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_BillID.ForeColor = System.Drawing.Color.Black;
-            this.lb_BillID.Location = new System.Drawing.Point(533, 15);
+            this.lb_BillID.Location = new System.Drawing.Point(453, 15);
             this.lb_BillID.Name = "lb_BillID";
             this.lb_BillID.Size = new System.Drawing.Size(101, 20);
             this.lb_BillID.TabIndex = 0;

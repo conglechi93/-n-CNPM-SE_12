@@ -194,7 +194,7 @@ namespace CNPM_SE_12.View
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            if (tab_Main.SelectedIndex.ToString() == "0") Add_Ctg();
+            if (tab_Main.SelectedIndex.ToString() == "0" ) Add_Ctg();
             else Add_Items();
         }
 

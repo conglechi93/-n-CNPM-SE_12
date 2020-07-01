@@ -10,6 +10,7 @@ namespace CNPM_SE_12.BLL
 {
     class QL_Account_BLL
     {
+        private HassPass H = new HassPass();
         private static QL_Account_BLL _Instance;
         public static QL_Account_BLL Instance
 
@@ -27,6 +28,28 @@ namespace CNPM_SE_12.BLL
 
         }
 
+        public bool create_Account(string id,string login, string pass, string type)
+        {
+            Account acc = new Account()
+            {
+                ID_Account = id,
+                Login = login,
+                PassWord = H.MD5(pass),
+                ID_Type = type
+            };
+            try
+            {
+                SE_12Entities db = new SE_12Entities();
+                db.Accounts.Add(acc);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+        }
         public string getTypeAccount_BLL(string id_account)
         {
             SE_12Entities db = new SE_12Entities();

@@ -67,7 +67,7 @@ namespace CNPM_SE_12.View
                     if (Convert.ToInt32(values) > 0) status = "Còn hàng";
                     Item item = new Item()
                     {
-                        ID_Items = this.ID_Items,
+                        ID_Items = txt_IDItems.Text,
                         Items_Name = name_item,
                         ID_Category = ctg,
                         Price = Convert.ToInt32(price),
@@ -78,12 +78,20 @@ namespace CNPM_SE_12.View
                     {
                         MessageBox.Show("Add thành công !");
                     }
+                    else
+                    {
+                        MessageBox.Show("Add Thất bại !");
+                    }
                 }
                 else
                 {
                     if (BLL.QL_Items_BLL.Instance.Edit_Items_BLL(ID_Items, name_item, price, values, ctg))
                     {
-                        MessageBox.Show("Edit thành công !");
+                        MessageBox.Show("Cập nhật thành công !");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thất bại !");
                     }
                 }
             }    
@@ -92,7 +100,7 @@ namespace CNPM_SE_12.View
 
         public bool check_Inf()
         {
-            if(BLL.QL_Items_BLL.Instance.getItems_byID_BLL(ID_Items) == null)
+            if(BLL.QL_Items_BLL.Instance.getItems_byID_BLL(ID_Items) != null)
             {
                 MessageBox.Show("Sản phẩm này đã tồn tại!");
                 return false;

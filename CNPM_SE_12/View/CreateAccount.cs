@@ -16,9 +16,11 @@ namespace CNPM_SE_12.View
 
         public delegate void Mydel();
         private string ID_Acccount;
+        private string ID_Type;
         public CreateAccount(string id_account,string id_type)
         {
             this.ID_Acccount = id_account;
+            this.ID_Type = id_type;
             InitializeComponent();
         }
         private bool check()
@@ -47,7 +49,21 @@ namespace CNPM_SE_12.View
         {
             if(check())
             {
-                MessageBox.Show("abc");
+                if (BLL.QL_Account_BLL.Instance.create_Account(ID_Acccount, txt_Login.Text, txt_Pass.Text, ID_Type))
+                {
+                    MessageBox.Show("Thêm mới thành công !");
+
+                }
+                else
+                {
+                    BLL.QL_User_BLL.Instance.del_Acc_byID(ID_Acccount);
+                    MessageBox.Show("Thêm mới thất bại !");
+                }
+                if (D != null)
+                {
+                    D();
+                    this.Close();
+                }
             }
         }
     }

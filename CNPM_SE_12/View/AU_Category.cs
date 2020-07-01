@@ -57,12 +57,20 @@ namespace CNPM_SE_12.View
                 {
                     MessageBox.Show("Add thành công !");
                 }
+                else
+                {
+                    MessageBox.Show("Add thất bại !");
+                }
             }
             else
             {
                 if (BLL.QL_Items_BLL.Instance.Edit_Ctg_BLL(txtCtg_ID.Text, txtCtg_Name.Text))
                 {
                     MessageBox.Show("Edit thành công !");
+                }
+                else
+                {
+                    MessageBox.Show("Edit thất bại !");
                 }
 
             }
