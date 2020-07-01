@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CNPM_SE_12.DTO;
 using System.IO;
+using System.Collections;
 
 namespace CNPM_SE_12.View
 {
@@ -29,7 +30,7 @@ namespace CNPM_SE_12.View
 
         public Main(string id_account)
         {
-            this.ID_Account = id_account;
+            ID_Account = id_account;
             tb_Order = new List<data_Order>();
             InitializeComponent();
             //setColumn_DGV();
@@ -87,21 +88,15 @@ namespace CNPM_SE_12.View
                         btn.Name = "abc";
                         btn.Text = item[index].Items_Name;
                         btn.Tag = item[index].ID_Items;
+                        btn.ForeColor = Color.Black;
+                        btn.BackColor = Color.LightGray;
+                        btn.Font = new Font("Cambria", 8);
+                        //btn.FlatStyle = FlatStyle.Flat;
                         index++;
                     }
                     else break;
                 }
             }
-        }
-
-        public void setColumn_DGV()
-        {
-            DGV_Show.ColumnCount = 4;
-            DGV_Show.Columns[0].Name = "Mã sản phẩm";
-            DGV_Show.Columns[1].Name = "Tên sản phẩm";
-            DGV_Show.Columns[2].Name = "Số lượng";
-            DGV_Show.Columns[3].Name = "Đơn giá";
-
         }
 
         public void setCbb_Ctg()
@@ -131,9 +126,32 @@ namespace CNPM_SE_12.View
             }
         }
 
+        //private void ShowOrder(string id_item)
+        //{
+        //    DGV_Show.DataSource = null;   
+        //    Item item = BLL.QL_Items_BLL.Instance.getItems_byID_BLL(id_item);
+        //    int dem = Convert.ToInt32(item.Reserve);
+        //    bool check = true;
+        //    foreach (data_Order i in tb_Order)
+        //    {
+        //        if (i.Items_ID == id_item)
+        //        {
+        //            if(dem < i .Values + 1)
+        //            {
+        //                MessageBox.Show(" Hết hàng!");
+        //            }
+        //            else i.Values++;
+        //            check = false;
+        //            break;
+        //        }
+        //    }
+        //    if (check) tb_Order.Add(new data_Order { Items_ID = item.ID_Items, Items_Name = item.Items_Name, Price = item.Price, Values = 1 });
+        //    DGV_Show.DataSource = tb_Order;
+        //}
+
         private void ShowOrder(string id_item)
         {
-            DGV_Show.DataSource = null;   
+            DGV_Show.DataSource = null;
             Item item = BLL.QL_Items_BLL.Instance.getItems_byID_BLL(id_item);
             int dem = Convert.ToInt32(item.Reserve);
             bool check = true;
@@ -141,7 +159,7 @@ namespace CNPM_SE_12.View
             {
                 if (i.Items_ID == id_item)
                 {
-                    if(dem < i .Values + 1)
+                    if (dem < i.Values + 1)
                     {
                         MessageBox.Show(" Hết hàng!");
                     }
@@ -151,7 +169,7 @@ namespace CNPM_SE_12.View
                 }
             }
             if (check) tb_Order.Add(new data_Order { Items_ID = item.ID_Items, Items_Name = item.Items_Name, Price = item.Price, Values = 1 });
-            DGV_Show.DataSource = tb_Order;
+            ShowDGV(tb_Order);
         }
         private void ClearMatrix()
         {
@@ -190,18 +208,56 @@ namespace CNPM_SE_12.View
         {
             foreach (DataGridViewRow i in DGV_Show.Rows)
             {
-                int price = Convert.ToInt32(i.Cells["Price"].Value.ToString());
-                int value = Convert.ToInt32(i.Cells["Values"].Value.ToString());
-                total += price * value;
+                if(i.Cells[3].Value != null)
+                {
+                    int price = Convert.ToInt32(i.Cells[2].Value.ToString());
+                    int value = Convert.ToInt32(i.Cells[3].Value.ToString());
+                    total += price * value;
+                }  
             }
         }
         private void btn_CreateBill_Click(object sender, EventArgs e)
         {
             getToTal();
             Bill f = new Bill(ID_Account, total, tb_Order);
+            f.D += new Bill.mydel(clear_DGV);
             f.ShowDialog();
         }
 
+        private void clear_DGV()
+        {
+            DGV_Show.DataSource = null;
+            while (DGV_Show.Columns.Count > 0)
+            {
+                DGV_Show.Columns.RemoveAt(0);
+            }
+            while (DGV_Show.Rows.Count > 1)
+            {
+                DGV_Show.Rows.RemoveAt(0);
+            }
+        }    
+        private void ShowDGV(List<data_Order> da_O)
+        {
+
+            DGV_Show.ColumnCount = 4;
+            DGV_Show.Columns[0].Name = "Mã sản phẩm";
+            DGV_Show.Columns[1].Name = "Tên sản phẩm";
+            DGV_Show.Columns[2].Name = "Đơn giá";
+            DGV_Show.Columns[3].Name = "Số lượng";
+            while (DGV_Show.Rows.Count > 1)
+            {
+                DGV_Show.Rows.RemoveAt(0);
+            }
+            foreach (data_Order i in da_O)
+            {
+                ArrayList a = new ArrayList();
+                a.Add(i.Items_ID);
+                a.Add(i.Items_Name);
+                a.Add(i.Price);
+                a.Add(i.Values);
+                DGV_Show.Rows.Add(a.ToArray());
+            }
+        }
         public void ReadData()
         {
             string[] lines = File.ReadAllLines(@"E:\Lich.txt");
@@ -224,5 +280,9 @@ namespace CNPM_SE_12.View
             fs.Close();
         }
 
+        private void DGV_Show_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

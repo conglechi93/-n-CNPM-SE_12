@@ -12,7 +12,6 @@ namespace CNPM_SE_12.View
 {
     public partial class FB_Manager : UserControl
     {
-        private string ID_Type;
         public FB_Manager()
         {
             InitializeComponent();
