@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,7 +35,7 @@ namespace CNPM_SE_12
 
         public void ReadData()
         {
-            string[] lines = File.ReadAllLines(@"K:\check.txt");
+            string[] lines = File.ReadAllLines(@"E:\check.txt");
 
             if (lines[0] == "true")
             {
@@ -47,7 +48,7 @@ namespace CNPM_SE_12
 
         public void WriteData()
         {
-            String filepath = "K:\\check.txt";
+            String filepath = "E:\\check.txt";
             FileStream fs = new FileStream(filepath, FileMode.Create);
             StreamWriter sWriter = new StreamWriter(fs, Encoding.UTF8);
             if (cb_Rmb.Checked == true)
@@ -69,6 +70,23 @@ namespace CNPM_SE_12
             fs.Close();
         }
 
+        private string HashPass(string pass)
+        {
+            string s = pass;
+            MD5 mh = MD5.Create();
+            //Chuyển kiểu chuổi thành kiểu byte
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes("Chuỗi cần mã hóa");
+            //mã hóa chuỗi đã chuyển
+            byte[] hash = mh.ComputeHash(inputBytes);
+            //tạo đối tượng StringBuilder (làm việc với kiểu dữ liệu lớn)
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("X2"));
+            }
+            return s;
+        }    
         private void txt_User_Leave(object sender, EventArgs e)
         {
             if (txt_User.Text == "")
@@ -77,11 +95,6 @@ namespace CNPM_SE_12
             }
         }
   
-        //TextBox txt = (TextBox)sender;
-        //    if(txt.Text == "User name" || txt.Text == "Pass word")
-        //    {
-        //        txt.Text = "";
-        //    }
         private void txt_Pass_Leave(object sender, EventArgs e)
         {
             if (txt_Pass.Text == "")
@@ -92,6 +105,7 @@ namespace CNPM_SE_12
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(HashPass(HashPass(txt_Pass.Text)));
             if (BLL.Login_BLL.Instance.CheckAccount(txt_User.Text, txt_Pass.Text))
             {
                 WriteData();

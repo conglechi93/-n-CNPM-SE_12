@@ -68,7 +68,16 @@ namespace CNPM_SE_12.BLL
                 MessageBox.Show(e.ToString());
                 return false;
             }
+        }
 
+        public bool checkAcccount(string login)
+        {
+            SE_12Entities db = new SE_12Entities();
+            foreach(Account i in db.Accounts.Select(p=>p).ToList())
+            {
+                if (i.Login == login) return false;
+            }
+            return true;
         }
     }
 }

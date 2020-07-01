@@ -19,6 +19,8 @@ namespace CNPM_SE_12.View
             this.ID_Account = id_account;
         }
 
-
+        private void Btn_Save_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

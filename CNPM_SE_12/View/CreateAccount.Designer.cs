@@ -28,103 +28,158 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_Save = new System.Windows.Forms.Button();
-            this.txt_NewPass = new System.Windows.Forms.TextBox();
-            this.txt_IDAccount = new System.Windows.Forms.TextBox();
+            this.pnl_Show = new System.Windows.Forms.Panel();
+            this.btn_Create = new System.Windows.Forms.Button();
+            this.txt_ConfirmPass = new System.Windows.Forms.TextBox();
+            this.txt_Pass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_Login = new System.Windows.Forms.TextBox();
+            this.btn_Cancle = new System.Windows.Forms.Button();
+            this.pnl_Show.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel2
+            // pnl_Show
             // 
-            this.panel2.Controls.Add(this.btn_Save);
-            this.panel2.Controls.Add(this.txt_NewPass);
-            this.panel2.Controls.Add(this.txt_IDAccount);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(259, 238);
-            this.panel2.TabIndex = 10;
+            this.pnl_Show.Controls.Add(this.btn_Cancle);
+            this.pnl_Show.Controls.Add(this.btn_Create);
+            this.pnl_Show.Controls.Add(this.txt_ConfirmPass);
+            this.pnl_Show.Controls.Add(this.txt_Login);
+            this.pnl_Show.Controls.Add(this.txt_Pass);
+            this.pnl_Show.Controls.Add(this.label2);
+            this.pnl_Show.Controls.Add(this.label1);
+            this.pnl_Show.Controls.Add(this.label3);
+            this.pnl_Show.Location = new System.Drawing.Point(16, 15);
+            this.pnl_Show.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Show.Name = "pnl_Show";
+            this.pnl_Show.Size = new System.Drawing.Size(451, 318);
+            this.pnl_Show.TabIndex = 10;
             // 
-            // btn_Save
+            // btn_Create
             // 
-            this.btn_Save.BackColor = System.Drawing.Color.LightSlateGray;
-            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Save.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_Save.Location = new System.Drawing.Point(15, 98);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(99, 35);
-            this.btn_Save.TabIndex = 8;
-            this.btn_Save.Text = "Save";
-            this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Create.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btn_Create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Create.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Create.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btn_Create.Location = new System.Drawing.Point(58, 232);
+            this.btn_Create.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Create.Name = "btn_Create";
+            this.btn_Create.Size = new System.Drawing.Size(132, 43);
+            this.btn_Create.TabIndex = 8;
+            this.btn_Create.Text = "Create";
+            this.btn_Create.UseVisualStyleBackColor = false;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
-            // txt_NewPass
+            // txt_ConfirmPass
             // 
-            this.txt_NewPass.BackColor = System.Drawing.Color.LightGray;
-            this.txt_NewPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_NewPass.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NewPass.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_NewPass.Location = new System.Drawing.Point(15, 76);
-            this.txt_NewPass.Name = "txt_NewPass";
-            this.txt_NewPass.Size = new System.Drawing.Size(149, 18);
-            this.txt_NewPass.TabIndex = 12;
+            this.txt_ConfirmPass.BackColor = System.Drawing.Color.LightGray;
+            this.txt_ConfirmPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_ConfirmPass.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ConfirmPass.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txt_ConfirmPass.Location = new System.Drawing.Point(218, 159);
+            this.txt_ConfirmPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ConfirmPass.Name = "txt_ConfirmPass";
+            this.txt_ConfirmPass.Size = new System.Drawing.Size(199, 22);
+            this.txt_ConfirmPass.TabIndex = 12;
             // 
-            // txt_IDAccount
+            // txt_Pass
             // 
-            this.txt_IDAccount.BackColor = System.Drawing.Color.LightGray;
-            this.txt_IDAccount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_IDAccount.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_IDAccount.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_IDAccount.Location = new System.Drawing.Point(15, 32);
-            this.txt_IDAccount.Name = "txt_IDAccount";
-            this.txt_IDAccount.Size = new System.Drawing.Size(149, 18);
-            this.txt_IDAccount.TabIndex = 12;
+            this.txt_Pass.BackColor = System.Drawing.Color.LightGray;
+            this.txt_Pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Pass.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Pass.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txt_Pass.Location = new System.Drawing.Point(218, 105);
+            this.txt_Pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Pass.Name = "txt_Pass";
+            this.txt_Pass.Size = new System.Drawing.Size(199, 22);
+            this.txt_Pass.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(12, 54);
+            this.label2.Location = new System.Drawing.Point(56, 158);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 19);
+            this.label2.Size = new System.Drawing.Size(83, 23);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Mật khẩu mới:";
+            this.label2.Text = "Xác thực";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(12, 10);
+            this.label3.Location = new System.Drawing.Point(56, 104);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 19);
+            this.label3.Size = new System.Drawing.Size(89, 23);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Mật khẩu cũ:";
+            this.label3.Text = "Mật khẩu";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.Location = new System.Drawing.Point(56, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 23);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Tên đăng nhập";
+            // 
+            // txt_Login
+            // 
+            this.txt_Login.BackColor = System.Drawing.Color.LightGray;
+            this.txt_Login.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Login.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Login.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txt_Login.Location = new System.Drawing.Point(218, 55);
+            this.txt_Login.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Login.Name = "txt_Login";
+            this.txt_Login.Size = new System.Drawing.Size(199, 22);
+            this.txt_Login.TabIndex = 12;
+            // 
+            // btn_Cancle
+            // 
+            this.btn_Cancle.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btn_Cancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancle.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancle.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btn_Cancle.Location = new System.Drawing.Point(241, 232);
+            this.btn_Cancle.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Cancle.Name = "btn_Cancle";
+            this.btn_Cancle.Size = new System.Drawing.Size(132, 43);
+            this.btn_Cancle.TabIndex = 8;
+            this.btn_Cancle.Text = "Cancle";
+            this.btn_Cancle.UseVisualStyleBackColor = false;
             // 
             // CreateAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnl_Show);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CreateAccount";
-            this.Size = new System.Drawing.Size(288, 268);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Size = new System.Drawing.Size(471, 337);
+            this.pnl_Show.ResumeLayout(false);
+            this.pnl_Show.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btn_Save;
-        private System.Windows.Forms.TextBox txt_NewPass;
+        private System.Windows.Forms.Panel pnl_Show;
+        private System.Windows.Forms.Button btn_Create;
+        private System.Windows.Forms.TextBox txt_ConfirmPass;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_IDAccount;
+        private System.Windows.Forms.TextBox txt_Pass;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_Cancle;
+        private System.Windows.Forms.TextBox txt_Login;
+        private System.Windows.Forms.Label label1;
     }
 }

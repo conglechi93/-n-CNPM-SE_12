@@ -112,6 +112,7 @@
     <Compile Include="DTO\User.cs">
       <DependentUpon>DB_SE12.tt</DependentUpon>
     </Compile>
+    <Compile Include="HassPass.cs" />
     <Compile Include="View\ChangePass_NV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,7 +126,7 @@
       <DependentUpon>Chart_Payment.cs</DependentUpon>
     </Compile>
     <Compile Include="View\CreateAccount.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
