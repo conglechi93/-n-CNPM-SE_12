@@ -101,11 +101,11 @@ namespace CNPM_SE_12.BLL
             try
             {
                 SE_12Entities db = new SE_12Entities();
-                foreach (User i in db.Users)
+                foreach (User i in db.Users.Select(p => p).ToList())
                 {
                     foreach (DataGridViewRow j in r)
                     {
-                        if (i.ID_Account == j.Cells["ID_Account"].Value.ToString())
+                        if (i.ID_Account == j.Cells["Mã nhân viên"].Value.ToString())
                         {
                             db.Users.Remove(i);
                         }

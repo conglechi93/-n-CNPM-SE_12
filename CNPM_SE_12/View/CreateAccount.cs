@@ -13,7 +13,6 @@ namespace CNPM_SE_12.View
     public partial class CreateAccount : Form
     {
         private string ID_Acccount;
-        private string ID_Type;
         public CreateAccount(string id_account,string id_type)
         {
             this.ID_Acccount = id_account;

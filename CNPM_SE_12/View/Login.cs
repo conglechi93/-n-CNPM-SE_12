@@ -74,18 +74,15 @@ namespace CNPM_SE_12
         {
             string s = pass;
             MD5 mh = MD5.Create();
-            //Chuyển kiểu chuổi thành kiểu byte
             byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes("Chuỗi cần mã hóa");
-            //mã hóa chuỗi đã chuyển
             byte[] hash = mh.ComputeHash(inputBytes);
-            //tạo đối tượng StringBuilder (làm việc với kiểu dữ liệu lớn)
             StringBuilder sb = new StringBuilder();
 
             for (int i = 0; i < hash.Length; i++)
             {
                 sb.Append(hash[i].ToString("X2"));
             }
-            return s;
+            return sb.ToString();
         }    
         private void txt_User_Leave(object sender, EventArgs e)
         {
@@ -104,8 +101,7 @@ namespace CNPM_SE_12
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(HashPass(HashPass(txt_Pass.Text)));
+        {   
             if (BLL.Login_BLL.Instance.CheckAccount(txt_User.Text, txt_Pass.Text))
             {
                 WriteData();

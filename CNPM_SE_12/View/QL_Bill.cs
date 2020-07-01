@@ -70,8 +70,8 @@ namespace CNPM_SE_12.View
 
         private void btn_Reset_Click(object sender, EventArgs e)
         {
-            CreateAccount f = new CreateAccount();
-            f.ShowDialog();
+            //CreateAccount f = new CreateAccount();
+            //f.ShowDialog();
         }
     }
 }
