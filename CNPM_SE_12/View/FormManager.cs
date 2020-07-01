@@ -68,7 +68,7 @@ namespace CNPM_SE_12.View
             }
             if (btn.Tag.ToString() == "4")
             {
-                OpenChildForm(new QuanLyBill(ID_Account));
+                OpenChildForm(new QL_Bill(ID_Account));
             }
             if (btn.Tag.ToString() == "5")
             {
