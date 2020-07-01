@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_Slogan = new System.Windows.Forms.Label();
-            this.lb_Adress = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_Adress = new System.Windows.Forms.Label();
@@ -61,7 +60,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 417);
+            this.panel1.Size = new System.Drawing.Size(600, 439);
             this.panel1.TabIndex = 0;
             // 
             // lb_Slogan
@@ -69,7 +68,7 @@
             this.lb_Slogan.AutoSize = true;
             this.lb_Slogan.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Slogan.ForeColor = System.Drawing.Color.Navy;
-            this.lb_Slogan.Location = new System.Drawing.Point(214, 46);
+            this.lb_Slogan.Location = new System.Drawing.Point(262, 55);
             this.lb_Slogan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Slogan.Name = "lb_Slogan";
             this.lb_Slogan.Size = new System.Drawing.Size(271, 28);
@@ -79,20 +78,20 @@
             // button1
             // 
             this.button1.Image = global::CNPM_SE_12.Properties.Resources.Documents;
-            this.button1.Location = new System.Drawing.Point(535, 11);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(713, 14);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 50);
+            this.button1.Size = new System.Drawing.Size(72, 62);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CNPM_SE_12.Properties.Resources.login_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(21, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(178, 143);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -109,34 +108,14 @@
             this.lb_Adress.TabIndex = 1;
             this.lb_Adress.Text = "Địa chỉ: Trường Đại học Bách Khoa Đà Nẵng";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(713, 14);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 62);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CNPM_SE_12.Properties.Resources.login_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 143);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // lb_Phone
             // 
             this.lb_Phone.AutoSize = true;
-            this.lb_Phone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Phone.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Phone.ForeColor = System.Drawing.Color.Black;
-            this.lb_Phone.Location = new System.Drawing.Point(453, 44);
+            this.lb_Phone.Location = new System.Drawing.Point(310, 39);
             this.lb_Phone.Name = "lb_Phone";
-            this.lb_Phone.Size = new System.Drawing.Size(198, 20);
+            this.lb_Phone.Size = new System.Drawing.Size(173, 17);
             this.lb_Phone.TabIndex = 1;
             this.lb_Phone.Text = "Số điện thoại: 0000000abc";
             // 
@@ -150,7 +129,7 @@
             this.panel2.Controls.Add(this.lb_Time);
             this.panel2.Controls.Add(this.lb_BillID);
             this.panel2.Controls.Add(this.lb_UserID);
-            this.panel2.Location = new System.Drawing.Point(2, 122);
+            this.panel2.Location = new System.Drawing.Point(2, 146);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(595, 291);
@@ -273,7 +252,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(600, 417);
+            this.ClientSize = new System.Drawing.Size(600, 439);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);

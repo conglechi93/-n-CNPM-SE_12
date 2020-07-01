@@ -347,6 +347,12 @@
       <DependentUpon>DB_SE12.edmx</DependentUpon>
       <LastGenOutput>DB_SE12.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\book_magnify.png" />
+    <None Include="Resources\chart_pie_lightning.png" />
+    <None Include="Resources\reload.png" />
+    <None Include="Resources\previous-green.png" />
+    <None Include="Resources\next-green.png" />
+    <None Include="Resources\bullet_plus1.png" />
     <None Include="Resources\Documents.png" />
     <None Include="Resources\script_stop.png" />
     <None Include="Resources\script_start.png" />

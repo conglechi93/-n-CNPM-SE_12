@@ -66,5 +66,10 @@ namespace CNPM_SE_12.View
                 }
             }
         }
+
+        private void Btn_Cancle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
