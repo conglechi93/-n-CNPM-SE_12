@@ -98,7 +98,6 @@ namespace CNPM_SE_12.View
                 txt_CMND.Text = user.Pasport;
                 txt_DiaChi.Text = user.Address;
                 txt_ShiftTime.Text = user.Shift_Time;
-                txt_Salary.Text = user.Salary.ToString();
             }
         }
 
@@ -115,8 +114,7 @@ namespace CNPM_SE_12.View
                 string Passport = txt_CMND.Text;
                 string Address = txt_DiaChi.Text;
                 string ShiftTime = txt_ShiftTime.Text;
-                string Salary = txt_Salary.Text;
-                if (BLL.QL_User_BLL.Instance.Add_User_BLL(ID_User, User_Name, Gender, Birthday, Phonenumber, Passport, Address, ShiftTime, Salary))
+                if (BLL.QL_User_BLL.Instance.Add_User_BLL(ID_User, User_Name, Gender, Birthday, Phonenumber, Passport, Address, ShiftTime))
                     MessageBox.Show("Add thành công!");
                 else MessageBox.Show("Add thất bại");
             }       
@@ -153,8 +151,7 @@ namespace CNPM_SE_12.View
             string Passport = txt_CMND.Text;
             string Address = txt_DiaChi.Text;
             string ShiftTime = txt_ShiftTime.Text;
-            string Salary = txt_Salary.Text;
-            if (BLL.QL_User_BLL.Instance.Edit_User_BLL(ID_User, User_Name, Gender, Birthday, Phonenumber, Passport, Address, ShiftTime, Salary))
+            if (BLL.QL_User_BLL.Instance.Edit_User_BLL(ID_User, User_Name, Gender, Birthday, Phonenumber, Passport, Address, ShiftTime))
                 MessageBox.Show("Add thành công!");
             else MessageBox.Show("Add thất bại");
         }

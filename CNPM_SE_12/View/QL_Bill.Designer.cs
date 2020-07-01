@@ -54,9 +54,9 @@
             this.panel1.Controls.Add(this.btn_Search);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 206);
+            this.panel1.Size = new System.Drawing.Size(601, 167);
             this.panel1.TabIndex = 0;
             // 
             // btn_Reset
@@ -65,10 +65,10 @@
             this.btn_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Reset.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Reset.ForeColor = System.Drawing.Color.White;
-            this.btn_Reset.Location = new System.Drawing.Point(547, 105);
-            this.btn_Reset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Reset.Location = new System.Drawing.Point(410, 85);
+            this.btn_Reset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Reset.Name = "btn_Reset";
-            this.btn_Reset.Size = new System.Drawing.Size(125, 41);
+            this.btn_Reset.Size = new System.Drawing.Size(94, 33);
             this.btn_Reset.TabIndex = 3;
             this.btn_Reset.Text = "Reset";
             this.btn_Reset.UseVisualStyleBackColor = false;
@@ -80,10 +80,10 @@
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Location = new System.Drawing.Point(547, 50);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Search.Location = new System.Drawing.Point(410, 41);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(125, 41);
+            this.btn_Search.Size = new System.Drawing.Size(94, 33);
             this.btn_Search.TabIndex = 3;
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
@@ -99,10 +99,10 @@
             this.panel3.Controls.Add(this.lb_IDItems);
             this.panel3.Controls.Add(this.lb_IDNhanVien);
             this.panel3.Controls.Add(this.lbTime);
-            this.panel3.Location = new System.Drawing.Point(11, 22);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(8, 18);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(500, 162);
+            this.panel3.Size = new System.Drawing.Size(375, 132);
             this.panel3.TabIndex = 4;
             // 
             // txt_IdNhanVien
@@ -111,10 +111,10 @@
             this.txt_IdNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_IdNhanVien.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_IdNhanVien.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_IdNhanVien.Location = new System.Drawing.Point(180, 80);
-            this.txt_IdNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_IdNhanVien.Location = new System.Drawing.Point(135, 65);
+            this.txt_IdNhanVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_IdNhanVien.Name = "txt_IdNhanVien";
-            this.txt_IdNhanVien.Size = new System.Drawing.Size(299, 22);
+            this.txt_IdNhanVien.Size = new System.Drawing.Size(224, 18);
             this.txt_IdNhanVien.TabIndex = 3;
             // 
             // txt_IDItems
@@ -123,10 +123,10 @@
             this.txt_IDItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_IDItems.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_IDItems.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_IDItems.Location = new System.Drawing.Point(180, 47);
-            this.txt_IDItems.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_IDItems.Location = new System.Drawing.Point(135, 38);
+            this.txt_IDItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_IDItems.Name = "txt_IDItems";
-            this.txt_IDItems.Size = new System.Drawing.Size(299, 22);
+            this.txt_IDItems.Size = new System.Drawing.Size(224, 18);
             this.txt_IDItems.TabIndex = 3;
             // 
             // txt_ID
@@ -135,10 +135,10 @@
             this.txt_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_ID.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ID.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_ID.Location = new System.Drawing.Point(180, 14);
-            this.txt_ID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_ID.Location = new System.Drawing.Point(135, 11);
+            this.txt_ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_ID.Name = "txt_ID";
-            this.txt_ID.Size = new System.Drawing.Size(299, 22);
+            this.txt_ID.Size = new System.Drawing.Size(224, 18);
             this.txt_ID.TabIndex = 3;
             // 
             // dtpk
@@ -148,10 +148,10 @@
             this.dtpk.CalendarMonthBackground = System.Drawing.Color.LightGray;
             this.dtpk.CalendarTrailingForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtpk.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpk.Location = new System.Drawing.Point(180, 114);
-            this.dtpk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpk.Location = new System.Drawing.Point(135, 93);
+            this.dtpk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpk.Name = "dtpk";
-            this.dtpk.Size = new System.Drawing.Size(297, 29);
+            this.dtpk.Size = new System.Drawing.Size(224, 25);
             this.dtpk.TabIndex = 2;
             this.dtpk.TabStop = false;
             // 
@@ -160,9 +160,10 @@
             this.lb_ID.AutoSize = true;
             this.lb_ID.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_ID.ForeColor = System.Drawing.Color.Navy;
-            this.lb_ID.Location = new System.Drawing.Point(16, 12);
+            this.lb_ID.Location = new System.Drawing.Point(12, 10);
+            this.lb_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_ID.Name = "lb_ID";
-            this.lb_ID.Size = new System.Drawing.Size(129, 23);
+            this.lb_ID.Size = new System.Drawing.Size(108, 19);
             this.lb_ID.TabIndex = 0;
             this.lb_ID.Text = "Mã đơn hàng: ";
             // 
@@ -171,9 +172,10 @@
             this.lb_IDItems.AutoSize = true;
             this.lb_IDItems.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_IDItems.ForeColor = System.Drawing.Color.Navy;
-            this.lb_IDItems.Location = new System.Drawing.Point(16, 47);
+            this.lb_IDItems.Location = new System.Drawing.Point(12, 38);
+            this.lb_IDItems.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_IDItems.Name = "lb_IDItems";
-            this.lb_IDItems.Size = new System.Drawing.Size(132, 23);
+            this.lb_IDItems.Size = new System.Drawing.Size(109, 19);
             this.lb_IDItems.TabIndex = 0;
             this.lb_IDItems.Text = "Mã sản phẩm: ";
             // 
@@ -182,9 +184,10 @@
             this.lb_IDNhanVien.AutoSize = true;
             this.lb_IDNhanVien.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_IDNhanVien.ForeColor = System.Drawing.Color.Navy;
-            this.lb_IDNhanVien.Location = new System.Drawing.Point(16, 82);
+            this.lb_IDNhanVien.Location = new System.Drawing.Point(12, 67);
+            this.lb_IDNhanVien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_IDNhanVien.Name = "lb_IDNhanVien";
-            this.lb_IDNhanVien.Size = new System.Drawing.Size(133, 23);
+            this.lb_IDNhanVien.Size = new System.Drawing.Size(110, 19);
             this.lb_IDNhanVien.TabIndex = 0;
             this.lb_IDNhanVien.Text = "Mã nhân viên: ";
             // 
@@ -193,19 +196,20 @@
             this.lbTime.AutoSize = true;
             this.lbTime.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTime.ForeColor = System.Drawing.Color.Navy;
-            this.lbTime.Location = new System.Drawing.Point(16, 121);
+            this.lbTime.Location = new System.Drawing.Point(12, 98);
+            this.lbTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(101, 23);
+            this.lbTime.Size = new System.Drawing.Size(82, 19);
             this.lbTime.TabIndex = 0;
             this.lbTime.Text = "Thời gian: ";
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.DGV_Show);
-            this.panel2.Location = new System.Drawing.Point(1, 213);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(1, 173);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(601, 217);
+            this.panel2.Size = new System.Drawing.Size(451, 176);
             this.panel2.TabIndex = 1;
             // 
             // DGV_Show
@@ -213,17 +217,17 @@
             this.DGV_Show.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Show.Location = new System.Drawing.Point(0, 2);
-            this.DGV_Show.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DGV_Show.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DGV_Show.Name = "DGV_Show";
             this.DGV_Show.ReadOnly = true;
             this.DGV_Show.RowHeadersWidth = 51;
             this.DGV_Show.RowTemplate.Height = 24;
-            this.DGV_Show.Size = new System.Drawing.Size(797, 251);
+            this.DGV_Show.Size = new System.Drawing.Size(598, 204);
             this.DGV_Show.TabIndex = 0;
             // 
             // QL_Bill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

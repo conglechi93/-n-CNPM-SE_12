@@ -316,6 +316,7 @@
       <DependentUpon>DB_SE12.edmx</DependentUpon>
       <LastGenOutput>DB_SE12.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\background1.jpg" />
     <None Include="Resources\user_magnify.png" />
     <None Include="Resources\user_cross.png" />
     <None Include="Resources\package_white.png" />
