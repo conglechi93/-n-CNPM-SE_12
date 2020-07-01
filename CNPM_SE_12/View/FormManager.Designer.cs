@@ -247,6 +247,15 @@
             this.panel4.Size = new System.Drawing.Size(243, 205);
             this.panel4.TabIndex = 0;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Location = new System.Drawing.Point(4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(301, 217);
+            this.panel4.TabIndex = 0;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CNPM_SE_12.Properties.Resources.login_logo;
@@ -328,7 +337,7 @@
             // 
             // FormManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CNPM_SE_12.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
