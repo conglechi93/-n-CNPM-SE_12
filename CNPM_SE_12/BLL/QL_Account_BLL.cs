@@ -33,6 +33,12 @@ namespace CNPM_SE_12.BLL
             return account;
         }
 
+        public string getTypeAccount_BLL(string id_account)
+        {
+            SE_12Entities db = new SE_12Entities();
+            var acc = db.Accounts.Where(p => p.ID_Account == id_account).FirstOrDefault();
+            return acc.ID_Type;
+        }
         public Account getAccount_byID_BLL(string id_account)
         {
             SE_12Entities db = new SE_12Entities();

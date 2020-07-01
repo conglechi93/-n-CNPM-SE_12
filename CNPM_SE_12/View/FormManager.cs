@@ -13,11 +13,11 @@ namespace CNPM_SE_12.View
     public partial class FormManager : Form
     {
         private Form currentChildForm = null;
-        private string ID_User;
+        private string ID_Type;
         public FormManager(string id_user)
         {
             InitializeComponent();
-            this.ID_User = id_user;
+            this.ID_Type = id_user;
             this.Text = string.Empty;
             //this.ControlBox = false;
             this.DoubleBuffered = true;
@@ -51,15 +51,15 @@ namespace CNPM_SE_12.View
             }
             if (btn.Tag.ToString() == "2")
             {
-                OpenChildForm(new QL_Items());
+                OpenChildForm(new QL_Items(ID_Type));
             }
             if (btn.Tag.ToString() == "3")
             {
-                OpenChildForm(new QL_User());
+                OpenChildForm(new QL_User(ID_Type));
             }
             if (btn.Tag.ToString() == "4")
             {
-                OpenChildForm(new QuanLyBill());
+                OpenChildForm(new QuanLyBill(ID_Type));
             }
             if (btn.Tag.ToString() == "5")
             {
@@ -67,7 +67,7 @@ namespace CNPM_SE_12.View
             }
             if (btn.Tag.ToString() == "6")
             {
-                if (BLL.QL_Account_BLL.Instance.getAccount_byID_BLL(ID_User).ID_Type == "1")
+                if (BLL.QL_Account_BLL.Instance.getAccount_byID_BLL(ID_Type).ID_Type == "1")
                 {
                     OpenChildForm(new FB_Manager());
                 }
@@ -78,7 +78,7 @@ namespace CNPM_SE_12.View
             }
             if (btn.Tag.ToString() == "7")
             {
-                OpenChildForm(new Account_Manager());
+                OpenChildForm(new Account_Manager(ID_Type));
             }
         }
         private void btnOut_Click(object sender, EventArgs e)

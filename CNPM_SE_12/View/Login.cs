@@ -15,7 +15,8 @@ namespace CNPM_SE_12
 {
     public partial class fLogin : Form
     {
-        private string ID_User;
+        private string ID_Account;
+        private string ID_Type;
         public fLogin()
         {
             InitializeComponent();
@@ -25,8 +26,9 @@ namespace CNPM_SE_12
         {
             if (BLL.Login_BLL.Instance.CheckAccount(txt_User.Text, txt_Pass.Text))
             {
-                ID_User = Login_BLL.Instance.getIDUser(txt_User.Text);
-                FormManager f = new FormManager(ID_User);
+                ID_Account = Login_BLL.Instance.getIDUser(txt_User.Text);
+                ID_Type = BLL.QL_Account_BLL.Instance.getTypeAccount_BLL(ID_Account);
+                FormManager f = new FormManager(ID_Type);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();

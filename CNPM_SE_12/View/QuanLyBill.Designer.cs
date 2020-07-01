@@ -70,8 +70,9 @@
             this.btn_Reset.Name = "btn_Reset";
             this.btn_Reset.Size = new System.Drawing.Size(94, 33);
             this.btn_Reset.TabIndex = 3;
-            this.btn_Reset.Text = "Reset";
-            this.btn_Reset.UseVisualStyleBackColor = false;
+            this.btn_Reset.Text = "Làm mới";
+            this.btn_Reset.UseVisualStyleBackColor = true;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // btn_Search
             // 
@@ -229,7 +230,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuanLyBill";
-            this.Size = new System.Drawing.Size(608, 379);
+            this.Text = "QuanLyBill";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

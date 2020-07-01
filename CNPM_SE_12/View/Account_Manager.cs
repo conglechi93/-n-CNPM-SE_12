@@ -13,10 +13,19 @@ namespace CNPM_SE_12.View
 {
     public partial class Account_Manager : UserControl
     {
-        public Account_Manager()
+        private string ID_Type;
+        public Account_Manager(string id_type)
         {
-            InitializeComponent();
-            ShowDGV();
+            if(id_type == "1")
+            {
+                InitializeComponent();
+                ShowDGV();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền hạn này !");
+            }
+
         }
         public void ShowDGV()
         {
