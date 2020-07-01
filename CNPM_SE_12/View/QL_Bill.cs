@@ -47,9 +47,7 @@ namespace CNPM_SE_12.View
         }
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            List<int> data = getData();
-            Chart_Payment c = new Chart_Payment(data);
-            c.Show();
+
         }
         private List<int> getData()
         {
@@ -72,6 +70,25 @@ namespace CNPM_SE_12.View
         {
             //CreateAccount f = new CreateAccount();
             //f.ShowDialog();
+        }
+
+        private void btn_DrawChart_Click(object sender, EventArgs e)
+        {
+            List<int> data = getData();
+            Chart_Payment c = new Chart_Payment(data);
+            c.Show();
+        }
+
+        private void btn_DetailOrd_Click(object sender, EventArgs e)
+        {
+            DataGridViewSelectedRowCollection r = DGV_Show.SelectedRows;
+            if (r.Count == 1)
+            {
+                string ID = r[0].Cells[0].Value.ToString();
+                MessageBox.Show(ID);
+                DetailOrder f = new DetailOrder(ID);
+                f.ShowDialog();
+            }
         }
     }
 }

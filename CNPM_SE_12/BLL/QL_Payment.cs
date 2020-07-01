@@ -1,4 +1,5 @@
 ﻿using CNPM_SE_12.DTO;
+using CNPM_SE_12.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,6 +44,20 @@ namespace CNPM_SE_12.BLL
             }
         }
 
+        public List<Detail_Order> getOrder_byID(string ID)
+        {
+            try
+            {
+                SE_12Entities db = new SE_12Entities();
+                List<Detail_Order> ord = db.Detail_Order.Where(p => p.ID_Order == Convert.ToInt32(ID)).ToList();
+                return ord;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return null;
+            }
+        }
         public int CountBill()
         {
             try

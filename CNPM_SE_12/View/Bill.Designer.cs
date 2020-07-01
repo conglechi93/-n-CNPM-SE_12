@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_Slogan = new System.Windows.Forms.Label();
+            this.lb_Adress = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_Adress = new System.Windows.Forms.Label();
@@ -108,15 +109,34 @@
             this.lb_Adress.TabIndex = 1;
             this.lb_Adress.Text = "Địa chỉ: Trường Đại học Bách Khoa Đà Nẵng";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(713, 14);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(72, 62);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CNPM_SE_12.Properties.Resources.login_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(31, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 143);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // lb_Phone
             // 
             this.lb_Phone.AutoSize = true;
-            this.lb_Phone.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Phone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Phone.ForeColor = System.Drawing.Color.Black;
-            this.lb_Phone.Location = new System.Drawing.Point(310, 39);
-            this.lb_Phone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_Phone.Location = new System.Drawing.Point(453, 44);
             this.lb_Phone.Name = "lb_Phone";
-            this.lb_Phone.Size = new System.Drawing.Size(173, 17);
+            this.lb_Phone.Size = new System.Drawing.Size(198, 20);
             this.lb_Phone.TabIndex = 1;
             this.lb_Phone.Text = "Số điện thoại: 0000000abc";
             // 
