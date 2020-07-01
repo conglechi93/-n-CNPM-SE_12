@@ -128,7 +128,7 @@
             this.txt_Search.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Search.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txt_Search.Location = new System.Drawing.Point(23, 31);
-            this.txt_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.Size = new System.Drawing.Size(135, 18);
             this.txt_Search.TabIndex = 10;
@@ -140,7 +140,7 @@
             this.btn_Search.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Search.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.btn_Search.Location = new System.Drawing.Point(162, 23);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(125, 35);
             this.btn_Search.TabIndex = 11;
@@ -173,7 +173,7 @@
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.dtg_Search);
             this.Name = "FB_Manager";
-            this.Size = new System.Drawing.Size(800, 422);
+            this.Size = new System.Drawing.Size(800, 500);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Search)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CNPM_SE_12.BLL
 {
     public class Login_BLL
     {
+        private HassPass H = new HassPass();
         private static Login_BLL _Instance;
         public static Login_BLL Instance
 
@@ -32,9 +34,11 @@ namespace CNPM_SE_12.BLL
         {
             SE_12Entities DB = new SE_12Entities();
             var account = DB.Accounts.Select(p => p);
+            string s = H.MD5(pass);
+            MessageBox.Show(s);
             foreach (Account i in account.ToList())
             {
-                if (login == i.Login && pass == i.PassWord)
+                if (login == i.Login && H.MD5(pass) == i.PassWord)
                 {
                     return true;
                 }

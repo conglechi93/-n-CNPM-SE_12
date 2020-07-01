@@ -26,12 +26,6 @@ namespace CNPM_SE_12.BLL
         {
 
         }
-        public List<Account> getAccount_BLL()
-        {
-            SE_12Entities db = new SE_12Entities();
-            List<Account> account = db.Accounts.Select(p => p).ToList();
-            return account;
-        }
 
         public string getTypeAccount_BLL(string id_account)
         {
@@ -74,7 +68,40 @@ namespace CNPM_SE_12.BLL
                 MessageBox.Show(e.ToString());
                 return false;
             }
+        }
 
+        public bool delAccount_BLL(DataGridViewSelectedRowCollection r)
+        {
+            try
+            {
+                SE_12Entities db = new SE_12Entities();
+                foreach (Account i in db.Accounts.Select(p => p).ToList())
+                {
+                    foreach (DataGridViewRow j in r)
+                    {
+                        if (i.ID_Account == j.Cells["Mã nhân viên"].Value.ToString())
+                        {
+                            db.Accounts.Remove(i);
+                        }
+                    }
+                }
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+        }
+        public bool checkAcccount(string login)
+        {
+            SE_12Entities db = new SE_12Entities();
+            foreach(Account i in db.Accounts.Select(p=>p).ToList())
+            {
+                if (i.Login == login) return false;
+            }
+            return true;
         }
     }
 }
