@@ -75,7 +75,7 @@
             this.tab_Main.Controls.Add(this.tab_Items);
             this.tab_Main.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tab_Main.Location = new System.Drawing.Point(10, 51);
-            this.tab_Main.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tab_Main.Margin = new System.Windows.Forms.Padding(2);
             this.tab_Main.Name = "tab_Main";
             this.tab_Main.SelectedIndex = 0;
             this.tab_Main.Size = new System.Drawing.Size(780, 338);
@@ -85,11 +85,14 @@
             // tab_Ctg
             // 
             this.tab_Ctg.Controls.Add(this.pnl_Ctg);
+            this.tab_Ctg.Controls.Add(this.btn_Del);
+            this.tab_Ctg.Controls.Add(this.btn_Add);
+            this.tab_Ctg.Controls.Add(this.btn_Edit);
             this.tab_Ctg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tab_Ctg.Location = new System.Drawing.Point(4, 26);
-            this.tab_Ctg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tab_Ctg.Margin = new System.Windows.Forms.Padding(2);
             this.tab_Ctg.Name = "tab_Ctg";
-            this.tab_Ctg.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tab_Ctg.Padding = new System.Windows.Forms.Padding(2);
             this.tab_Ctg.Size = new System.Drawing.Size(772, 308);
             this.tab_Ctg.TabIndex = 0;
             this.tab_Ctg.Tag = "1";
@@ -103,7 +106,7 @@
             this.pnl_Ctg.Controls.Add(this.txt_NameCtg);
             this.pnl_Ctg.Controls.Add(this.lb_IDCtg);
             this.pnl_Ctg.Location = new System.Drawing.Point(4, 87);
-            this.pnl_Ctg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_Ctg.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Ctg.Name = "pnl_Ctg";
             this.pnl_Ctg.Size = new System.Drawing.Size(270, 81);
             this.pnl_Ctg.TabIndex = 8;
@@ -112,7 +115,7 @@
             // 
             this.txt_IDCtg.Enabled = false;
             this.txt_IDCtg.Location = new System.Drawing.Point(122, 11);
-            this.txt_IDCtg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_IDCtg.Margin = new System.Windows.Forms.Padding(2);
             this.txt_IDCtg.Name = "txt_IDCtg";
             this.txt_IDCtg.Size = new System.Drawing.Size(136, 26);
             this.txt_IDCtg.TabIndex = 5;
@@ -132,7 +135,7 @@
             // 
             this.txt_NameCtg.Enabled = false;
             this.txt_NameCtg.Location = new System.Drawing.Point(122, 47);
-            this.txt_NameCtg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NameCtg.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NameCtg.Name = "txt_NameCtg";
             this.txt_NameCtg.Size = new System.Drawing.Size(136, 26);
             this.txt_NameCtg.TabIndex = 4;
@@ -155,9 +158,9 @@
             this.tab_Items.Controls.Add(this.txt_Search);
             this.tab_Items.Controls.Add(this.pnl_Items);
             this.tab_Items.Location = new System.Drawing.Point(4, 26);
-            this.tab_Items.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tab_Items.Margin = new System.Windows.Forms.Padding(2);
             this.tab_Items.Name = "tab_Items";
-            this.tab_Items.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tab_Items.Padding = new System.Windows.Forms.Padding(2);
             this.tab_Items.Size = new System.Drawing.Size(772, 308);
             this.tab_Items.TabIndex = 1;
             this.tab_Items.Tag = "2";
@@ -168,7 +171,7 @@
             // 
             this.cbbSearch.FormattingEnabled = true;
             this.cbbSearch.Location = new System.Drawing.Point(226, 266);
-            this.cbbSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbSearch.Margin = new System.Windows.Forms.Padding(2);
             this.cbbSearch.Name = "cbbSearch";
             this.cbbSearch.Size = new System.Drawing.Size(140, 25);
             this.cbbSearch.TabIndex = 6;
@@ -176,7 +179,7 @@
             // btn_Search
             // 
             this.btn_Search.Location = new System.Drawing.Point(378, 264);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(107, 24);
             this.btn_Search.TabIndex = 5;
@@ -186,7 +189,7 @@
             // txt_Search
             // 
             this.txt_Search.Location = new System.Drawing.Point(5, 266);
-            this.txt_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Search.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.Size = new System.Drawing.Size(189, 24);
             this.txt_Search.TabIndex = 4;
@@ -206,7 +209,7 @@
             this.pnl_Items.Controls.Add(this.lb_IDItems);
             this.pnl_Items.Controls.Add(this.lb_NameItems);
             this.pnl_Items.Location = new System.Drawing.Point(8, 17);
-            this.pnl_Items.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_Items.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_Items.Name = "pnl_Items";
             this.pnl_Items.Size = new System.Drawing.Size(267, 232);
             this.pnl_Items.TabIndex = 7;
@@ -215,7 +218,7 @@
             // 
             this.txt_IDItems.Enabled = false;
             this.txt_IDItems.Location = new System.Drawing.Point(122, 8);
-            this.txt_IDItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_IDItems.Margin = new System.Windows.Forms.Padding(2);
             this.txt_IDItems.Name = "txt_IDItems";
             this.txt_IDItems.Size = new System.Drawing.Size(134, 24);
             this.txt_IDItems.TabIndex = 1;
@@ -224,7 +227,7 @@
             // 
             this.txt_NameItems.Enabled = false;
             this.txt_NameItems.Location = new System.Drawing.Point(122, 45);
-            this.txt_NameItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_NameItems.Margin = new System.Windows.Forms.Padding(2);
             this.txt_NameItems.Name = "txt_NameItems";
             this.txt_NameItems.Size = new System.Drawing.Size(134, 24);
             this.txt_NameItems.TabIndex = 1;
@@ -233,7 +236,7 @@
             // 
             this.txt_Ctg.Enabled = false;
             this.txt_Ctg.Location = new System.Drawing.Point(122, 83);
-            this.txt_Ctg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Ctg.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Ctg.Name = "txt_Ctg";
             this.txt_Ctg.Size = new System.Drawing.Size(134, 24);
             this.txt_Ctg.TabIndex = 1;
@@ -252,7 +255,7 @@
             // 
             this.txt_Values.Enabled = false;
             this.txt_Values.Location = new System.Drawing.Point(122, 120);
-            this.txt_Values.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Values.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Values.Name = "txt_Values";
             this.txt_Values.Size = new System.Drawing.Size(134, 24);
             this.txt_Values.TabIndex = 1;
@@ -271,7 +274,7 @@
             // 
             this.txt_Price.Enabled = false;
             this.txt_Price.Location = new System.Drawing.Point(122, 163);
-            this.txt_Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_Price.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(134, 24);
             this.txt_Price.TabIndex = 1;
@@ -290,7 +293,7 @@
             // 
             this.txt_State.Enabled = false;
             this.txt_State.Location = new System.Drawing.Point(122, 200);
-            this.txt_State.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_State.Margin = new System.Windows.Forms.Padding(2);
             this.txt_State.Name = "txt_State";
             this.txt_State.Size = new System.Drawing.Size(134, 24);
             this.txt_State.TabIndex = 1;
@@ -330,7 +333,7 @@
             this.DGV_Show.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_Show.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Show.Location = new System.Drawing.Point(292, 80);
-            this.DGV_Show.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DGV_Show.Margin = new System.Windows.Forms.Padding(2);
             this.DGV_Show.Name = "DGV_Show";
             this.DGV_Show.ReadOnly = true;
             this.DGV_Show.RowHeadersWidth = 51;
@@ -347,7 +350,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.tab_Main);
             this.panel1.Location = new System.Drawing.Point(3, 41);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(814, 404);
             this.panel1.TabIndex = 1;
@@ -355,57 +358,86 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btn_Show);
-            this.panel2.Controls.Add(this.btn_Del);
-            this.panel2.Controls.Add(this.btn_Edit);
-            this.panel2.Controls.Add(this.btn_Add);
             this.panel2.Location = new System.Drawing.Point(292, 28);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(495, 46);
             this.panel2.TabIndex = 1;
             // 
             // btn_Show
             // 
+            this.btn_Show.BackColor = System.Drawing.Color.SlateBlue;
+            this.btn_Show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Show.ForeColor = System.Drawing.Color.White;
+            this.btn_Show.Image = global::CNPM_SE_12.Properties.Resources.application_osx_get;
+            this.btn_Show.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Show.Location = new System.Drawing.Point(374, 2);
-            this.btn_Show.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Show.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Show.Name = "btn_Show";
             this.btn_Show.Size = new System.Drawing.Size(76, 41);
             this.btn_Show.TabIndex = 0;
             this.btn_Show.Text = "Show";
-            this.btn_Show.UseVisualStyleBackColor = true;
+            this.btn_Show.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Show.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_Show.UseVisualStyleBackColor = false;
             this.btn_Show.Click += new System.EventHandler(this.btn_Show_Click);
             // 
             // btn_Del
             // 
-            this.btn_Del.Location = new System.Drawing.Point(257, 2);
-            this.btn_Del.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Del.BackColor = System.Drawing.Color.SlateBlue;
+            this.btn_Del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Del.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Del.ForeColor = System.Drawing.Color.White;
+            this.btn_Del.Image = global::CNPM_SE_12.Properties.Resources.decline;
+            this.btn_Del.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Del.Location = new System.Drawing.Point(14, 263);
+            this.btn_Del.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Del.Name = "btn_Del";
-            this.btn_Del.Size = new System.Drawing.Size(76, 41);
+            this.btn_Del.Size = new System.Drawing.Size(98, 41);
             this.btn_Del.TabIndex = 0;
             this.btn_Del.Text = "Xóa";
-            this.btn_Del.UseVisualStyleBackColor = true;
+            this.btn_Del.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Del.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_Del.UseVisualStyleBackColor = false;
             this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // btn_Edit
             // 
-            this.btn_Edit.Location = new System.Drawing.Point(149, 2);
-            this.btn_Edit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Edit.BackColor = System.Drawing.Color.SlateBlue;
+            this.btn_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Edit.ForeColor = System.Drawing.Color.White;
+            this.btn_Edit.Image = global::CNPM_SE_12.Properties.Resources.database_wrench;
+            this.btn_Edit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Edit.Location = new System.Drawing.Point(14, 216);
+            this.btn_Edit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(76, 41);
+            this.btn_Edit.Size = new System.Drawing.Size(98, 41);
             this.btn_Edit.TabIndex = 0;
             this.btn_Edit.Text = "Cập nhật";
-            this.btn_Edit.UseVisualStyleBackColor = true;
+            this.btn_Edit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Edit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_Edit.UseVisualStyleBackColor = false;
             this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(34, 2);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Add.BackColor = System.Drawing.Color.SlateBlue;
+            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.ForeColor = System.Drawing.Color.White;
+            this.btn_Add.Image = global::CNPM_SE_12.Properties.Resources.control_add;
+            this.btn_Add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Add.Location = new System.Drawing.Point(14, 172);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(76, 41);
+            this.btn_Add.Size = new System.Drawing.Size(98, 41);
             this.btn_Add.TabIndex = 0;
             this.btn_Add.Text = "Thêm";
-            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Add.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_Add.UseVisualStyleBackColor = false;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // QL_Item
@@ -413,7 +445,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QL_Item";
             this.Size = new System.Drawing.Size(800, 500);
             this.tab_Main.ResumeLayout(false);

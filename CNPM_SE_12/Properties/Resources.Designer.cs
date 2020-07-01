@@ -63,6 +63,16 @@ namespace CNPM_SE_12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap application_osx_get {
+            get {
+                object obj = ResourceManager.GetObject("application_osx_get", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background {
             get {
                 object obj = ResourceManager.GetObject("background", resourceCulture);
@@ -96,6 +106,36 @@ namespace CNPM_SE_12.Properties {
         internal static System.Drawing.Bitmap bullet_plus {
             get {
                 object obj = ResourceManager.GetObject("bullet_plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap control_add {
+            get {
+                object obj = ResourceManager.GetObject("control_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap database_wrench {
+            get {
+                object obj = ResourceManager.GetObject("database_wrench", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap decline {
+            get {
+                object obj = ResourceManager.GetObject("decline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
