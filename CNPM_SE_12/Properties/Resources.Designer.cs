@@ -93,6 +93,16 @@ namespace CNPM_SE_12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap book_magnify {
+            get {
+                object obj = ResourceManager.GetObject("book_magnify", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bookmark {
             get {
                 object obj = ResourceManager.GetObject("Bookmark", resourceCulture);
@@ -123,9 +133,9 @@ namespace CNPM_SE_12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bullet_tick {
+        internal static System.Drawing.Bitmap bullet_plus1 {
             get {
-                object obj = ResourceManager.GetObject("bullet_tick", resourceCulture);
+                object obj = ResourceManager.GetObject("bullet_plus1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +143,9 @@ namespace CNPM_SE_12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap calendar_select_none {
+        internal static System.Drawing.Bitmap bullet_tick {
             get {
-                object obj = ResourceManager.GetObject("calendar_select_none", resourceCulture);
+                object obj = ResourceManager.GetObject("bullet_tick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,6 +373,16 @@ namespace CNPM_SE_12.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap next_green {
+            get {
+                object obj = ResourceManager.GetObject("next-green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Package {
             get {
                 object obj = ResourceManager.GetObject("Package", resourceCulture);
@@ -386,16 +406,6 @@ namespace CNPM_SE_12.Properties {
         internal static System.Drawing.Bitmap page_cancel {
             get {
                 object obj = ResourceManager.GetObject("page_cancel", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap page_header_footer {
-            get {
-                object obj = ResourceManager.GetObject("page_header_footer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
