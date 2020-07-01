@@ -42,6 +42,8 @@
             this.lbTime = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DGV_Show = new System.Windows.Forms.DataGridView();
+            this.btn_Chart = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -51,6 +53,8 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btn_Reset);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_Chart);
             this.panel1.Controls.Add(this.btn_Search);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(1, 1);
@@ -65,10 +69,10 @@
             this.btn_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Reset.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Reset.ForeColor = System.Drawing.Color.White;
-            this.btn_Reset.Location = new System.Drawing.Point(547, 105);
+            this.btn_Reset.Location = new System.Drawing.Point(547, 59);
             this.btn_Reset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Reset.Name = "btn_Reset";
-            this.btn_Reset.Size = new System.Drawing.Size(125, 41);
+            this.btn_Reset.Size = new System.Drawing.Size(166, 41);
             this.btn_Reset.TabIndex = 3;
             this.btn_Reset.Text = "Reset";
             this.btn_Reset.UseVisualStyleBackColor = false;
@@ -80,10 +84,10 @@
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Search.Location = new System.Drawing.Point(547, 50);
+            this.btn_Search.Location = new System.Drawing.Point(547, 11);
             this.btn_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(125, 41);
+            this.btn_Search.Size = new System.Drawing.Size(166, 41);
             this.btn_Search.TabIndex = 3;
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
@@ -218,8 +222,38 @@
             this.DGV_Show.ReadOnly = true;
             this.DGV_Show.RowHeadersWidth = 51;
             this.DGV_Show.RowTemplate.Height = 24;
-            this.DGV_Show.Size = new System.Drawing.Size(511, 263);
+            this.DGV_Show.Size = new System.Drawing.Size(777, 263);
             this.DGV_Show.TabIndex = 0;
+            // 
+            // btn_Chart
+            // 
+            this.btn_Chart.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btn_Chart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Chart.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Chart.ForeColor = System.Drawing.Color.White;
+            this.btn_Chart.Location = new System.Drawing.Point(547, 104);
+            this.btn_Chart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Chart.Name = "btn_Chart";
+            this.btn_Chart.Size = new System.Drawing.Size(166, 41);
+            this.btn_Chart.TabIndex = 3;
+            this.btn_Chart.Text = "Vẽ biểu đồ";
+            this.btn_Chart.UseVisualStyleBackColor = false;
+            this.btn_Chart.Click += new System.EventHandler(this.btn_DrawChart_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(547, 149);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 41);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Hiển thị chi tiết";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btn_DetailOrd_Click);
             // 
             // QL_Bill
             // 
@@ -255,5 +289,7 @@
         private System.Windows.Forms.TextBox txt_ID;
         private System.Windows.Forms.TextBox txt_IdNhanVien;
         private System.Windows.Forms.TextBox txt_IDItems;
+        private System.Windows.Forms.Button btn_Chart;
+        private System.Windows.Forms.Button button1;
     }
 }

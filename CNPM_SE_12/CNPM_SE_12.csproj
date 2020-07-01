@@ -131,6 +131,12 @@
     <Compile Include="View\CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DetailOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DetailOrder.Designer.cs">
+      <DependentUpon>DetailOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DetailOrder.resx">
+      <DependentUpon>DetailOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FB_Manager.resx">
       <DependentUpon>FB_Manager.cs</DependentUpon>
