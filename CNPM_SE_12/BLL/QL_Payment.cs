@@ -28,6 +28,20 @@ namespace CNPM_SE_12.BLL
 
         }
 
+        public List<Order> getOrder()
+        {
+            try
+            {
+                SE_12Entities db = new SE_12Entities();
+                List<Order> ord = db.Orders.Select(p => p).ToList();
+                return ord;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return null;
+            }
+        }
         public bool Add_Payment_BLL(string id_account,DateTime time,int total)
         {
             try
