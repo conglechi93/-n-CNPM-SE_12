@@ -44,7 +44,7 @@ namespace CNPM_SE_12.BLL
         {
             return true;
         }
-        public bool Add_User_BLL(string ID_User, string User_Name, string Gender, string Birthday, string Phonenumber, string Passport, string Address, string ShiftTime, string Salary)
+        public bool Add_User_BLL(string ID_User, string User_Name, string Gender, string Birthday, string Phonenumber, string Passport, string Address, string ShiftTime)
         {
             User user = new User();
             user.ID_Account = ID_User;
@@ -58,7 +58,6 @@ namespace CNPM_SE_12.BLL
             user.Pasport = Passport;
             user.Address = Address;
             user.Shift_Time = ShiftTime;
-            user.Salary = Convert.ToInt32(Salary);
             try
             {
                 SE_12Entities db = new SE_12Entities();
@@ -121,7 +120,7 @@ namespace CNPM_SE_12.BLL
                 return false;
             }
         }
-        public bool Edit_User_BLL(string ID_User, string User_Name, string Gender, string Birthday, string Phonenumber, string Passport, string Address, string ShiftTime, string Salary)
+        public bool Edit_User_BLL(string ID_User, string User_Name, string Gender, string Birthday, string Phonenumber, string Passport, string Address, string ShiftTime)
         {
             try
             {
@@ -138,7 +137,6 @@ namespace CNPM_SE_12.BLL
                 user_clone.Pasport = Passport;
                 user_clone.Address = Address;
                 user_clone.Shift_Time = ShiftTime;
-                user_clone.Salary = Convert.ToInt32(Salary);
 
                 User user = db.Users.Where(p => p.ID_Account == ID_User).FirstOrDefault();
                 user.ID_Account = user_clone.ID_Account;
@@ -149,7 +147,6 @@ namespace CNPM_SE_12.BLL
                 user.Pasport = user_clone.Pasport;
                 user.Address = user_clone.Address;
                 user.Shift_Time = user_clone.Shift_Time;
-                user.Salary = user_clone.Salary;
                 db.SaveChanges();
                 return true;
             }

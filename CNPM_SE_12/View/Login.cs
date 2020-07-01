@@ -132,5 +132,15 @@ namespace CNPM_SE_12
         {
             this.Close();
         }
+
+        private void Btn_Exit_MouseHover(object sender, EventArgs e)
+        {
+            btn_Exit.BackColor = Color.Red;
+        }
+
+        private void Btn_Exit_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Exit.BackColor = Color.RosyBrown;
+        }
     }
 }

@@ -203,12 +203,6 @@
     <Compile Include="View\QL_Item.Designer.cs">
       <DependentUpon>QL_Item.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\QL_Items.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\QL_Items.Designer.cs">
-      <DependentUpon>QL_Items.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\QL_User.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -264,9 +258,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\QL_Item.resx">
       <DependentUpon>QL_Item.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\QL_Items.resx">
-      <DependentUpon>QL_Items.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\QL_User.resx">
       <DependentUpon>QL_User.cs</DependentUpon>
@@ -324,6 +315,7 @@
       <DependentUpon>DB_SE12.edmx</DependentUpon>
       <LastGenOutput>DB_SE12.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\background1.jpg" />
     <None Include="Resources\user_magnify.png" />
     <None Include="Resources\user_cross.png" />
     <None Include="Resources\package_white.png" />

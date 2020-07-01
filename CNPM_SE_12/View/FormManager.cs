@@ -32,6 +32,7 @@ namespace CNPM_SE_12.View
             }
             childForm.BorderStyle = BorderStyle.None;
             childForm.Dock = DockStyle.Fill;
+            pnl_ShowForm.BackColor = Color.White;
             pnl_ShowForm.Controls.Add(childForm);
             childForm.BringToFront();
             childForm.Show();
@@ -63,12 +64,21 @@ namespace CNPM_SE_12.View
                 }
                 else
                 {
+                    pnl_ShowForm.Controls.Clear();
                     pnl_ShowForm.BackColor = Color.Transparent;
                 }
             }
             if (btn.Tag.ToString() == "4")
             {
-                OpenChildForm(new QL_Bill(ID_Account));
+                if (BLL.QL_Account_BLL.Instance.getAccount_byID_BLL(ID_Account).ID_Type == "1")
+                {
+                    OpenChildForm(new QL_Bill(ID_Account));
+                }
+                else
+                {
+                    pnl_ShowForm.Controls.Clear();
+                    pnl_ShowForm.BackColor = Color.Transparent;
+                }
             }
             if (btn.Tag.ToString() == "5")
             {
@@ -87,7 +97,15 @@ namespace CNPM_SE_12.View
             }
             if (btn.Tag.ToString() == "7")
             {
-                OpenChildForm(new Account_Manager(ID_Account));
+                if (BLL.QL_Account_BLL.Instance.getAccount_byID_BLL(ID_Account).ID_Type == "1")
+                {
+                    OpenChildForm(new Account_Manager());
+                }
+                else
+                {
+                    pnl_ShowForm.Controls.Clear();
+                    OpenChildForm(new ChangePass_NV(ID_Account));
+                }
             }
         }
         private void btnOut_Click(object sender, EventArgs e)
@@ -112,7 +130,7 @@ namespace CNPM_SE_12.View
 
         private void BtnOut_MouseHover(object sender, EventArgs e)
         {
-            btnOut.BackColor = Color.Red;
+            btnOut.BackColor = Color.Lime;
         }
 
         private void BtnOut_MouseLeave(object sender, EventArgs e)

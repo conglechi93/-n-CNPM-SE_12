@@ -13,19 +13,9 @@ namespace CNPM_SE_12.View
 {
     public partial class Account_Manager : UserControl
     {
-        private string ID_Type;
-        public Account_Manager(string id_type)
+        public Account_Manager()
         {
-            if(id_type == "1")
-            {
-                ID_Type = id_type;
                 InitializeComponent();
-            }
-            else
-            {
-                MessageBox.Show("Bạn không có quyền hạn này !");
-            }
-
         }
         private void Btn_Search_Click(object sender, EventArgs e)
         {
