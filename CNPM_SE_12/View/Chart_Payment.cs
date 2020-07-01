@@ -12,21 +12,22 @@ namespace CNPM_SE_12.View
 {
     public partial class Chart_Payment : Form
     {
-        public Chart_Payment()
+        private List<int> data;
+        public Chart_Payment(List<int> data)
         {
             InitializeComponent();
+            this.data = data;
         }
 
         private void Chart_Load(object sender, EventArgs e)
         {
-            chart_Bill.Series["VND Đồng"].Points.Add(60000);
-            chart_Bill.Series["VND Đồng"].Points[0].Label = "60000";
-            chart_Bill.Series["VND Đồng"].Points[0].Color = Color.Blue;
-            chart_Bill.Series["VND Đồng"].Points[0].AxisLabel = "Tháng 1";
-            chart_Bill.Series["VND Đồng"].Points.Add(30000);
-            chart_Bill.Series["VND Đồng"].Points[1].Label = "30000";
-            chart_Bill.Series["VND Đồng"].Points[1].Color = Color.Blue;
-            chart_Bill.Series["VND Đồng"].Points[1].AxisLabel = "Tháng 2";
+            for(int i = 0; i <= 11; i++)
+            {
+                chart_Bill.Series["VND Đồng"].Points.Add(data[i]);
+                chart_Bill.Series["VND Đồng"].Points[i].Label = data[i].ToString();
+                chart_Bill.Series["VND Đồng"].Points[i].Color = Color.Blue;
+                chart_Bill.Series["VND Đồng"].Points[i].AxisLabel = "Tháng " + (i + 1).ToString();
+            }    
         }
     }
 }

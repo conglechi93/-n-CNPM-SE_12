@@ -47,7 +47,7 @@
             series1.Legend = "Legend1";
             series1.Name = "VND Đồng";
             this.chart_Bill.Series.Add(series1);
-            this.chart_Bill.Size = new System.Drawing.Size(575, 300);
+            this.chart_Bill.Size = new System.Drawing.Size(821, 358);
             this.chart_Bill.TabIndex = 0;
             this.chart_Bill.Text = "chart_Bill";
             // 
@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 303);
+            this.ClientSize = new System.Drawing.Size(845, 373);
             this.Controls.Add(this.chart_Bill);
             this.Name = "Chart_Payment";
             this.Load += new System.EventHandler(this.Chart_Load);

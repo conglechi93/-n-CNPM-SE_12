@@ -19,7 +19,7 @@ namespace CNPM_SE_12.View
 
         private void Btn_Save_Click(object sender, EventArgs e)
         {
-
+            hash("sha256", "");
         }
     }
 }
