@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,6 +20,7 @@ namespace CNPM_SE_12
         {
             InitializeComponent();
             ReadData();
+            HashPass();
         }
 
 
@@ -69,6 +71,24 @@ namespace CNPM_SE_12
             fs.Close();
         }
 
+        private void HashPass()
+        {
+            //Tạo MD5 
+            MessageBox.Show("Chuỗi cần mã hóa");
+            MD5 mh = MD5.Create();
+            //Chuyển kiểu chuổi thành kiểu byte
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes("Chuỗi cần mã hóa");
+            //mã hóa chuỗi đã chuyển
+            byte[] hash = mh.ComputeHash(inputBytes);
+            //tạo đối tượng StringBuilder (làm việc với kiểu dữ liệu lớn)
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("X2"));
+            }
+            MessageBox.Show(sb.ToString());
+        }    
         private void txt_User_Leave(object sender, EventArgs e)
         {
             if (txt_User.Text == "")
