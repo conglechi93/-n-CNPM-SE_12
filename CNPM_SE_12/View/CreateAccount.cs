@@ -66,5 +66,10 @@ namespace CNPM_SE_12.View
                 }
             }
         }
+
+        private void btn_Cancle_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -15,6 +15,7 @@ namespace CNPM_SE_12.DTO
     public partial class Link
     {
         public int ID_FB { get; set; }
-        public string Link1 { get; set; }
+        public string Subject { get; set; }
+        public string Message { get; set; }
     }
 }

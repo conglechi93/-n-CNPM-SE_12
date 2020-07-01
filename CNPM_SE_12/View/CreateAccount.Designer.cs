@@ -50,9 +50,10 @@
             this.pnl_Show.Controls.Add(this.label2);
             this.pnl_Show.Controls.Add(this.label1);
             this.pnl_Show.Controls.Add(this.label3);
-            this.pnl_Show.Location = new System.Drawing.Point(10, 2);
+            this.pnl_Show.Location = new System.Drawing.Point(13, 2);
+            this.pnl_Show.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Show.Name = "pnl_Show";
-            this.pnl_Show.Size = new System.Drawing.Size(342, 258);
+            this.pnl_Show.Size = new System.Drawing.Size(456, 318);
             this.pnl_Show.TabIndex = 10;
             // 
             // btn_Cancle
@@ -61,12 +62,14 @@
             this.btn_Cancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancle.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancle.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_Cancle.Location = new System.Drawing.Point(181, 171);
+            this.btn_Cancle.Location = new System.Drawing.Point(241, 210);
+            this.btn_Cancle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cancle.Name = "btn_Cancle";
-            this.btn_Cancle.Size = new System.Drawing.Size(99, 35);
+            this.btn_Cancle.Size = new System.Drawing.Size(132, 43);
             this.btn_Cancle.TabIndex = 8;
             this.btn_Cancle.Text = "Cancle";
             this.btn_Cancle.UseVisualStyleBackColor = false;
+            this.btn_Cancle.Click += new System.EventHandler(this.btn_Cancle_Click);
             // 
             // btn_Create
             // 
@@ -74,9 +77,10 @@
             this.btn_Create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Create.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Create.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_Create.Location = new System.Drawing.Point(44, 171);
+            this.btn_Create.Location = new System.Drawing.Point(59, 210);
+            this.btn_Create.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Create.Name = "btn_Create";
-            this.btn_Create.Size = new System.Drawing.Size(99, 35);
+            this.btn_Create.Size = new System.Drawing.Size(132, 43);
             this.btn_Create.TabIndex = 8;
             this.btn_Create.Text = "Create";
             this.btn_Create.UseVisualStyleBackColor = false;
@@ -88,9 +92,10 @@
             this.txt_ConfirmPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_ConfirmPass.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ConfirmPass.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_ConfirmPass.Location = new System.Drawing.Point(164, 129);
+            this.txt_ConfirmPass.Location = new System.Drawing.Point(219, 159);
+            this.txt_ConfirmPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_ConfirmPass.Name = "txt_ConfirmPass";
-            this.txt_ConfirmPass.Size = new System.Drawing.Size(149, 18);
+            this.txt_ConfirmPass.Size = new System.Drawing.Size(199, 22);
             this.txt_ConfirmPass.TabIndex = 12;
             // 
             // txt_Login
@@ -99,9 +104,10 @@
             this.txt_Login.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Login.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Login.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_Login.Location = new System.Drawing.Point(164, 45);
+            this.txt_Login.Location = new System.Drawing.Point(219, 55);
+            this.txt_Login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Login.Name = "txt_Login";
-            this.txt_Login.Size = new System.Drawing.Size(149, 18);
+            this.txt_Login.Size = new System.Drawing.Size(199, 22);
             this.txt_Login.TabIndex = 12;
             // 
             // txt_Pass
@@ -110,9 +116,10 @@
             this.txt_Pass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Pass.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Pass.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txt_Pass.Location = new System.Drawing.Point(164, 85);
+            this.txt_Pass.Location = new System.Drawing.Point(219, 105);
+            this.txt_Pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Pass.Name = "txt_Pass";
-            this.txt_Pass.Size = new System.Drawing.Size(149, 18);
+            this.txt_Pass.Size = new System.Drawing.Size(199, 22);
             this.txt_Pass.TabIndex = 12;
             // 
             // label2
@@ -120,9 +127,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(42, 128);
+            this.label2.Location = new System.Drawing.Point(56, 158);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 19);
+            this.label2.Size = new System.Drawing.Size(83, 23);
             this.label2.TabIndex = 11;
             this.label2.Text = "Xác thực";
             // 
@@ -131,9 +139,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(42, 44);
+            this.label1.Location = new System.Drawing.Point(56, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 19);
+            this.label1.Size = new System.Drawing.Size(134, 23);
             this.label1.TabIndex = 11;
             this.label1.Text = "Tên đăng nhập";
             // 
@@ -142,18 +151,20 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(42, 84);
+            this.label3.Location = new System.Drawing.Point(56, 103);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 19);
+            this.label3.Size = new System.Drawing.Size(89, 23);
             this.label3.TabIndex = 11;
             this.label3.Text = "Mật khẩu";
             // 
             // CreateAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 267);
+            this.ClientSize = new System.Drawing.Size(483, 329);
             this.Controls.Add(this.pnl_Show);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.pnl_Show.ResumeLayout(false);

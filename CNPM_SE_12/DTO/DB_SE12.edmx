@@ -46,7 +46,8 @@
             <PropertyRef Name="ID_FB" />
           </Key>
           <Property Name="ID_FB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Link" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -56,16 +57,6 @@
           <Property Name="ID Account" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="Time_Order" Type="date" />
           <Property Name="Proceeds" Type="int" />
-        </EntityType>
-        <EntityType Name="QL_WDay">
-          <Key>
-            <PropertyRef Name="ID_WDay" />
-          </Key>
-          <Property Name="ID_WDay" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="ID_Account" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="Shift_Start_Time" Type="datetime" />
-          <Property Name="Shift_End_Time" Type="datetime" />
-          <Property Name="Salary_Shift" Type="int" />
         </EntityType>
         <EntityType Name="Salary">
           <Key>
@@ -97,6 +88,7 @@
           <Key>
             <PropertyRef Name="ID_Account" />
           </Key>
+          <Property Name="ID_Account" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="User_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Gender" Type="bit" Nullable="false" />
           <Property Name="Birthday" Type="date" Nullable="false" />
@@ -105,7 +97,6 @@
           <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Wday" Type="nvarchar" MaxLength="10" />
           <Property Name="Salary" Type="int" />
-          <Property Name="ID_Account" Type="nvarchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <Association Name="FK_Account_Type_Account">
           <End Role="Type_Account" Type="Self.Type_Account" Multiplicity="1" />
@@ -179,18 +170,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_QL_WDay_User">
-          <End Role="User" Type="Self.User" Multiplicity="1" />
-          <End Role="QL_WDay" Type="Self.QL_WDay" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="ID_Account" />
-            </Principal>
-            <Dependent Role="QL_WDay">
-              <PropertyRef Name="ID_Account" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Salary_User">
           <End Role="User" Type="Self.User" Multiplicity="1" />
           <End Role="Salary" Type="Self.Salary" Multiplicity="*" />
@@ -210,7 +189,6 @@
           <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Link" EntityType="Self.Link" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="QL_WDay" EntityType="Self.QL_WDay" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Salary" EntityType="Self.Salary" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Type_Account" EntityType="Self.Type_Account" Schema="dbo" store:Type="Tables" />
@@ -238,10 +216,6 @@
           <AssociationSet Name="FK_Order_User" Association="Self.FK_Order_User">
             <End Role="User" EntitySet="User" />
             <End Role="Order" EntitySet="Order" />
-          </AssociationSet>
-          <AssociationSet Name="FK_QL_WDay_User" Association="Self.FK_QL_WDay_User">
-            <End Role="User" EntitySet="User" />
-            <End Role="QL_WDay" EntitySet="QL_WDay" />
           </AssociationSet>
           <AssociationSet Name="FK_Salary_User" Association="Self.FK_Salary_User">
             <End Role="User" EntitySet="User" />
@@ -301,7 +275,8 @@
             <PropertyRef Name="ID_FB" />
           </Key>
           <Property Name="ID_FB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Link1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -313,17 +288,6 @@
           <Property Name="Proceeds" Type="Int32" />
           <NavigationProperty Name="Detail_Order" Relationship="Self.FK_Detail_Order_Order" FromRole="Order" ToRole="Detail_Order" />
           <NavigationProperty Name="User" Relationship="Self.FK_Order_User" FromRole="Order" ToRole="User" />
-        </EntityType>
-        <EntityType Name="QL_WDay">
-          <Key>
-            <PropertyRef Name="ID_WDay" />
-          </Key>
-          <Property Name="ID_WDay" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ID_Account" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Shift_Start_Time" Type="DateTime" Precision="3" />
-          <Property Name="Shift_End_Time" Type="DateTime" Precision="3" />
-          <Property Name="Salary_Shift" Type="Int32" />
-          <NavigationProperty Name="User" Relationship="Self.FK_QL_WDay_User" FromRole="QL_WDay" ToRole="User" />
         </EntityType>
         <EntityType Name="Salary">
           <Key>
@@ -357,6 +321,7 @@
           <Key>
             <PropertyRef Name="ID_Account" />
           </Key>
+          <Property Name="ID_Account" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="User_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Gender" Type="Boolean" Nullable="false" />
           <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="0" />
@@ -365,10 +330,8 @@
           <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Wday" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Salary" Type="Int32" />
-          <Property Name="ID_Account" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Account" Relationship="Self.FK_Account_User" FromRole="User" ToRole="Account" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Order_User" FromRole="User" ToRole="Order" />
-          <NavigationProperty Name="QL_WDay" Relationship="Self.FK_QL_WDay_User" FromRole="User" ToRole="QL_WDay" />
           <NavigationProperty Name="Salaries" Relationship="Self.FK_Salary_User" FromRole="User" ToRole="Salary" />
         </EntityType>
         <Association Name="FK_Account_Type_Account">
@@ -443,18 +406,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_QL_WDay_User">
-          <End Role="User" Type="Self.User" Multiplicity="1" />
-          <End Role="QL_WDay" Type="Self.QL_WDay" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="ID_Account" />
-            </Principal>
-            <Dependent Role="QL_WDay">
-              <PropertyRef Name="ID_Account" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Salary_User">
           <End Role="User" Type="Self.User" Multiplicity="1" />
           <End Role="Salary" Type="Self.Salary" Multiplicity="*" />
@@ -474,7 +425,6 @@
           <EntitySet Name="Items" EntityType="Self.Item" />
           <EntitySet Name="Links" EntityType="Self.Link" />
           <EntitySet Name="Orders" EntityType="Self.Order" />
-          <EntitySet Name="QL_WDay" EntityType="Self.QL_WDay" />
           <EntitySet Name="Salaries" EntityType="Self.Salary" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="Type_Account" EntityType="Self.Type_Account" />
@@ -502,10 +452,6 @@
           <AssociationSet Name="FK_Order_User" Association="Self.FK_Order_User">
             <End Role="User" EntitySet="Users" />
             <End Role="Order" EntitySet="Orders" />
-          </AssociationSet>
-          <AssociationSet Name="FK_QL_WDay_User" Association="Self.FK_QL_WDay_User">
-            <End Role="User" EntitySet="Users" />
-            <End Role="QL_WDay" EntitySet="QL_WDay" />
           </AssociationSet>
           <AssociationSet Name="FK_Salary_User" Association="Self.FK_Salary_User">
             <End Role="User" EntitySet="Users" />
@@ -562,7 +508,8 @@
             <EntityTypeMapping TypeName="SE_12Model.Link">
               <MappingFragment StoreEntitySet="Link">
                 <ScalarProperty Name="ID_FB" ColumnName="ID_FB" />
-                <ScalarProperty Name="Link1" ColumnName="Link" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -573,17 +520,6 @@
                 <ScalarProperty Name="ID_Account" ColumnName="ID Account" />
                 <ScalarProperty Name="Time_Order" ColumnName="Time_Order" />
                 <ScalarProperty Name="Proceeds" ColumnName="Proceeds" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="QL_WDay">
-            <EntityTypeMapping TypeName="SE_12Model.QL_WDay">
-              <MappingFragment StoreEntitySet="QL_WDay">
-                <ScalarProperty Name="ID_WDay" ColumnName="ID_WDay" />
-                <ScalarProperty Name="ID_Account" ColumnName="ID_Account" />
-                <ScalarProperty Name="Shift_Start_Time" ColumnName="Shift_Start_Time" />
-                <ScalarProperty Name="Shift_End_Time" ColumnName="Shift_End_Time" />
-                <ScalarProperty Name="Salary_Shift" ColumnName="Salary_Shift" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -619,6 +555,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="SE_12Model.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="ID_Account" ColumnName="ID_Account" />
                 <ScalarProperty Name="User_Name" ColumnName="User_Name" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
                 <ScalarProperty Name="Birthday" ColumnName="Birthday" />
@@ -627,7 +564,6 @@
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="Wday" ColumnName="Wday" />
                 <ScalarProperty Name="Salary" ColumnName="Salary" />
-                <ScalarProperty Name="ID_Account" ColumnName="ID_Account" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

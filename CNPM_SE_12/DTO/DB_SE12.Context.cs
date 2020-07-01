@@ -31,7 +31,6 @@ namespace CNPM_SE_12.DTO
         public virtual DbSet<Item> Items { get; set; }
         public virtual DbSet<Link> Links { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<QL_WDay> QL_WDay { get; set; }
         public virtual DbSet<Salary> Salaries { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Type_Account> Type_Account { get; set; }

@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="BLL\Login_BLL.cs" />
     <Compile Include="BLL\QL_Account_BLL.cs" />
+    <Compile Include="BLL\QL_FeedBack.cs" />
     <Compile Include="BLL\QL_Items_BLL.cs" />
     <Compile Include="BLL\QL_Payment.cs" />
     <Compile Include="BLL\QL_User_BLL.cs" />
@@ -95,9 +96,6 @@
       <DependentUpon>DB_SE12.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\Order.cs">
-      <DependentUpon>DB_SE12.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DTO\QL_WDay.cs">
       <DependentUpon>DB_SE12.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\Salary.cs">
@@ -337,6 +335,15 @@
     <None Include="Resources\Package1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Documents.png" />
+    <None Include="Resources\script_stop.png" />
+    <None Include="Resources\script_start.png" />
+    <None Include="Resources\letter.jpg" />
+    <None Include="Resources\page_cancel.png" />
+    <None Include="Resources\bullet_tick.png" />
+    <None Include="Resources\bullet_magnify.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="DTO\DB_SE12.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DB_SE12.edmx</DependentUpon>
@@ -347,13 +354,6 @@
       <DependentUpon>DB_SE12.edmx</DependentUpon>
       <LastGenOutput>DB_SE12.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\Documents.png" />
-    <None Include="Resources\script_stop.png" />
-    <None Include="Resources\script_start.png" />
-    <None Include="Resources\letter.jpg" />
-    <None Include="Resources\page_cancel.png" />
-    <None Include="Resources\bullet_tick.png" />
-    <None Include="Resources\bullet_magnify.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
