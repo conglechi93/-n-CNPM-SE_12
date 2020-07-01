@@ -12,6 +12,9 @@ namespace CNPM_SE_12.View
 {
     public partial class CreateAccount : Form
     {
+        public Mydel D { get; set; }
+
+        public delegate void Mydel();
         private string ID_Acccount;
         public CreateAccount(string id_account,string id_type)
         {

@@ -44,7 +44,7 @@ namespace CNPM_SE_12.BLL
         {
             return true;
         }
-        public bool Add_User_BLL(string ID_User, string User_Name, string Gender, string Birthday, string Phonenumber, string Passport, string Address, string ShiftTime)
+        public bool Add_User_BLL(string ID_User, string User_Name, string Gender, string Birthday, string Phonenumber, string Passport, string Address)
         {
             User user = new User();
             user.ID_Account = ID_User;
@@ -57,7 +57,8 @@ namespace CNPM_SE_12.BLL
             user.NumberPhone = Phonenumber;
             user.Pasport = Passport;
             user.Address = Address;
-            user.Wday = ShiftTime;
+            user.Wday = "0";
+            user.Salary = 0;
             try
             {
                 SE_12Entities db = new SE_12Entities();
@@ -96,30 +97,6 @@ namespace CNPM_SE_12.BLL
         //    user.Salary = Convert.ToInt32(Salary);
         //    //Add_User_BLL(user);
         //}
-        public bool delUser_BLL(DataGridViewSelectedRowCollection r)
-        {
-            try
-            {
-                SE_12Entities db = new SE_12Entities();
-                foreach (User i in db.Users.Select(p => p).ToList())
-                {
-                    foreach (DataGridViewRow j in r)
-                    {
-                        if (i.ID_Account == j.Cells["Mã nhân viên"].Value.ToString())
-                        {
-                            db.Users.Remove(i);
-                        }
-                    }
-                }
-                db.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.ToString());
-                return false;
-            }
-        }
         public bool Edit_User_BLL(string ID_User, string User_Name, string Gender, string Birthday, string Phonenumber, string Passport, string Address, string wday)
         {
             try
@@ -156,6 +133,52 @@ namespace CNPM_SE_12.BLL
                 return false;
             }
         }
+
+        public void del_Acc_byID(string id)
+        {
+            try
+            {
+                SE_12Entities db = new SE_12Entities();
+                foreach (User i in db.Users.Select(p => p).ToList())
+                {
+                    if (i.ID_Account == id)
+                    {
+                        db.Users.Remove(i);
+                        break;
+                    }
+                }
+                db.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+        }
+        public bool delUser_BLL(DataGridViewSelectedRowCollection r)
+        {
+            try
+            {
+                SE_12Entities db = new SE_12Entities();
+                foreach (User i in db.Users.Select(p => p).ToList())
+                {
+                    foreach (DataGridViewRow j in r)
+                    {
+                        if (i.ID_Account == j.Cells["Mã nhân viên"].Value.ToString())
+                        {
+                            db.Users.Remove(i);
+                        }
+                    }
+                }
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                return false;
+            }
+        }
+
         public List<User> Search_BLL(String Search)
         {
             SE_12Entities db = new SE_12Entities();

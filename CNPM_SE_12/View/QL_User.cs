@@ -125,11 +125,19 @@ namespace CNPM_SE_12.View
                 string Phonenumber = txt_SoDienThoai.Text;
                 string Passport = txt_CMND.Text;
                 string Address = txt_DiaChi.Text;
-                string ShiftTime = txt_Wday.Text;
-                if (BLL.QL_User_BLL.Instance.Add_User_BLL(ID_User, User_Name, Gender, Birthday, Phonenumber, Passport, Address, ShiftTime))
-                    MessageBox.Show("Add thành công!");
-                else MessageBox.Show("Add thất bại");
+                string type_Acc = "1";
+                if (BLL.QL_User_BLL.Instance.Add_User_BLL(ID_User, User_Name, Gender, Birthday, Phonenumber, Passport, Address))
+                {
+                    CreateAccount f = new CreateAccount(ID_Account,type_Acc);
+                    f.ShowDialog();
+
+                }    
             }       
+        }
+
+        private void delAcc()
+        {
+
         }
 
         private void Edit()
@@ -142,8 +150,8 @@ namespace CNPM_SE_12.View
             string Phonenumber = txt_SoDienThoai.Text;
             string Passport = txt_CMND.Text;
             string Address = txt_DiaChi.Text;
-            string ShiftTime = txt_Wday.Text;
-            if (BLL.QL_User_BLL.Instance.Edit_User_BLL(ID_User, User_Name, Gender, Birthday, Phonenumber, Passport, Address, ShiftTime))
+            string Wday = txt_Wday.Text;
+            if (BLL.QL_User_BLL.Instance.Edit_User_BLL(ID_User, User_Name, Gender, Birthday, Phonenumber, Passport, Address, Wday))
                 MessageBox.Show("Edit thành công!");
             else MessageBox.Show("Edit thất bại");
         }
@@ -167,6 +175,8 @@ namespace CNPM_SE_12.View
             }
             return true;
         }
+
+        
         private void Btn_Update_Click(object sender, EventArgs e)
         {
             Edit();
