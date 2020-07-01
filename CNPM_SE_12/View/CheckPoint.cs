@@ -33,7 +33,7 @@ namespace CNPM_SE_12.View
         public void ReadData()
         {
             Day = new List<string>();
-            string[] lines = File.ReadAllLines(@"K:\Lich.txt");
+            string[] lines = File.ReadAllLines(@"E:\Lich.txt");
 
             foreach (string s in lines)
             {

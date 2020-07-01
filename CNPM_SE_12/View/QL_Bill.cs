@@ -19,7 +19,6 @@ namespace CNPM_SE_12.View
         {
             InitializeComponent();
             setData();
-            getD();
         }
 
 
@@ -46,38 +45,12 @@ namespace CNPM_SE_12.View
             }
 
         }
-        private void btn_Reset_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Search_Click(object sender, EventArgs e)
         {
             List<int> data = getData();
             Chart_Payment c = new Chart_Payment(data);
             c.Show();
         }
-
-        private void getD()
-        {
-            List<Order> ord = BLL.QL_Payment.Instance.getOrder();
-            List<int> total = new List<int>();
-            for (int i = 1; i <= 12; i++)
-            {
-                int values = 0;
-                foreach (Order o in ord)
-                {
-                    if (Convert.ToDateTime(o.Time_Order).Month == i)
-                        values += Convert.ToInt32(o.Proceeds);
-                }
-                total.Add(values);
-            }
-            for (int i = 0; i <= 11; i++)
-            {
-                MessageBox.Show(i.ToString() + " " + total[i].ToString());
-            }
-        }
-
         private List<int> getData()
         {
             List<Order> ord = BLL.QL_Payment.Instance.getOrder();
@@ -93,6 +66,12 @@ namespace CNPM_SE_12.View
                 total.Add(values);
             }
             return total;
+        }
+
+        private void btn_Reset_Click(object sender, EventArgs e)
+        {
+            CreateAccount f = new CreateAccount();
+            f.ShowDialog();
         }
     }
 }

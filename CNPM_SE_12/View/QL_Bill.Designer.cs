@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Reset = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
@@ -74,6 +72,7 @@
             this.btn_Reset.TabIndex = 3;
             this.btn_Reset.Text = "Reset";
             this.btn_Reset.UseVisualStyleBackColor = false;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // btn_Search
             // 
@@ -229,7 +228,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "QuanLyBill";
+            this.Name = "QL_Bill";
             this.Size = new System.Drawing.Size(800, 500);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
