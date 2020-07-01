@@ -52,7 +52,8 @@
             this.pnl_Show.Controls.Add(this.label2);
             this.pnl_Show.Controls.Add(this.label1);
             this.pnl_Show.Controls.Add(this.label3);
-            this.pnl_Show.Location = new System.Drawing.Point(10, 2);
+            this.pnl_Show.Location = new System.Drawing.Point(13, 2);
+            this.pnl_Show.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Show.Name = "pnl_Show";
             this.pnl_Show.Size = new System.Drawing.Size(345, 258);
             this.pnl_Show.TabIndex = 10;
@@ -67,13 +68,28 @@
             this.btn_Cancle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Cancle.Location = new System.Drawing.Point(197, 197);
             this.btn_Cancle.Name = "btn_Cancle";
-            this.btn_Cancle.Size = new System.Drawing.Size(99, 35);
+            this.btn_Cancle.Size = new System.Drawing.Size(132, 43);
             this.btn_Cancle.TabIndex = 8;
             this.btn_Cancle.Text = "Cancle";
             this.btn_Cancle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Cancle.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btn_Cancle.UseVisualStyleBackColor = false;
             this.btn_Cancle.Click += new System.EventHandler(this.Btn_Cancle_Click);
+            // 
+            // btn_Create
+            // 
+            this.btn_Create.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btn_Create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Create.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Create.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btn_Create.Location = new System.Drawing.Point(59, 210);
+            this.btn_Create.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Create.Name = "btn_Create";
+            this.btn_Create.Size = new System.Drawing.Size(132, 43);
+            this.btn_Create.TabIndex = 8;
+            this.btn_Create.Text = "Create";
+            this.btn_Create.UseVisualStyleBackColor = false;
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
             // txt_ConfirmPass
             // 
@@ -174,12 +190,13 @@
             // 
             // CreateAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(367, 267);
             this.ControlBox = false;
             this.Controls.Add(this.pnl_Show);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.pnl_Show.ResumeLayout(false);

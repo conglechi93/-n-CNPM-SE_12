@@ -17,6 +17,7 @@ namespace CNPM_SE_12.View
         public QL_Item()
         {
             InitializeComponent();
+            ShowCtg();
         }
 
         private void ShowItems()
