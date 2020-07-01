@@ -250,8 +250,6 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Controls.Add(this.btnQ);
-            this.panel4.Controls.Add(this.button5);
             this.panel4.Location = new System.Drawing.Point(4, 4);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
