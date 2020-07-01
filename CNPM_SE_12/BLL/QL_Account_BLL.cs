@@ -26,12 +26,6 @@ namespace CNPM_SE_12.BLL
         {
 
         }
-        public List<QL_Payment> getAccount_BLL()
-        {
-            SE_12Entities db = new SE_12Entities();
-            List<QL_Payment> account = db.QL_Payment.Select(p => p).ToList();
-            return account;
-        }
 
         public string getTypeAccount_BLL(string id_account)
         {

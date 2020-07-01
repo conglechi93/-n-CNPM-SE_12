@@ -19,17 +19,12 @@ namespace CNPM_SE_12.View
             if(ID_Type!="3")
             {
                 InitializeComponent();
-                ShowDGV();
             }
             else
             {
                 MessageBox.Show("Bạn không có quyền hạn này !");
             }
 
-        }
-        public void ShowDGV()
-        {
-            dataGridView1.DataSource = BLL.QL_Account_BLL.Instance.getAccount_BLL().Select(p => new {p.ID_Oder, p.ID_Account, p.Proceeds, p.Payment_Time }).ToList();
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {

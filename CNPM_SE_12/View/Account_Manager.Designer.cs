@@ -203,7 +203,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dtg);
             this.Name = "Account_Manager";
-            this.Size = new System.Drawing.Size(782, 268);
+            this.Size = new System.Drawing.Size(800, 500);
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

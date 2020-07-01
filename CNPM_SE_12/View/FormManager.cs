@@ -109,5 +109,15 @@ namespace CNPM_SE_12.View
         {
             this.Close();
         }
+
+        private void BtnOut_MouseHover(object sender, EventArgs e)
+        {
+            btnOut.BackColor = Color.Red;
+        }
+
+        private void BtnOut_MouseLeave(object sender, EventArgs e)
+        {
+            btnOut.BackColor = Color.OliveDrab;
+        }
     }
 }
