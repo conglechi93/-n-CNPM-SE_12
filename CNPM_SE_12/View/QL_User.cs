@@ -62,7 +62,7 @@ namespace CNPM_SE_12.View
                 a.Add(i.Gender);
                 a.Add(i.Birthday.ToShortDateString());
                 a.Add(i.NumberPhone);
-                a.Add(i.Shift_Time);
+                a.Add(i.Wday);
                 a.Add(i.Address);
                 a.Add(i.Pasport);
                 a.Add(i.Salary);
@@ -101,7 +101,7 @@ namespace CNPM_SE_12.View
                 txt_SoDienThoai.Text = user.NumberPhone;
                 txt_CMND.Text = user.Pasport;
                 txt_DiaChi.Text = user.Address;
-                txt_Wday.Text = user.Shift_Time;
+                txt_Wday.Text = user.Wday;
                 //int type = Convert.ToInt32(user.Account.ID_Type);
                 //cbb_TypeAcccount.SelectedIndex = 0;
                 //for (int i = 0; i < cbb_TypeAcccount.Items.Count; i++)

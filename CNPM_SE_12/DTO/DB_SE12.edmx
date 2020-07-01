@@ -10,7 +10,7 @@
             <PropertyRef Name="ID_Account" />
           </Key>
           <Property Name="ID_Account" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="PassWord" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ID_Type" Type="nvarchar" MaxLength="10" Nullable="false" />
         </EntityType>
@@ -103,7 +103,7 @@
           <Property Name="NumberPhone" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Pasport" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Shift_Time" Type="nvarchar" MaxLength="10" />
+          <Property Name="Wday" Type="nvarchar" MaxLength="10" />
           <Property Name="Salary" Type="int" />
           <Property Name="ID_Account" Type="nvarchar" MaxLength="10" Nullable="false" />
         </EntityType>
@@ -258,7 +258,7 @@
             <PropertyRef Name="ID_Account" />
           </Key>
           <Property Name="ID_Account" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PassWord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ID_Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Type_Account" Relationship="Self.FK_Account_Type_Account" FromRole="Account" ToRole="Type_Account" />
@@ -363,7 +363,7 @@
           <Property Name="NumberPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Pasport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Shift_Time" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Wday" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Salary" Type="Int32" />
           <Property Name="ID_Account" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Account" Relationship="Self.FK_Account_User" FromRole="User" ToRole="Account" />
@@ -467,7 +467,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="SE_12Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="SE_12Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Accounts" EntityType="Self.Account" />
           <EntitySet Name="Categories" EntityType="Self.Category" />
           <EntitySet Name="Detail_Order" EntityType="Self.Detail_Order" />
@@ -517,7 +517,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="SE_12ModelStoreContainer" CdmEntityContainer="SE_12Entities">
+        <EntityContainerMapping StorageEntityContainer="SE_12ModelStoreContainer" CdmEntityContainer="SE_12Entities1">
           <EntitySetMapping Name="Accounts">
             <EntityTypeMapping TypeName="SE_12Model.Account">
               <MappingFragment StoreEntitySet="Account">
@@ -625,7 +625,7 @@
                 <ScalarProperty Name="NumberPhone" ColumnName="NumberPhone" />
                 <ScalarProperty Name="Pasport" ColumnName="Pasport" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Shift_Time" ColumnName="Shift_Time" />
+                <ScalarProperty Name="Wday" ColumnName="Wday" />
                 <ScalarProperty Name="Salary" ColumnName="Salary" />
                 <ScalarProperty Name="ID_Account" ColumnName="ID_Account" />
               </MappingFragment>

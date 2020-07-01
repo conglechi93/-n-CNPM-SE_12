@@ -35,7 +35,6 @@ namespace CNPM_SE_12.BLL
             SE_12Entities DB = new SE_12Entities();
             var account = DB.Accounts.Select(p => p);
             string s = H.MD5(pass);
-            MessageBox.Show(s);
             foreach (Account i in account.ToList())
             {
                 if (login == i.Login && H.MD5(pass) == i.PassWord)
