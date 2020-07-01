@@ -38,12 +38,10 @@ namespace CNPM_SE_12.View
         private void ShowData()
         {
             SE_12Entities db = new SE_12Entities();
-            this.Text = "ADD Items";
 
             if (ID_Items != "")
             {
                 txt_IDItems.Enabled = false;
-                this.Text = "EDIT Items";
                 Item item = BLL.QL_Items_BLL.Instance.getItems_byID_BLL(ID_Items);
                 txt_IDItems.Text = item.ID_Items;
                 txt_ItemsName.Text = item.Items_Name;
@@ -128,56 +126,6 @@ namespace CNPM_SE_12.View
         private void btn_Cancle_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void lb_Number_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_Subject_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbb_LoaiHang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_ItemsName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_IDItems_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_Price_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_Number_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
