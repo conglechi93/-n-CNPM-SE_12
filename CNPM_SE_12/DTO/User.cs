@@ -28,7 +28,7 @@ namespace CNPM_SE_12.DTO
         public string NumberPhone { get; set; }
         public string Pasport { get; set; }
         public string Address { get; set; }
-        public string Shift_Time { get; set; }
+        public string Wday { get; set; }
         public Nullable<int> Salary { get; set; }
         public string ID_Account { get; set; }
     

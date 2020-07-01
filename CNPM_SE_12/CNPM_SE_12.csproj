@@ -306,20 +306,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DTO\DB_SE12.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DB_SE12.edmx</DependentUpon>
-      <LastGenOutput>DB_SE12.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DTO\DB_SE12.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DB_SE12.edmx</DependentUpon>
-      <LastGenOutput>DB_SE12.cs</LastGenOutput>
-    </Content>
-    <None Include="Resources\application_osx_get.png" />
-    <None Include="Resources\decline1.png" />
-    <None Include="Resources\database_wrench.png" />
-    <None Include="Resources\control_add.png" />
     <None Include="Resources\background1.jpg" />
     <None Include="Resources\user_magnify.png" />
     <None Include="Resources\user_cross.png" />
@@ -337,6 +323,18 @@
     <None Include="Resources\Stats1.png" />
     <None Include="Resources\User1.png" />
     <None Include="Resources\Package1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DTO\DB_SE12.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_SE12.edmx</DependentUpon>
+      <LastGenOutput>DB_SE12.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DTO\DB_SE12.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_SE12.edmx</DependentUpon>
+      <LastGenOutput>DB_SE12.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -57,7 +57,7 @@ namespace CNPM_SE_12.BLL
             user.NumberPhone = Phonenumber;
             user.Pasport = Passport;
             user.Address = Address;
-            user.Shift_Time = ShiftTime;
+            user.Wday = ShiftTime;
             try
             {
                 SE_12Entities db = new SE_12Entities();
@@ -120,7 +120,7 @@ namespace CNPM_SE_12.BLL
                 return false;
             }
         }
-        public bool Edit_User_BLL(string ID_User, string User_Name, string Gender, string Birthday, string Phonenumber, string Passport, string Address, string ShiftTime)
+        public bool Edit_User_BLL(string ID_User, string User_Name, string Gender, string Birthday, string Phonenumber, string Passport, string Address, string wday)
         {
             try
             {
@@ -136,7 +136,7 @@ namespace CNPM_SE_12.BLL
                 user_clone.NumberPhone = Phonenumber;
                 user_clone.Pasport = Passport;
                 user_clone.Address = Address;
-                user_clone.Shift_Time = ShiftTime;
+                user_clone.Wday = wday;
 
                 User user = db.Users.Where(p => p.ID_Account == ID_User).FirstOrDefault();
                 user.ID_Account = user_clone.ID_Account;
@@ -146,7 +146,7 @@ namespace CNPM_SE_12.BLL
                 user.NumberPhone = user_clone.NumberPhone;
                 user.Pasport = user_clone.Pasport;
                 user.Address = user_clone.Address;
-                user.Shift_Time = user_clone.Shift_Time;
+                user.Wday = user_clone.Wday;
                 db.SaveChanges();
                 return true;
             }
