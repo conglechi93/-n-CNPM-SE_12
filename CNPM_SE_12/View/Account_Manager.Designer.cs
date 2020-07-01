@@ -93,7 +93,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtg.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtg.Location = new System.Drawing.Point(277, 12);
+            this.dtg.Location = new System.Drawing.Point(292, 120);
             this.dtg.Name = "dtg";
             this.dtg.RowHeadersWidth = 51;
             this.dtg.Size = new System.Drawing.Size(479, 238);
@@ -111,7 +111,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.btn_Reset);
             this.panel2.Controls.Add(this.lb_MaNhanVien);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Location = new System.Drawing.Point(27, 120);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(259, 238);
             this.panel2.TabIndex = 10;

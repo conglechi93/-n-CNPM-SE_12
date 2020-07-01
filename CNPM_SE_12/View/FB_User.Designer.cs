@@ -32,12 +32,12 @@
             this.pnl = new System.Windows.Forms.Panel();
             this.txt_Message = new System.Windows.Forms.TextBox();
             this.txt_Subject = new System.Windows.Forms.TextBox();
+            this.btn_Exit = new System.Windows.Forms.Button();
             this.lb_Message = new System.Windows.Forms.Label();
+            this.btn_Send = new System.Windows.Forms.Button();
             this.lb_Subject = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btn_Exit = new System.Windows.Forms.Button();
-            this.btn_Send = new System.Windows.Forms.Button();
             this.pnl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             // 
             // txt_Message
             // 
-            this.txt_Message.BackColor = System.Drawing.Color.LightGray;
+            this.txt_Message.BackColor = System.Drawing.Color.White;
             this.txt_Message.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Message.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Message.ForeColor = System.Drawing.SystemColors.WindowFrame;
@@ -77,6 +77,23 @@
             this.txt_Subject.Size = new System.Drawing.Size(281, 18);
             this.txt_Subject.TabIndex = 5;
             // 
+            // btn_Exit
+            // 
+            this.btn_Exit.BackColor = System.Drawing.Color.SlateBlue;
+            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Exit.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Exit.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btn_Exit.Image = global::CNPM_SE_12.Properties.Resources.email_stop;
+            this.btn_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Exit.Location = new System.Drawing.Point(469, 372);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(125, 35);
+            this.btn_Exit.TabIndex = 4;
+            this.btn_Exit.Text = "Exit";
+            this.btn_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_Exit.UseVisualStyleBackColor = false;
+            // 
             // lb_Message
             // 
             this.lb_Message.AutoSize = true;
@@ -87,6 +104,23 @@
             this.lb_Message.Size = new System.Drawing.Size(72, 19);
             this.lb_Message.TabIndex = 4;
             this.lb_Message.Text = "Message:";
+            // 
+            // btn_Send
+            // 
+            this.btn_Send.BackColor = System.Drawing.Color.SlateBlue;
+            this.btn_Send.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Send.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Send.ForeColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btn_Send.Image = global::CNPM_SE_12.Properties.Resources.email_start;
+            this.btn_Send.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Send.Location = new System.Drawing.Point(214, 372);
+            this.btn_Send.Name = "btn_Send";
+            this.btn_Send.Size = new System.Drawing.Size(125, 35);
+            this.btn_Send.TabIndex = 4;
+            this.btn_Send.Text = "Send";
+            this.btn_Send.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Send.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_Send.UseVisualStyleBackColor = false;
             // 
             // lb_Subject
             // 
@@ -110,40 +144,6 @@
             this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
-            // btn_Exit
-            // 
-            this.btn_Exit.BackColor = System.Drawing.Color.SlateBlue;
-            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Exit.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Exit.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_Exit.Image = global::CNPM_SE_12.Properties.Resources.email_stop;
-            this.btn_Exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Exit.Location = new System.Drawing.Point(469, 372);
-            this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(125, 35);
-            this.btn_Exit.TabIndex = 4;
-            this.btn_Exit.Text = "Exit";
-            this.btn_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btn_Exit.UseVisualStyleBackColor = false;
-            // 
-            // btn_Send
-            // 
-            this.btn_Send.BackColor = System.Drawing.Color.SlateBlue;
-            this.btn_Send.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Send.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Send.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btn_Send.Image = global::CNPM_SE_12.Properties.Resources.email_start;
-            this.btn_Send.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Send.Location = new System.Drawing.Point(214, 372);
-            this.btn_Send.Name = "btn_Send";
-            this.btn_Send.Size = new System.Drawing.Size(125, 35);
-            this.btn_Send.TabIndex = 4;
-            this.btn_Send.Text = "Send";
-            this.btn_Send.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Send.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btn_Send.UseVisualStyleBackColor = false;
             // 
             // FB_User
             // 

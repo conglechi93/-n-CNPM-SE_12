@@ -79,7 +79,7 @@
             this.tab_Main.Margin = new System.Windows.Forms.Padding(2);
             this.tab_Main.Name = "tab_Main";
             this.tab_Main.SelectedIndex = 0;
-            this.tab_Main.Size = new System.Drawing.Size(780, 364);
+            this.tab_Main.Size = new System.Drawing.Size(780, 355);
             this.tab_Main.TabIndex = 0;
             this.tab_Main.SelectedIndexChanged += new System.EventHandler(this.tab_Main_SelectedIndexChanged);
             // 
@@ -169,7 +169,7 @@
             this.tab_Items.Margin = new System.Windows.Forms.Padding(2);
             this.tab_Items.Name = "tab_Items";
             this.tab_Items.Padding = new System.Windows.Forms.Padding(2);
-            this.tab_Items.Size = new System.Drawing.Size(772, 332);
+            this.tab_Items.Size = new System.Drawing.Size(772, 323);
             this.tab_Items.TabIndex = 1;
             this.tab_Items.Tag = "2";
             this.tab_Items.Text = "Sản phẩm";
@@ -180,7 +180,7 @@
             this.cbbSearch.BackColor = System.Drawing.Color.LightSteelBlue;
             this.cbbSearch.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cbbSearch.FormattingEnabled = true;
-            this.cbbSearch.Location = new System.Drawing.Point(492, 272);
+            this.cbbSearch.Location = new System.Drawing.Point(499, 280);
             this.cbbSearch.Margin = new System.Windows.Forms.Padding(2);
             this.cbbSearch.Name = "cbbSearch";
             this.cbbSearch.Size = new System.Drawing.Size(140, 27);
@@ -189,7 +189,7 @@
             // txt_Search
             // 
             this.txt_Search.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.txt_Search.Location = new System.Drawing.Point(278, 272);
+            this.txt_Search.Location = new System.Drawing.Point(278, 280);
             this.txt_Search.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.Size = new System.Drawing.Size(189, 26);
@@ -367,7 +367,7 @@
             this.btn_Search.ForeColor = System.Drawing.Color.White;
             this.btn_Search.Image = global::CNPM_SE_12.Properties.Resources.bullet_magnify;
             this.btn_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Search.Location = new System.Drawing.Point(653, 264);
+            this.btn_Search.Location = new System.Drawing.Point(665, 272);
             this.btn_Search.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(98, 41);
@@ -399,7 +399,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGV_Show.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DGV_Show.Location = new System.Drawing.Point(300, 114);
+            this.DGV_Show.Location = new System.Drawing.Point(300, 123);
             this.DGV_Show.Margin = new System.Windows.Forms.Padding(2);
             this.DGV_Show.Name = "DGV_Show";
             this.DGV_Show.ReadOnly = true;

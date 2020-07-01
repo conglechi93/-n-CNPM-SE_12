@@ -279,10 +279,5 @@ namespace CNPM_SE_12.View
             sWriter.Flush();
             fs.Close();
         }
-
-        private void DGV_Show_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
